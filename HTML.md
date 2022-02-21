@@ -22,6 +22,7 @@ Son la base del lenguaje
     <i> </i>       => tecto en cursiva
     <strik> </strik> => texto tachado 
     <small> </small> => chiquita
+    <center> </center> => centra tanto texto como imagenes
 
 ### lista
     <ul> </ul> => lista oredenada
@@ -36,13 +37,12 @@ Son la base del lenguaje
 ## de vinculos
     <img 
         src = "rutaDeLaImagen" 
-        alt = "texto descriptiba" 
+        alt = "texto descriptiba"
+        title = "titulo de la imagen" 
         width = "ancho de la imange"
         height "alto de la imagen"
     > => para subir imagenes
-    <a 
-        href = "enlace web" 
-        target = "donde se abriar el recurso"> 
+    <a href = "enlace web" target = "donde se abriar el recurso"> 
         texto 
     </a> => para subir links
         
@@ -87,8 +87,10 @@ caracteristica de la etiqueta a modificar
     <html lang="en">    => definicion de ht
 
     <head>              => definicion referente al documento
-      <meta charset="UTF-8">  => define el uso de la codificacion del documento (legunaje español (ñ á é í ó ú, etc))            
-      <title>Document</title> => se define lo que se mostrara en la pestaña del navegador
+        <meta charset="UTF-8">  => define el uso de la codificacion del documento (legunaje español (ñ á é í ó ú, etc))
+        <link rel = "icon" href = "ubicacion del .ico">   => icono de la web        
+        <title>Document</title> => se define lo que se mostrara en la pestaña del navegador
+        <link rel = "stylesheet" href = "./rutaDelArchivo/style.css"> => vincular css con HTML 
     </head>             => cierre de head           
 
     <body>              => cuerpo del html 
@@ -115,3 +117,15 @@ independiente del contenido ocupara el ancho correspondiente
     <meta name = "author" conten = "autor de la pagina "> 
     <meta name = "copyright" conten = "empresa con copyrigth"> 
     <meta name = "robots" conten = "index/noindex">  => es o no indexada
+
+# Tabla
+## Estructura
+    <table>             => creacion de tabla
+        <tr>            => fila
+            <td> </td>  => columna
+        </tr>
+    </table>
+## propiedades
+    <table border = 1px> => se le da un borde de x px
+
+
