@@ -72,7 +72,17 @@ Son la base del lenguaje
     type "submit"    => enviar formulario  
 ### atributos de los type
     type "" required = "" => oblia a completar el capo
-
+    # Tabla
+## Estructura
+    <table>             => creacion de tabla
+        <tr>            => fila
+            <td> </td>  => columna
+        </tr>
+    </table>
+## propiedades
+    <table border = 1px> => se le da un borde de x px
+## otros importantes
+    <marquee> </marquee> => crea un texto que se desplaza de derecha a izquierda de la plantalla
 # Atributos:
 caracteristica de la etiqueta a modificar
     
@@ -88,9 +98,6 @@ caracteristica de la etiqueta a modificar
 
     <head>              => definicion referente al documento
         <meta charset="UTF-8">  => define el uso de la codificacion del documento (legunaje español (ñ á é í ó ú, etc))
-        <link rel = "icon" href = "ubicacion del .ico">   => icono de la web        
-        <title>Document</title> => se define lo que se mostrara en la pestaña del navegador
-        <link rel = "stylesheet" href = "./rutaDelArchivo/style.css"> => vincular css con HTML 
     </head>             => cierre de head           
 
     <body>              => cuerpo del html 
@@ -100,7 +107,24 @@ caracteristica de la etiqueta a modificar
     </html>
 
 ## Compleja
+    <!DOCTYPE html>     => version del lenguaje 
+    <html lang="en">    => definicion de ht
 
+    <head>              => definicion referente al documento
+        <meta charset="UTF-8">       => define el uso de la codificacion del documento (legunaje español (ñ á é í ó ú, etc))
+        <link rel = "icon" href = "ubicacion del .ico">   => icono de la web        
+        <title>Document</title>       => se define lo que se mostrara en la pestaña del navegador
+        <meta name="viewport" content = "widthe=divace-wid th, initial-scale=1"> => hacer escalable la pagina
+        <link rel = "stylesheet" href = "./rutaDelArchivo/style.css">   => vincular css con HTML
+        <>
+
+    </head>             => cierre de head           
+
+    <body>              => cuerpo del html 
+            
+    </body>             => cierre del body
+
+    </html>
 
 ## Elementos
 ### de linea 
@@ -117,15 +141,27 @@ independiente del contenido ocupara el ancho correspondiente
     <meta name = "author" conten = "autor de la pagina "> 
     <meta name = "copyright" conten = "empresa con copyrigth"> 
     <meta name = "robots" conten = "index/noindex">  => es o no indexada
+    <meta name="viewport" content = "widthe=divace-wid th, initial-scale=1"> => hace escalable una pagina web
 
-# Tabla
-## Estructura
-    <table>             => creacion de tabla
-        <tr>            => fila
-            <td> </td>  => columna
-        </tr>
-    </table>
-## propiedades
-    <table border = 1px> => se le da un borde de x px
+# Agregar Tipografia Google Fonts
+- se entra a la pagina de google fonts:
+<a href= "https://fonts.google.com/"> <img src="./img/googleFonts.png" width = 80px></a>
+- se copia la tipografia de la pagina el link
+ejemplo:
+    
+    `<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100&display=swap" rel="stylesheet">` 
+<br>
+
+    `<link rel="preconnect" href="https://fonts.googleapis.com">`
+<br>
+
+    `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>`
+    
+
+- luego se aplica el formato en css:
+
+    `h1{
+       font-family: 'Roboto Serif', sans-serif;
+    }`
 
 

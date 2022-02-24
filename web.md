@@ -20,6 +20,11 @@
 
     app.use(express.static("ubicacion"))  => expone carpeta al usuario
 
+
+    app.get('/', function(req,res){
+        res.sendFile(path.join(__dirname,"./views/home.html")); => inicio de una pagina web 
+    });
+
 # vincular css con html
 
     <!DOCTYPE html>     => version del lenguaje 
