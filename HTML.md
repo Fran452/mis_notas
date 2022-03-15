@@ -28,7 +28,7 @@ Son la base del lenguaje
     <ul> </ul> => lista oredenada
     <ol> </ol> => lista desordenada
     <li> </li> => elemeto de la lista
-## atributo
+#### atributo
     type = "" => se puede cambiar el typo 
         en ul siendo numerico (1), alfabetico(A) o romanos (I)
         en ol siendo disc, circle, square, none
@@ -52,27 +52,11 @@ Son la base del lenguaje
     <footer> </footer>      => pie de pagina de una pagina
     <section> </section>    => seccion de contenido monotematica
     <articol> </articol>    => pieza de contenido indepediente
-
-## Formulario
-    <form>
-        <input type= "" name = ""> => valores del formulario
-        <textarea></textarea> => campo de texto que se puede modificar
-        <textarea readonly=""></textarea> => campo de texto solo de lectura
-    </form>
-### tipos de type
-    type "text"      => tipea texto
-    type "paswweord" => contraseña
-    type "numbre"    => numero
-    type "email"     => obligatorio que sea un mail
-    type "color"     => eleccion de color
-    type "renge" min = "" max "" => poner un rango que va desde el min hasta el max
-    type "date"      => poner un fecha
-    type "time"      => poneruna hora
-    type "button" value = "" => boton
-    type "submit"    => enviar formulario  
-### atributos de los type
-    type "" required = "" => oblia a completar el capo
-    # Tabla
+## Botones
+    <button type= "reset">texto</button> => elimina el formulario
+    <button type= "submit">enviar</button> => envia el formulario
+    <button type= "button">algo</button> => se programa en JS
+# Tabla
 ## Estructura
     <table>             => creacion de tabla
         <tr>            => fila
