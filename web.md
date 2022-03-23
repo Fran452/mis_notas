@@ -41,3 +41,40 @@
         </body>             => cierre del body
 
         </html>
+
+# Orden de carpetas
+    |_ node_modules
+    |_ public
+        |_img
+            |_ imagenes a utilizar   
+        |_css
+            |_ styleMain.css
+            |_ styleProductosGeneral.css
+            |_ stylesProductosEspesifico.css
+    |_ src
+        |_controllers
+            |_ productosControllers.js
+            |_ mainControllers.js
+            |_ etc 
+        |_rotures
+            |_ productos.js
+            |_ main.js
+            |_ etc
+        |_views
+            |_ Main.html
+            |_ ProductosGeneral.html
+            |_ ProductosEspesifico.html
+        |_ app.js
+    |_ package-lock.json
+    |_ package.json
+    |_ README.md
+
+# Express
+## paquete pre armado 
+- sudo npm install express-generator -g
+- express nombreDelProyecto --ejs
+- cd nombreDelProyecto
+- npm install
+
+# Motores de vista
+nos permiten crear una estructura dinamica para las vistas de nuestro proyecto

@@ -53,8 +53,8 @@
 |`font-style: italica`      |tipografia en cursiba
 |`font-weight: bold`        |tipografia en negrita
 |`text-aling: left`         |alineacion left(derecha) right(izquierda) center(centrado) justify(jutificado)
-|`text-decoration: none`    | agrega un subrallado (underline) o un tachado (line-through)
-|`text-transforme: none`    |uppercase(todo en mayuscula), lowercase(todo en minusculas)
+|`text-decoration: none`    |agrega un subrallado (underline) o un tachado (line-through)
+|`text-transform: none`     |uppercase(todo en mayuscula), lowercase(todo en minusculas)
 |`line-height: tamaño`      |distancia entre parrafos
 
 ## Colores
@@ -147,7 +147,7 @@ Son los puntos recomendados en los cuales hacer un Media queries
 |`flex-direction: row-reverse`    |Eje principal el ancho de derecha a izquiera
 |`flex-direction: column-reverse` |Eje principal el ancho de abajo a arriba
 ### Manejo de los ejes
-#### Eje main (eje X)
+#### Main axis (eje X)
 | codigo                          |explicacion| | | |
 |:-------------------------------:|---|---|---|---| 
 |`justify-content: flex-start`    |valor por defecto
@@ -156,7 +156,7 @@ Son los puntos recomendados en los cuales hacer un Media queries
 |`justify-content: space-between` |Cepara de manera uniforme los objetos
 |`justify-content: space-around`  |Cepara de manera uniforme los objetos con separacion al principio y al final
 
-#### Cross (eje y)
+#### Main Cross (eje y)
 | codigo                |explicacion| | | |
 |:---------------------:|---|---|---|---| 
 |`align-items: stretch`   |Se estiran para acabar todo el contenedor

@@ -258,5 +258,18 @@ Es la ejecucion de varios metodos en tiempo de ejecucion
 |metodo|accion||||
 |:------:|-------|-----|-----|----------|
 | `isintance(objeto,clase)`| si el objeto seleccionado pertenece a sierta clase|
-||
 
+# Manejo de errores
+```
+try:
+    error => por ejemplo 1/0
+except exepcion1 as nombre:
+    codigo
+except exepcion2 as nombre:
+    codigo
+except Exeption as nombre:
+    codigo
+```
+exepcion1 tanto exepcion2 son algun tipo de exepcion posibles. En cambio Exeption es la forma generica de poner a cualquier exepcion 
+## Tipo de exepciones 
+<img src = "./img/manejo-errores.png">
