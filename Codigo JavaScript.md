@@ -5,6 +5,7 @@
 |string| "texto"
 |array |[valor,valor2,varl3,...,valorN]
 |object|{clave : valor,clave2 : valor2,... ,claveN: valorN}|
+|int| 5
 ## Decicion
 ```
 if(condicion){
@@ -116,7 +117,8 @@ fuction nombre(...variables){
 |`object.hasOwnPeoperty(propiedad)` | Pregunta si tiene esa propiedad ese objeto
 |`object.reduce(function(acumulador,elemento){funcion},acumulador)` | Junta los elementos segun la funcion dada
 |`object.map(funcion(valor,indice){Funcion},acumulador)` | Aplica la funcion a cada elemento
-|`object.key` |Muestra que contiene la llave
+|`object.key`|Muestra que contiene la llave
+|`object[key]`| devuelve el valor que almacene esa key del objeto de otra forma
 |`let object = {...objectA}` | Creo un object con las propiedades de objectA antes declarado
 
 ## Funciones de HTML
@@ -125,6 +127,20 @@ fuction nombre(...variables){
 |`document.write(valor)`    | Muestra el valor en la pantalla
 |`prompt(valor)`            | Le pide al ususario un valor 
 |`alert(valor)`             | Muestra como alerta el valor
+
+## FS
+| Codigo                  |Funcion| | | |
+|:-------------------------:|---|---|---|---|
+|`fs.readFileSync("archivo",utg-8)`|lee el archivo indicado en el primer parametro y en el segundo parametro indica el decodificado
+|`fs.writeFileSync("archivo",informacionString)`|El archivo es sobreescrito por la informacionString
+|`fs.appendFileSync("archivo",informacionString)`|la informacionString se agrega al final del archivo
+
+## path
+| Codigo                  |Funcion| | | |
+|:-------------------------:|---|---|---|---|
+|`path.join(carpeta1,carpeta2,carpeta3)`| se crea una ruta que indica hacia donde va
+|`path.extname(direccion)`|te declara cual es la extencion del archivo
+|`path.dirname(direccion)`|te daclara el directorio de un archivo
 
 # Clases
 ## Estructura
@@ -149,7 +165,7 @@ const Clase =class{
 ```
 #### Nombrada
 ```
-const Clase =class Clase{
+const Clase = class Clase{
     construnctor(variable1,valriable2){
         this.variable1 = variable1;
         this.variable2 = variable2;
@@ -181,6 +197,10 @@ class ClaseHija extends ClasePadre{
 `continue;` -> No finaliza sino saltea la iteracion <br>
 `break;` -> Finaliza el bucle <br>
 `process.argv` -> Toma las variables que se pasan por consola despues del node ruta <br>
+
+| Codigo                  |Funcion| | | |
+|:-------------------------:|---|---|---|---|
+|`tipeof valor`    | nos dice el tipo del valor
     
 # Modulos
 ## Variables
@@ -239,28 +259,73 @@ let[nombre,edad] = object
 cuando declare nombre va almacenar "fran" 
 
 # Express
+## Paquetes necesarios y distribucion de carpetas
+### paquetes necesarios
+#### externos
+para una mejor implementaicon de node es necesario descargar estos paquetes de npm:
+- npm i express -s => require("express")
+- npm i method-override -s => require("method-override")
+#### interno
+require(path)
+require(fs)
+### carpetas utilizadas para una mejor implementacion de express
+ mejor definida en el rachivo web.md
+> `app.js` en este se implementan todos los arranques de la web
+>  __router__ en esta carpeta se guardan todas las direcciones de nuestra web en archivos como `person.js`
+> __controller__ en esta carpeta se almacena todas las acciones req res de cada ruta anteriormente mencionada. el nombre de los rachivos es `personController.js`
 ## Estructura de inicio
+### Del archivo app.js
 ```
 const express = require("express");
+const rutaA = require("./router/router.js")
+const methodOverride = require('method-override')
 const app = express();
+
+app.listen(300) => inicia el servidor
+app.use(methodOverride('_method'))
 ```
-## codigo App
+### Del los archivo routers
+```
+const express = require("express");
+const app = express.Routers();
+const controller = require("../controllers/controladorControllers.js")
+module.imports = router
+```
+### Del los archivo routers
+```
+const controllers{
+    rutaA : funcion,
+    rutaB : funcion,
+    rutaC : funcion,
+    rutaD : funcion,
+}
+
+module.imports = controllers
+```
+## codigo App/router
 | Codigo                  |Funcion| | | |
 |:-------------------------:|---|---|---|---|
 |`app.listen(puerto, () => {})`|inicia el servidor en el puerto, con una funcion que retorna una string|
 |`app.get('/', (req,res) => {})`| envia una respuesta al link enviado en la primer pocicion ('/')
 |`app.use(express.static(publicPath))`|utilizacion del archivo publico como img o css
 |`app.set(string1,string2)`|permite definier el motor de plantilla entre otras, con la primer string poniendo "view engine" y en el segundo el Template Engine a usar 
-
-
+|`app.use(express.urlencoded({extended:false}));`| No se
+|`app.use(express.json())`| No se 
+|`app.use(methodOverride('_method'))`|
+|`router.post('ruta',(req,res) => {})`| recibe la informacion recibida en un cuestionario anteriormente, la info se almacena en `req.body`
+|`router.put('ruta',(req,res) => {})`|sirve para modificar datos enviados por un formulario
+|`router.delete('ruta',(req,res) => {})`|elimina el objeto enviado por html
 ## Codigo req/res
 | Codigo                  |Funcion| | | |
 |:-------------------------:|---|---|---|---|
 |`req.params.parametroRuta`|nos devuelve el valor parametrizado en la ruta|
+|`req.query`|se almacena el valor de un query que envia el usuario valores al mismo.
+|`req.file`| envia los datos de un documendo subido por multer(informacion en BaseDeDatos)
+|`req.body`|devuelve el kay y valor de los formularios enviados por post  
 |`res.send(codigo Html)`|envia un codigo html 
 |`res.sendFile(ubiacion)`| envia un archivo con una ruta absoluta
 |`res.render('nombreDeLaVista',{valorEnviado})`|sirve para renderizar una vista de ejs y tambien se puede enviar diferentes valores al mismo.
-
+|`res.redirect('link')`| redirige de una pagina a otra
 ## rutas
 ### ruta fija
 una ruta la cual siempre lleva el mismo nombre y no es modificado
@@ -285,3 +350,12 @@ para cada ruta.js
 para app.js
 - primero se importa el modulo
 - `app.use("/ruta",imporDeRutas)` => el metodo use llama a nnuestras rutas y las utiliza con la funcion que le pasamos
+
+## Error 404
+Este error se genera cuando un recurso no se encuentra dentro del servidor
+### Codigo
+```
+app.use((req,res,next) =>{
+    res.status(404).render('not-found')
+})
+```

@@ -33,4 +33,7 @@
     git checkout "rama" => moverse entre ramas
     git merge ramaAClonar => clona una rama a la rama actual
     git branch -m nombre => renombrar una rama
-    git push origin --delete rama => para eliminar una rama
+    git push origin --delete rama => para eliminar una rama online
+    git branch -d nombre_rama => eliminar rama local
+
+    

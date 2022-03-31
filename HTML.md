@@ -54,7 +54,7 @@ Son la base del lenguaje
     <articol> </articol>    => pieza de contenido indepediente
 ## Botones
     <button type= "reset">texto</button> => elimina el formulario
-    <button type= "submit">enviar</button> => envia el formulario
+    <button type= "<">enviar</button> => envia el formulario
     <button type= "button">algo</button> => se programa en JS
 # Tabla
 ## Estructura
@@ -154,14 +154,16 @@ ejemplo:
 Es un Template Engine. Esto permite que mis archivos html sean completamente dinamicos asi poder reutilizar la estructura
 ## Intalacion
 > primero lo intalamos en nuestro proyecto con : `npm install ejs --save`
-> agregar el codigo corresponediente en nuestro app.js: `app.set("view engine","ejs);`
-> y mnodificar todos los .html a .ejs 
+> agregar el codigo corresponediente en nuestro app.js: `app.set("view engine","ejs");`
+> agregar la ruta donde se encuentran nuestros archivos ejs: ejemplo: `app.set("view","./src/views");`
+> y modificar todos los .html a .ejs 
 
 ## Etiquetas especiales
 | Codigo                  |Funcion| | | |
 |:-------------------------:|---|---|---|---|
 |`<% codigo %>` |entre este codigo se implementa el codigo JS|
 |`<%= codigo %>`|se utiliza para que el contenido sea impreso de forma literal en el html|
+|`<%-include(ubicacion) %>`|incluye un codigo guardado anteriormente y reutilizable|
 ## Parametros Compartidos
 Vamos a poder compartir con la vista cualquier tipo de dato existente en JavaScript
-### Codigo
+

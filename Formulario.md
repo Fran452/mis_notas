@@ -4,7 +4,24 @@
     <form  action = "" method = "">
         etiquetas
     </form>
-    
+
+## Tipos de formularios 
+## Enviar los datos por el link
+    <form  method = "GET" action = "/user/buscar">
+        etiquetas
+    </form>
+## Enviar los datos de forma oculta
+    <form  method = "POST" action = "/user/register">
+        etiquetas
+    </form>
+## Editar los valores de un objeto ya creado
+    <form  method = "POST"  action = "/user/register?_method=PUT">
+        etiquetas
+    </form>
+## Eliminar objeto
+    <form  method = "POST" action = "/user/register?_method=DELETE">
+        <button type = "submit"></button>
+    </form>
 ## Etiquetas importante
 
     <input type= "" name = ""> => valores del formulario

@@ -61,6 +61,8 @@
             |_ main.js
             |_ etc
         |_views
+            |_ partials
+                |_index.ejs
             |_ Main.html
             |_ ProductosGeneral.html
             |_ ProductosEspesifico.html
