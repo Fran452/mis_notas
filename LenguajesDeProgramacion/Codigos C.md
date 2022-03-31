@@ -1,0 +1,2 @@
+# Estructuras
+## definicion de variables 

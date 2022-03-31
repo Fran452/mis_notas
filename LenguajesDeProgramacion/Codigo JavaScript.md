@@ -6,6 +6,10 @@
 |array |[valor,valor2,varl3,...,valorN]
 |object|{clave : valor,clave2 : valor2,... ,claveN: valorN}|
 |int| 5
+|variables generales| `var nombreCosntate`
+|variables constantes| `cosnt nombreConsate`
+|variables locales| `let nombreConstate`
+
 ## Decicion
 ```
 if(condicion){
