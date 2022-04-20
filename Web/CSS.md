@@ -126,12 +126,12 @@ son aquella que no se modifican selgun el contexto algunos ejemplos son:
 mobile first: se empiza por el formato de celular y se va adaptando al modelo de PC (el ma recomendado)
 mobile last:  se empieza por el formato de PC a la version de celular 
 
-<img src = "./img/mobile-first.jpg">
+<img src = "../img/mobile-first.jpg">
 
 ## Breakpoints
 Son los puntos recomendados en los cuales hacer un Media queries
 
-<img src = "./img/breakpoints.jpg"  height = 200>
+<img src = "../img/breakpoints.jpg"  height = 200>
 
 # flex
 ## Estructura basica
@@ -241,11 +241,12 @@ es diferenciar un comportamiento al momento de pasar por encima del objeto con u
 |`animation-direction: valor`               |valor puede ser: alternative (la animacion va y viene)  normal (la animacion va en bucle)
 # Normalize
 ## libreria de estilos para web. descarga: 
-<a href = "https://necolas.github.io/normalize.css/"> <img src = "./img/normalize.png"></a>
+<a href = "https://necolas.github.io/normalize.css/"> <img src = "../img/normalize.png"></a>
+
 # Agregar iconos
 1. entrar a la pagina de font awesome 
 <br>
-<a href = "https://fontawesome.com/"><img src ="./img/fontAwesome.png" width = 50px> </a>
+<a href = "https://fontawesome.com/"><img src ="../img/fontAwesome.png" width = 50px> </a>
 
 2. copiar etiqueta del kit para el head
 `<script src="https://kit.fontawesome.com/6157b502e6.js" crossorigin="anonymous"></script>`

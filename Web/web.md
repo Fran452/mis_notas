@@ -66,6 +66,7 @@
             |_ Main.html
             |_ ProductosGeneral.html
             |_ ProductosEspesifico.html
+        |_
         |_ app.js
     |_ package-lock.json
     |_ package.json
@@ -80,3 +81,6 @@
 
 # Motores de vista
 nos permiten crear una estructura dinamica para las vistas de nuestro proyecto
+
+# Proceso de inicio de sesion
+## librerias necesarias:

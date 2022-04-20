@@ -34,6 +34,6 @@
     git merge ramaAClonar => clona una rama a la rama actual
     git branch -m nombre => renombrar una rama
     git push origin --delete rama => para eliminar una rama online
-    git branch -d nombre_rama => eliminar rama local
-
+    git branch -d nombre_rama => eliminar rama online
+    git stash => formatea la rama a la ultima version subida al git
     

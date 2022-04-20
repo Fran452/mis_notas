@@ -84,16 +84,18 @@ fuction nombre(...variables){
 |`array.join(x)`                                  | Devuelve una lista unida por el x
 |`array.split(x)`                                 | Devuelve una lista dividida por el x
 |`array.push(x)`                                  | Agrega x al arreglo
+|`array.mapped()`                                 | Cambia un array a objeto literal
 |`array.length`                                   | Tamaño del arreglo
 |`array.pop()`                                    | Se elimina el ultimo valor del arreglo
 |`array.indexOf(valor)`                           | Nos indica la pocicion del valor en un array
 |`array.shift()`                                  | Elimina el primer valor de un array
+|`array.includes(valor)`                          | Se indica si el valor esta incluido en el array
 |`array.unshift(valor)`                           | Agrega el valor al inicio de la lista
-|`array.includes(valor) `                         | Returna si el valor esta dentro de la lista
 |`array.reduce(function(acumulador,elemento){funcion},acumulador)` | Junta los elementos segun la funcion dada
 |`array.forEach(function(elemento){funcion})`     | Cumple la misma funcion que el map sin returnar nada 
 |`array.find(function(elemento){funcionBool})`    | Te trae el elemento que cumpla esa condicion
 |`let array = [...arraA, ...arrayB]`              | Creo un array con los valores de la arraA y la arraB antes declarado
+
 
 ## Funcion para String
 | Codigo                  |Funcion| | | |
@@ -102,9 +104,9 @@ fuction nombre(...variables){
 |`Number(string)`                   | Te pasa de una string a un entero 
 |`string.length `                   | Tamaño de la string.
 |`string.indexOf(valor)`            | Nos indica la pocicion del valor en una  string
-`|string.slice(inicio,fin)`         | Toma una parte del string sin tomar el final   
+|`string.slice(inicio,fin)`         | Toma una parte del string sin tomar el final   
 |`string.trim()`                    | Elimina los espacios en blanco del inicio y del final
-|`string.split(valor`)              | Convierte la string en array tomando como divisor el valor | ejemplo "hola soy juan".split("j") -> [ 'hola soy ', 'uan' ]
+|`string.split(valor)`              | Convierte la string en array tomando como divisor el valor | ejemplo "hola soy juan".split("j") -> [ 'hola soy ', 'uan' ]
 |`string.replace(valor,valor2)`     | Remplaza de la string el primer valor encontrado con valor2
 |`string.replaceAll(valor, valor2)` | Remplaza Todos los valor por valor2 
 |`hola mi nombre es ${nombre}`      | Forma alternativa para el no uso de "" o '' y eliminar + al usar el `` 
@@ -267,8 +269,15 @@ cuando declare nombre va almacenar "fran"
 ### paquetes necesarios
 #### externos
 para una mejor implementaicon de node es necesario descargar estos paquetes de npm:
-- npm i express -s => require("express")
-- npm i method-override -s => require("method-override")
+| descargar                |              requerir          |     Funcion  | | |
+|:------------------------:|--------------------------------|---|---|---|
+|npm i express             | `require("express")`           | Descarga el paquete basico de express
+|npm i method-override     | `require("method-override")`   | Permite subir fotos al servidor
+|npm i express-validator   | `require("express-validator")` | Permite validar campos del formulario
+|npm i express-session     | `require("express-session")`   | Mantener sesiones aviertas y confg globales
+|npm i cookie-parser       | `require('cookie-parser')`     | Sirve para la utilizacion de la coockies en una pagina web
+|npm i bcryptjs            | `require('bcryptjs')`          | Se utiliza para incriptar codigo
+|npm i ejs --save          |       
 #### interno
 require(path)
 require(fs)
@@ -306,7 +315,7 @@ const controllers{
 
 module.imports = controllers
 ```
-## codigo App/router
+## Codigo app/router
 | Codigo                  |Funcion| | | |
 |:-------------------------:|---|---|---|---|
 |`app.listen(puerto, () => {})`|inicia el servidor en el puerto, con una funcion que retorna una string|
@@ -322,14 +331,18 @@ module.imports = controllers
 ## Codigo req/res
 | Codigo                  |Funcion| | | |
 |:-------------------------:|---|---|---|---|
-|`req.params.parametroRuta`|nos devuelve el valor parametrizado en la ruta|
-|`req.query`|se almacena el valor de un query que envia el usuario valores al mismo.
-|`req.file`| envia los datos de un documendo subido por multer(informacion en BaseDeDatos)
-|`req.body`|devuelve el kay y valor de los formularios enviados por post  
-|`res.send(codigo Html)`|envia un codigo html 
-|`res.sendFile(ubiacion)`| envia un archivo con una ruta absoluta
-|`res.render('nombreDeLaVista',{valorEnviado})`|sirve para renderizar una vista de ejs y tambien se puede enviar diferentes valores al mismo.
-|`res.redirect('link')`| redirige de una pagina a otra
+|`req.params.parametroRuta`                     | Nos devuelve el valor parametrizado en la ruta|
+|`req.query`                                    | Se almacena el valor de un query que envia el usuario valores al mismo.
+|`req.file`                                     | Envia los datos de un documendo subido por multer(informacion en BaseDeDatos)
+|`req.body`                                     | Devuelve el kay y valor de los formularios enviados por post
+|`req.url`                                      | Devuelve el link en el que se ingreso
+|`req.session.valor`                            | Devuelve un objeto con los datos de la session activa en
+|`req.cookie.nombreDelvalor`                    | Devuelve el valor de la cookie anterior mente almacenado en el res   
+|`res.send(codigo Html)`                        | Envia un codigo html 
+|`res.sendFile(ubiacion)`                       | Envia un archivo con una ruta absoluta
+|`res.render('nombreDeLaVista',{valorEnviado})` | Sirve para renderizar una vista de ejs y tambien se puede enviar diferentes valores al mismo.
+|`res.redirect('link')`                         | Redirige de una pagina a otra
+|`res.cookie(nombre,valor,{configuraciones})`   | Se almacena una coookie con el nombre que le asignemos (String) y el valor almacenado, al final se almacena un objeto literal con las configuraciones pj(`maxAge: 60000` guarda la variable por 60 segundos)
 ## rutas
 ### ruta fija
 una ruta la cual siempre lleva el mismo nombre y no es modificado
@@ -346,7 +359,7 @@ ruta la cual el nombre es modificado ya se por un producto, una seccion etc y no
 ```
 router.get('/:item?',CB)
 ```
-## Rutas
+## Carpeta Rutas
 para cada ruta.js
 `express.Router()` => te permite crear rutas montables y desmontables en nuestra app<br>
 `router.get` => para crear las lineas de codico de cada ruta <br>
@@ -363,3 +376,86 @@ app.use((req,res,next) =>{
     res.status(404).render('not-found')
 })
 ```
+
+## Middlewares
+### que es
+es un bloque de código que se va a ejecutar en la "mitad" de un determinado request
+### a nivel de la aplicacion
+Son los Middlewares que se ejecutan siempre que se hag aun pedido a la app, se declaran del app.js
+### a nivel de las rutas
+Son los Middlewares que se ejecutan al momento de ingresar a daterminado link. se declaran como en el siguiente ejemplo: <br>
+```
+router.get("ruta",(req,res,next) => { codigo }, rutaController.action);
+```
+## Express Validator 
+### Primeras comnfigurarciones
+#### Router
+- requerir el paquete => `const {body} = require('express-validator')`
+- definir los requisito => <br>
+```
+const validation = {
+    validacion1,
+    validacion2,
+    validacion3
+}
+```
+- agregar como Middlewares en la rutas => `router.get("link",validation,controller)`
+#### Controller
+- requerir otra parte del paquete => `const {validationResult} = require('express-validator')`
+- llamamos a la funcion en nuestro controller => `let validaciones = validationResult(req)` 
+- esto nos devuelve un array de objetos con diferentes parametrso como en el siguiente ejemplo: 
+```
+errors:[
+    {
+        value : "",
+        msg : ""
+        params: "",
+        location: ""
+    },
+    {
+        value : "",
+        msg : ""
+        params: "",
+        location: ""
+    }
+]
+```
+- tramformamos ese array en un objeto con esta funcion => `validaciones.mapped()`
+### Codigo
+| Codigo                  |Funcion| | | |
+|:-------------------------:|---|---|---|---|
+|`check('nomrbeDelImput').notEmpty()`|obliga que el input no este vacio
+|`check('nomrbeDelImput').isEmail()`| obliga que el input sea un mail
+|`check('nomrbeDelImput').validacion().withMessage('mensaje de error')`| si la validacion no se cumple salta con este mensaje de error
+|`check('nomrbeDelImput').isLength({min : valorMinimo, max: valorMaximo})`| valida si se cumple el rango seleccionado
+|`array.isEmpaty()`|nos dice si hay no hay errores de validacion
+|`check('nomrbeDelImput').bail()`| corta las siguiente validaciones
+
+## Express session
+### Primeras comnfigurarciones
+#### app.js
+- requerimos elpaquete
+- usamos el Middlewares: app.use({secret : "texto"})
+### Codigo
+| Codigo                  |Funcion| | | |
+|:-------------------------:|---|---|---|---|
+|`get.session.parametro`| se almacena de forma global el parametro seleccionado
+
+## Cookies
+### Primeras comnfigurarciones
+#### app.js
+- requerimos el paquete
+- lo importamos
+- lo configuramos como Middlewares: <br>
+`app.use(coockieParser())`
+
+#### controller
+- para utilisarse primero se almacena un valor en `res.cookie(nombre,valor,{configuraciones})`
+- se llama utilizando la funcion `req.cookie.nombreDelvalor`
+
+## Hashing
+### codigo 
+| Codigo                  |Funcion| | | |
+|:-------------------------:|---|---|---|---|
+|`bcrypt.hashSync("estring",int)`| Se incripta la string seleccionada con la dificultad enumerada en el int 
+|`bcrypt.compareSync(contraseña,contraseñaIncriptada)`| indica si la contraseñas concuerda con la contraseñaIncriptada
