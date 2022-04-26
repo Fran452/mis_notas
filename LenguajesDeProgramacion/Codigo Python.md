@@ -2,7 +2,7 @@
 | codigo                |explicacion| | | |
 |:-------------------:  |---|---|---|---|
 | `print("texto")`      |muestra en cosola el texto
-| `inputo("texto)`      | muestra por consola el texto y espera resibir un valor
+| `input("texto")`      | muestra por consola el texto y espera resibir un valor
 |`id(variable)`         |ubicacion de memoria de la variable
 |`int(variable)`        |combierte la variable en int
 |`float(variable)`      |combierte la variable en float

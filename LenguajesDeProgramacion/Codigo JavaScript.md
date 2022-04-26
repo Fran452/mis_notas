@@ -74,8 +74,8 @@
 <div id = "Estructuras-Variables">
 
 ## Variables
-| Variable                  |codigo| | | |
-|:-------------------------:|---|---|---|---| 
+| Variable                  |codigo|
+|:-------------------------:|---
 |string| "texto"
 |array |[valor,valor2,varl3,...,valorN]
 |object|{clave : valor,clave2 : valor2,... ,claveN: valorN}|
@@ -174,8 +174,8 @@ fuction nombre(...variables){
 <div id = "Funciones-Array">
 
 ## Funciones a tener en cuenta para array:
-| Codigo                  |Funcion| | | |
-|:-------------------------:|---|---|---|---|
+| Codigo                  |Funcion|
+|:-------------------------:|---|
 |`array.slice(inicio,fin)`                        | Toma una parte del arreglo sin tomar el del final
 |`array.filter(funcion(valor,indice){funcion})`   | Filtra un arreglo
 |`array.map(fuction(valor,indice){funcion}) `     | Modifica todos los valores del array segun la funcion
@@ -199,8 +199,8 @@ fuction nombre(...variables){
 <div id = "Funciones-String">
 
 ## Funcion para String
-| Codigo                  |Funcion| | | |
-|:-------------------------:|---|---|---|---|
+| Codigo                  |Funcion|
+|:-------------------------:|---|
 |`string.toUpperCase()`             | Devuelve el valor con mayusculas
 |`Number(string)`                   | Te pasa de una string a un entero 
 |`string.length `                   | Tamaño de la string.
@@ -217,8 +217,8 @@ fuction nombre(...variables){
 <div id = "Funciones-Numeros">
 
 ## Funcion para Numeros
-| Codigo                  |Funcion| | | |
-|:-------------------------:|---|---|---|---|
+| Codigo                  |Funcion|
+|:-------------------------:|---|
 |`num.toString()`  | pasa el numero a string
 |`parseInt(valor)` | pasa de un valor decima a un valor entero
 </div>
@@ -227,8 +227,8 @@ fuction nombre(...variables){
 <div id = "Funciones-Objetos">
 
 ## Funciones para Objetos
-| Codigo                  |Funcion| | | |
-|:-------------------------:|---|---|---|---|
+| Codigo                  |Funcion|
+|:-------------------------:|---|
 |`object.hasOwnPeoperty(propiedad)` | Pregunta si tiene esa propiedad ese objeto
 |`object.reduce(function(acumulador,elemento){funcion},acumulador)` | Junta los elementos segun la funcion dada
 |`object.map(funcion(valor,indice){Funcion},acumulador)` | Aplica la funcion a cada elemento
@@ -241,8 +241,8 @@ fuction nombre(...variables){
 <div id = "Funciones-HTML">
 
 ## Funciones de HTML
-| Codigo                  |Funcion| | | |
-|:-------------------------:|---|---|---|---|
+| Codigo                  |Funcion|
+|:-------------------------:|---|
 |`document.write(valor)`    | Muestra el valor en la pantalla
 |`prompt(valor)`            | Le pide al ususario un valor 
 |`alert(valor)`             | Muestra como alerta el valor
@@ -252,8 +252,8 @@ fuction nombre(...variables){
 <div id = "Funciones-FS">
 
 ## FS
-| Codigo                  |Funcion| | | |
-|:-------------------------:|---|---|---|---|
+| Codigo                  |Funcion| 
+|:-------------------------:|---|
 |`fs.readFileSync("archivo",utg-8)`|lee el archivo indicado en el primer parametro y en el segundo parametro indica el decodificado
 |`fs.writeFileSync("archivo",informacionString)`|El archivo es sobreescrito por la informacionString
 |`fs.appendFileSync("archivo",informacionString)`|la informacionString se agrega al final del archivo
@@ -263,8 +263,8 @@ fuction nombre(...variables){
 <div id = "Funciones-path">
 
 ## path
-| Codigo                  |Funcion| | | |
-|:-------------------------:|---|---|---|---|
+| Codigo                  |Funcion|
+|:-------------------------:|---|
 |`path.join(carpeta1,carpeta2,carpeta3)`| se crea una ruta que indica hacia donde va
 |`path.extname(direccion)`|te declara cual es la extencion del archivo
 |`path.dirname(direccion)`|te daclara el directorio de un archivo
@@ -343,8 +343,8 @@ class ClaseHija extends ClasePadre{
 `break;` -> Finaliza el bucle <br>
 `process.argv` -> Toma las variables que se pasan por consola despues del node ruta <br>
 
-| Codigo                  |Funcion| | | |
-|:-------------------------:|---|---|---|---|
+| Codigo                  |Funcion| 
+|:-------------------------:|---|
 |`tipeof valor`    | nos dice el tipo del valor
 </div>
 
@@ -395,8 +395,8 @@ module.exports = {
 <div id = "JSON-Funciones">
 
 ## Funciones JSON
-| Codigo                  |Funcion| | | |
-|:-------------------------:|---|---|---|---|
+| Codigo                  |Funcion|
+|:-------------------------:|---|
 |`JSON.parse(datoJSON)`|convierte el dato JSON a objeto literal<br>
 |`JSON.stringify(datoObjeto)`|convierte el objeto literal en dato JSON<br>
 </div>
@@ -419,8 +419,8 @@ let fechaActual = new Date() => crea una variable con el informacion del dividid
 <div id = "Date-Funciones">
 
 ## Funciones
-| Codigo                  |Funcion| | | |
-|:-------------------------:|---|---|---|---|
+| Codigo                  |Funcion|
+|:-------------------------:|---|
 |`fechaActual.getDay() `    | Un numero segun el dia de la semana [domingo = 0]
 |`fechaActual.getDate()`    | Te da el dia del mes
 |`fechaActual.getMoth()`    | Te da el mes en el que te encontras empezado desde 0
@@ -485,8 +485,8 @@ para una mejor implementaicon de node es necesario descargar estos paquetes de n
 <div id = "Express-Codigo-app/router">
 
 ## Codigo app/router
-| Codigo                  |Funcion| | | |
-|:-------------------------:|---|---|---|---|
+| Codigo                  |Funcion|
+|:-------------------------:|---|
 |`app.listen(puerto, () => {})`|inicia el servidor en el puerto, con una funcion que retorna una string|
 |`app.get('/', (req,res) => {})`| envia una respuesta al link enviado en la primer pocicion ('/')
 |`app.use(express.static(publicPath))`|utilizacion del archivo publico como img o css
@@ -501,8 +501,8 @@ para una mejor implementaicon de node es necesario descargar estos paquetes de n
 <div id = "Express-Codigo-req/res">
 
 ## Codigo req/res
-| Codigo                  |Funcion| | | |
-|:-------------------------:|---|---|---|---|
+| Codigo                  |Funcion| 
+|:-------------------------:|---|
 |`req.params.parametroRuta`                     | Nos devuelve el valor parametrizado en la ruta|
 |`req.query`                                    | Se almacena el valor de un query que envia el usuario valores al mismo.
 |`req.file`                                     | Envia los datos de un documendo subido por multer(informacion en BaseDeDatos)
@@ -588,8 +588,8 @@ errors:[
 <div id = "Express-Validator-Codigo">
 
 ### Codigo
-| Codigo                  |Funcion| | | |
-|:-------------------------:|---|---|---|---|
+| Codigo                  |Funcion|
+|:-------------------------:|---|
 |`check('nomrbeDelImput').notEmpty()`|obliga que el input no este vacio
 |`check('nomrbeDelImput').isEmail()`| obliga que el input sea un mail
 |`check('nomrbeDelImput').validacion().withMessage('mensaje de error')`| si la validacion no se cumple salta con este mensaje de error
@@ -610,8 +610,8 @@ errors:[
 <div id = "Express-Session-Codigo">
 
 ### Codigo
-| Codigo                  |Funcion| | | |
-|:-------------------------:|---|---|---|---|
+| Codigo                  |Funcion|
+|:-------------------------:|---|
 |`get.session.parametro`| se almacena de forma global el parametro seleccionado 
 </div> </div>
 <div id = "Express-Cookies">
@@ -638,13 +638,13 @@ errors:[
 ### Primeras configurarciones
 - requerimos el paquete
 - lo importamos
-__------------------ ARREGLAR Y AGREGAR: primeras Config --------------------------------------__
+__------------------ ARREGLAR Y AGREGAR: primeras --------------------------------------__
  </div>
 <div id = "Express-Hashing-Codigo">
 
 ### Codigo 
-| Codigo                  |Funcion| | | |
-|:-------------------------:|---|---|---|---|
+| Codigo                  |Funcion|
+|:-------------------------:|---|
 |`bcrypt.hashSync("estring",int)`| Se incripta la string seleccionada con la dificultad enumerada en el int 
 |`bcrypt.compareSync(contraseña,contraseñaIncriptada)`| indica si la contraseñas concuerda con la contraseñaIncriptada
 </div>  </div>  </div>
