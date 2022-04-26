@@ -1,57 +1,98 @@
-# varios 
-| codigo                |explicacion| | | |
-|:-------------------:  |---|---|---|---|
-| `print("texto")`      |muestra en cosola el texto
-| `input("texto")`      | muestra por consola el texto y espera resibir un valor
-|`id(variable)`         |ubicacion de memoria de la variable
-|`int(variable)`        |combierte la variable en int
-|`float(variable)`      |combierte la variable en float
-|`type(variable)`       |el tipo de la variable
-|`#`                    |comentario
-|`__name__`             |muestra la ubicacion de donde se utiliza el codigo
-|`del variable`         |elimina el objeto
+# Indice
+1. 
+|[](#) |
+|:-------------------------:|
+|[](#)|
+|[](#)|
+|[](#)|
+|[](#)|
 
-# funciones para listas
-| codigo                            |explicacion| | | |
-|:-------------------:              |---|---|---|---|
-|`len(lista)`                       |cantidad de elementos dentro de la lista
-|`lista[valorInicial : valorFinal]` |toma los valores entre el valorInicial y el valorFinal sin incluirlos
-|`lista.append(valor)`              |agrega un elemento al final de la lista
-|`lista.insert(indice,valor)`       |agrega un elemento en un indice especifico de la lista
-|`lista.romeve(valor)`              |remueve el valor de la lista
-|`lista.pop()`                      |elimina el ultimo valor de la lista
-|`del lista[indice]`                |elimina un elemento de la lista por indice
-|`lista.clear()`                    |elimina todos los valores de la lista
-|`list(tupla)`                      |convierte la tupla en una lista
-|`tuple(lista)`                     |convierte la lista en tupla
+2. 
+|[](#) |
+|:-------------------------:|
+|[](#)|
+|[](#)|
+|[](#)|
+|[](#)|
 
-# funciones para set
-| codigo                |explicacion| | | |
-|:-------------------:  |---|---|---|---|
-|`len(set)`             |cantidad de elementos
-|`valor in set`         |si el valor esta en el set 
-|`set.add(valor)`       |agrega valor en el set
-|`set.remove(valor)`    | elimina valor del sat 
-|`set.discard(valor)`   |elimina valor del set (de no estar no arroja error)
-|`set.clear()`          |elimina todos los valores dentro de set
-|`del set`              |elimina el set
+3. 
+|[](#) |
+|:-------------------------:|
+|[](#)|
+|[](#)|
+|[](#)|
+|[](#)|
 
-# funciones para diccionarios
-| codigo                                      |explicacion| | | |
-|:-------------------:                        |---|---|---|---|
-|`len(dicc)`                                  |tamaño de diccionario
-|`dicc[key]`                                  |acceder a la definicion de la key
-|`dicc.get(key)`                              |acceder a la definicion de la key
-|`for key,definicion in dicc.items()`         |recorre un diccionario con las llaves y las definiciones
-|`for key,definicion in dicc.key()`           |recorre un diccionario con las llaves
-|`for key,definicion in dicc.values()`        |recorre un diccionario con  las definiciones 
-|`key in dicc `                               |si la key esta en el diccionario
-|`dicc["nueva llave"] = "nueva definicion`    |agrega un nuevo elemento al diccionario
-|`dicc.pop(key)`                              |elimina un elemento del diccionario
-|`dicc.clear()`                               |elimina todos los valores del diccionario
-|`del dicc`                                   |elimina el diccionario
+4. 
+|[](#) |
+|:-------------------------:|
+|[](#)|
+|[](#)|
+|[](#)|
+|[](#)|
 
-# funcion y estructuras de la clase
+5. 
+|[](#) |
+|:-------------------------:|
+|[](#)|
+|[](#)|
+|[](#)|
+|[](#)|
+
+# Varios 
+| Codigo                |                          Explicacion                    |
+|:---------------------:|---------------------------------------------------------|
+| `print("texto")`      | Muestra en cosola el texto
+| `input("texto")`      | Muestra por consola el texto y espera resibir un valor
+|`id(variable)`         | Ubicacion de memoria de la variable
+|`int(variable)`        | Combierte la variable en int
+|`float(variable)`      | Combierte la variable en float
+|`type(variable)`       | El tipo de la variable
+|`#`                    | Comentario
+|`__name__`             | Muestra la ubicacion de donde se utiliza el codigo
+|`del variable`         | Elimina el objeto
+
+# Funciones para listas
+| Codigo                            |                       Explicacion                                |
+|:---------------------------------:|------------------------------------------------------------------|
+|`len(lista)`                       | Cantidad de elementos dentro de la lista
+|`lista[valorInicial : valorFinal]` | Toma los valores entre el valorInicial y el valorFinal sin incluirlos
+|`lista.append(valor)`              | Agrega un elemento al final de la lista
+|`lista.insert(indice,valor)`       | Agrega un elemento en un indice especifico de la lista
+|`lista.romeve(valor)`              | Remueve el valor de la lista
+|`lista.pop()`                      | Elimina el ultimo valor de la lista
+|`del lista[indice]`                | Elimina un elemento de la lista por indice
+|`lista.clear()`                    | Elimina todos los valores de la lista
+|`list(tupla)`                      | Convierte la tupla en una lista
+|`tuple(lista)`                     | Convierte la lista en tupla
+
+# Funciones para set
+| Codigo                |               Explicacion                     |
+|:---------------------:|-----------------------------------------------|
+|`len(set)`             | Cantidad de elementos
+|`valor in set`         | Si el valor esta en el set 
+|`set.add(valor)`       | Agrega valor en el set
+|`set.remove(valor)`    | Elimina valor del sat 
+|`set.discard(valor)`   | Elimina valor del set (de no estar no arroja error)
+|`set.clear()`          | Elimina todos los valores dentro de set
+|`del set`              | Elimina el set
+
+# Funciones para diccionarios
+| Codigo                                      |             Explicacion                     |
+|:-------------------------------------------:|---------------------------------------------|
+|`len(dicc)`                                  | Tamaño de diccionario
+|`dicc[key]`                                  | Acceder a la definicion de la key
+|`dicc.get(key)`                              | Acceder a la definicion de la key
+|`for key,definicion in dicc.items()`         | Recorre un diccionario con las llaves y las definiciones
+|`for key,definicion in dicc.key()`           | Recorre un diccionario con las llaves
+|`for key,definicion in dicc.values()`        | Recorre un diccionario con  las definiciones 
+|`key in dicc `                               | Si la key esta en el diccionario
+|`dicc["nueva llave"] = "nueva definicion`    | Agrega un nuevo elemento al diccionario
+|`dicc.pop(key)`                              | Elimina un elemento del diccionario
+|`dicc.clear()`                               | Elimina todos los valores del diccionario
+|`del dicc`                                   | Elimina el diccionario
+
+# Funcion y estructuras de la clase
 ## Tipo de clases
 La clase es un molde para la creacion ya bien de objetos o de clases "hijas" que heredaran toda la estructura de la base
 ```
@@ -145,17 +186,17 @@ se puede accesder a esta variable fuera del contexto
 
 # Estructuras
 ## colecciones => 
-| Tipo de lista|codear                  |funcion| | |
-|:------------:|---|--------------------|---|---|    
-|listas         |[]                     |ordenada y modificable
-|tuplas         |()                     |ordenada y no se puede modificar
-|set            |{}                     |desordenada y modificable (no admite valores duplicados)
-|diccionario    |{key : definicion}     |tiene un valor y una definicion asiciada a el|
-|clases         |class Clase:<br>pass   | una clase es lal base para la creacion de objeto
-|objeto         |objeto = clase()       |es un variable con las propiedades de la clase
+| Tipo de lista|codear                  |       funcion                     |
+|:------------:|------------------------|------------------------------------|    
+|listas         |[]                     |   Ordenada y modificable
+|tuplas         |()                     |   Ordenada y no se puede modificar
+|set            |{}                     |   Desordenada y modificable (no admite valores duplicados)
+|diccionario    |{key : definicion}     |   Tiene un valor y una definicion asiciada a el
+|clases         |class Clase:<br>pass   |   Una clase es lal base para la creacion de objeto
+|objeto         |objeto = clase()       |   Es un variable con las propiedades de la clase
 
 
-## decicion
+## Decicion
 ```
 if condicion:
     codigoTrue
@@ -168,7 +209,7 @@ else:
 codigoTrue if condicion else codigoFalse
 ```
 
-## ciclo
+## Ciclo
 ```
 while condicion:
     codigoTrue
@@ -186,7 +227,7 @@ breack => sale del ciclo
 continue => saltea codigo seleccionado
 range(valor)   => imprime un rango segun el valor colocado
 ```
-## funciones
+## Funciones
 ```
 def nombreDeLaFuncion(variable,varible2): -> returnTipoDeVariable:
     codigo
@@ -196,67 +237,67 @@ def nombreDeLaFuncion(*variablesN):  => si no se sabe la cantidad de parametros 
 def nombreDeLaFuncion(**terminos):   => si queremos que los elementos sean un diccionario
 ```
 
-## import
+## Import
 `from Persona import Persona` => para importart solo una clase <br>
 `from Persona import *`       => para importar todas las clases del archivo <br>
 `from archivo impor objeto as nombre` => importa un objeto y se le hace referencia con el nombre dad
 
-### pruebas en archivos
+### Pruebas en archivos
 ```
 if __name__ == "__main__":
     pruebas             => esto no se va a importar
 ```
 # DEFINICIONES IMPORTANTES  
-## clases
+## Clases
     get => trae elementos fijos de clases sin romper encapsulamiento
     set => modifica elementos fijos de clases sin romper encapsulamiento
     read-only => variables que solo tienen get y no ser
 
-## variables
+## Variables
     estaticas = estan atadas al contexto
     dinamicas = pueden modificarse fuera del contexto
 
-## constante
+## Constante
 se escribe en mayusculas y se separan las palabras por _ ejemplo: <br>
 `MI_CONSTANTE`<br>
 las cosntantes **no** se tiene que modificar
 
 # Sobrecarga de operadores
-## Que es?
+## ¿Que es?
 Se le dice a una funcion que actua distinto segun el argumento que se le ingresa como el signo de + que segun que argumentos se les pasa cumple diferentes funciones como la de sumar concatenar etc
 ## Como funciona
 para sobrecargar un atributo en una classe se la tiene que sobrescribir. en la siguiente tabla se visualiza como sobrescribir algunos operadore:
 
-|Operador|        methodo            ||||
-|:------:|-------|-----|-----|----------|
-| +     | `__add__(self,other)`         |
-| -     | `__sub__(self,other)`         |
-| *     | `__mul__(self,other)`         |
-| /     | `__truediv__(self,other)`     |
-| //    | `__floordiv__(self,other)`    |
-| %     | `__mod__(self,other)`         |
-| **    | `__pow__(self,other)`         |
-| <     | `__it__(self,other)`          |
-| >     | `__gt__(self,other)`          |
-| <=    | `__le__(self,other)`          |
-| >=    | `__ge__(self,other)`          |
-| ==    | `__eq__(self,other)`          |
-| !=    | `__ne__(self,other)`          |
-| -=    | `__isub__(self, other)`       |
-| +=    | `__iadd__(self, other)`       |
-| *=    | `__imul__(self, other)`       |
-| /=    | `__idiv__(self, other)`       |
-| //=   | `__ifloordiv__(self, other)`  |
-| %=    | `__imod__(self, other)`       |
-| **=   | `__ipow__(self, other)`       |
+|Operador|        methodo                |
+|:------:|-------------------------------|
+| +      | `__add__(self,other)`         |
+| -      | `__sub__(self,other)`         |
+| *      | `__mul__(self,other)`         |
+| /      | `__truediv__(self,other)`     |
+| //     | `__floordiv__(self,other)`    |
+| %      | `__mod__(self,other)`         |
+| **     | `__pow__(self,other)`         |
+| <      | `__it__(self,other)`          |
+| >      | `__gt__(self,other)`          |
+| <=     | `__le__(self,other)`          |
+| >=     | `__ge__(self,other)`          |
+| ==     | `__eq__(self,other)`          |
+| !=     | `__ne__(self,other)`          |
+| -=     | `__isub__(self, other)`       |
+| +=     | `__iadd__(self, other)`       |
+| *=     | `__imul__(self, other)`       |
+| /=     | `__idiv__(self, other)`       |
+| //=    | `__ifloordiv__(self, other)`  |
+| %=     | `__imod__(self, other)`       |
+| **=    | `__ipow__(self, other)`       |
 
 # Polimorfismo
-## Que es?
+## ¿Que es?
 Es la ejecucion de varios metodos en tiempo de ejecucion
-## algunos metodos
+## Algunos metodos
 
-|metodo|accion||||
-|:------:|-------|-----|-----|----------|
+|           Metodo         |                       Accion                      |
+|:------------------------:|---------------------------------------------------|
 | `isintance(objeto,clase)`| si el objeto seleccionado pertenece a sierta clase|
 
 # Manejo de errores

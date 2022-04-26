@@ -1,8 +1,8 @@
-# descargar framework
+# Descargar framework
     $ npm init -y
     $ npm install express --save
 
-# correr un sitio web
+# Correr un sitio web
 
     const express = require("express");
     const app = express();
