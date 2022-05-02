@@ -23,14 +23,34 @@
 |[Editar](#funciones-editar)|[Estructura](#funciones-editar-estructura) <br> [Operadores](#funciones-editar-operadores)|
 
 4. 
-|[](#)|
-|:------------------:|
-|[](#)|
-|[](#)|
+|[Funciones de Manipulacion](#funciones-manipulacion)||
+|:------------------:|--|
+|[Incertar](#funciones-manipulacion-Incertar)|
+|[Modificar](#funciones-manipulacion-Modificar)|
+|[Eliminar](#funciones-manipulacion-Eliminar)|
+|[Seleccionar](#funciones-manipulacion-Seleccionar)|[Filtro](#funciones-manipulacion-Seleccionar-Filtro)<br> [Operadores](#funciones-manipulacion-Seleccionar-Operadores)|
+|[Ordenar](#funciones-manipulacion-Ordenar)|
+|[Apodar](#funciones-manipulacion-Apodar)|
+|[Edicion](#funciones-manipulacion-Edicion)|
+|[CASE](#funciones-manipulacion-CASE)|
 
+5. 
+|[Union de Tablas](#union-tablas)||
+|:------------------:|-|
+|[JOIN](#union-tablas-JOIN)|[otros JOIN](#union-tablas-JOIN-otros)
+|[DISTINCT](#union-tablas-DISTINCT)|
+|[GRUP](#union-tablas-GRUP)|
+|[HAVING](#union-tablas-HAVING)|
+6. 
+|[Funciones de Agregación](#Funciones-agregación)|
+|:------------------:| 
 </div>
- 
 
+
+<br> 
+
+
+## [Indice](#Indice)
 <div id = "datos">
 
 # Tipos de datos
@@ -67,7 +87,7 @@
 |datetime   |Almacena fecha y hora en anteriores formatos mencionados |
 </div> </div>
 
-
+## [Indice](#Indice)
 <div id = "constraints">
 
 # Constraints
@@ -88,6 +108,7 @@ Limitaciones en tipo de datos de una columna para mantener la integridad de nues
 |AUTO_INCREMENT | Generta un numero unico y lo incrementa automaticamente |
 </div> </div>
 
+## [Indice](#Indice)
 <div id = "funciones">
 
 # Funciones
@@ -143,10 +164,13 @@ ALTER TABLE productos(
 |DROP       | Para borrar una columna   |
 </div> </div> </div>
 
-
+## [Indice](#Indice)
 <div id = "funciones-manipulacion">
 
 # Manipulacion de datos
+
+<div id = "funciones-manipulacion-Incertar">
+
 ## Incertar Datos
 Con cada uno de los campos
 ```
@@ -154,14 +178,22 @@ INSERT INTO tabla VALUES (valor1,valor2,valor3)
 ```
 si no queremos aclarar cada campo<br>
 `INSERT INTO tabla(campo1,campo2,campo3) VALUE (valor1,valor2,valor3)`
+</div>
+<div id = "funciones-manipulacion-Modificar">
+
 ## Modificar Datos
 ```
 UPDATE movie 
 SET modifiacion  
 WHERE criterio
 ```
+</div>
+<div id = "funciones-manipulacion-Eliminar">
+
 ## Eliminar datos
 `DELETE FROM MOVIE WHERE bool`
+</div>
+<div id = "funciones-manipulacion-Seleccionar">
 
 ## Seleccionar
 solicita todos los datos * de una tabla <br>
@@ -169,12 +201,17 @@ solicita todos los datos * de una tabla <br>
 si quiero solicitar X campo:<br>
 `SELECT campo1,campo2,campo3 FROM movies` <br>
 
+
+<div id = "funciones-manipulacion-Seleccionar-Filtro">
+
 ### Seleccionar segun filtro
 se solicita el filtro agregando WHEARE y la condicion: <br>
 `SELECT * FROM movies WHERE rating > 5` <br>
 para agregar mas de un filtro se agrega AND o OR.
+</div>
+<div id = "funciones-manipulacion-Seleccionar-Operadores">
 
-#### Operadores
+### Operadores
 |Operador   |   Funcion                 | 
 |:---------:|---------------------------|
 | `=`       | Igual a                   |   
@@ -191,17 +228,25 @@ para agregar mas de un filtro se agrega AND o OR.
 | `LIKE`    | Se ajusta a (%a => termina) (a% => inicia) (%a% => contiene)
 |`LIMIT int`| no selecciona hasta el limite. va al final de todas las sentencias 
 |`OFFSET int`| nos saltea los primeros int resultados al final de todo despues de LIMIT 
+</div>
+<div id = "funciones-manipulacion-Ordenar">
+
 ### Ordenar datos seleccionados
 Se ordenan los datos agregando ORDER BY campo <br>
-`SELECT * FROM movies < campo` <br>
+`SELECT * FROM movies ORDER BY campo` <br>
 si se quiere ordenar de mayor a menor se le agrega al final del campo un DESC<br>
 `SELECT * FROM movies ORDER BY campo DESC` <br>
 y para agregar una regla de desenpate se hace de la siguente forma: <br>
 `SELECT * FROM movies ORDER BY campo DESC, campoDesenpate`
 
+<div id = "funciones-manipulacion-Apodar">
+
 ### Darle un apodo a los campos:
 para darle un apodo a los campos seleccionados se le agrega el nombre original mas AS y el apodo dado como en el siguiente ejmplo: <br>
 `SELECT nombreOrigina AS apodo FROM movies`
+</div>
+
+<div id = "funciones-manipulacion-Edicion">
 
 ## Funciones de edicion
 |Operador   |   Funcion                 | 
@@ -210,6 +255,76 @@ para darle un apodo a los campos seleccionados se le agrega el nombre original m
 |`CALESCE(columna,valor)`| nos permite mostrar valor en las filas con columnas NULL
 |`NOW()`| nos trae la feha actual
 |`DATEDIFF(fecha1, fecha2)`| sirve para comparar dos fechas
-|``| 
+|`EXTRACT(dato FROM columna)`| sirve para extraer el valor de la columna dependiendo del dato
+|`DATE_FORMAT(columna, "%D/%M/%Y")`| Sirve para definier el formato del dia en el que se le de.
+|`REPLACE(columna,variable,variableRemplazante)`| Remplaza la variable con variableRemplazante en la columna seleccionada
+|`LENGHT(columna)`| Te da el tamaño de los datos almacenados dentro de la columna
+|`COALESCE(variable,variable,variable)`| Te toma el primer valor no null de los x
+</div>
+<div id = "funciones-manipulacion-CASE">
 
+## CASE
+Se selecciona distintos casos como en la estructura: <br>
+```
+CASE
+    WHEN bool THEN valor
+    WHEN bool THEN valor
+    ELSE valor
+END
+```
+</div> </div>
+
+## [Indice](#Indice)
+<div id = "union-tablas">
+
+# Union de tablas
+
+<div id = "union-tablas-JOIN">
+
+## INNER JOIN
+```
+SELECTO movies.id, campo2,campo3
+FROM tabla
+INNSER JOIN tablaAUnir ON campoTabala = campoTablaB
+```
+</div>
+<div id = "union-tablas-JOIN-otros">
+
+### Otras variables:
+|Operador   |   Funcion                 | 
+|:---------:|---------------------------|
+|`LEFT JOIN` | tabla de la izquierda va a ser aceptado aun no tiendo vinculo
+|`RIGHT JOIN`| tabla de la derecha va a ser aceptada aun sin vinculos
+</div>
+<div id = "union-tablas-DISTINCT">
+
+## DISTINCT
+Elimina duplicados 100% iguales en sus filas  <br>
+`SELECTO DISTINCT movies.id, campo2,campo3 FROM tabla`
+</div>
+<div id = "union-tablas-GRUP">
+
+## GRUP BY  
+Se crean grupos por diferentes categorias para aplicarle diferentes funciones:<br>
+`GRUP BY campoDeAgrupacion`<br> 
+</div>
+<div id = "union-tablas-HAVING">
+
+## HAVING
+Agrega condiciones a los datos agrupados <br>
+`GRUP BY campoDeAgrupacion HAVING condicionDeGrupacion`<br> 
+</div> </div>
+
+
+## [Indice](#Indice)
+<div id = "Funciones-agregación">
+
+# Funciones de agregación
+|Operador   |   Funcion                 | 
+|:---------:|---------------------------|
+|`COUNT(*)`         | Nos suma la cantidad de filas que hay en una tabla segun el campo
+|`MAX(campo)`       | Nos devuelve el campo maximo de la tabla segun el campo
+|`MIN(campo)`       | Nos devuelve el campo minimo de la tabla segun el campo
+|`SUM(campo)`       | Hace la sumatoria de todos la tambla segun el campo
+|`AVG(campo)`       | Saca el promedio de todas las filas segun el campo
 </div>
