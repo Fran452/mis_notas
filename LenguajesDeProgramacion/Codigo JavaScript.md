@@ -1,3 +1,5 @@
+<div id = "Indice">
+
 # Indice
 
 1. 
@@ -65,8 +67,22 @@
 | [Express Validator](#Express-Validator)| [Configurarciones](#Express-Validator-Configurarciones) <br> [Codigo](#Express-Validator-Codigo)| 
 | [Express Session](#Express-Session)| [Configurarciones](#Express-Session-Configurarciones) <br> [Codigo](#Express-Session-Codigo)| 
 | [Cookies](#Express-Cookies)| [Configurarciones](#Express-Cookies-Configurarciones)| 
-| [Hashing](#Express-Hashing)| [Configurarciones](#Express-Hashing-Configurarciones) <br> [Codigo](#Express-Hashing-Codigo)| 
+| [Hashing](#Express-Hashing)| [Configurarciones](#Express-Hashing-Configurarciones) <br> [Codigo](#Express-Hashing-Codigo)|
 
+10. 
+|[Material Teorico](#Teorico)|| 
+|:--------------------:|-----|
+|[Express](#Teorico-express)|[app.js](#Teorico-express-app.js) <br> [routers](#Teorico-express-routers)<br> [controller](#Teorico-express-controller) | 
+|[CRUD](#Teorico-CRUD)|[¿Que es?](#Teorico-CRUD-que)| 
+|[HTTP](#Teorico-HTTP)|[Metodos](#Teorico-HTTP-Metodos) <br> [codigo](#Teorico-HTTP-codigo)| 
+|[Middlewares](#Teorico-Middlewares)|[¿Que es?](#Teorico-Middlewares-Que ) <br> [aplicacion](#Teorico-Middlewares-aplicacion) <br> [rutas](#Teorico-Middlewares-rutas) | 
+|[Runtas](#Teorico-Runtas)|[Fija](#Teorico-Runtas-Fija) <br> [parametrisada](#Teorico-Runtas-parametrisada) <br> [obtativa](#Teorico-Runtas-obtativa)| 
+|[Carpeta](#Teorico-Carpeta)|| 
+|[Error](#Teorico-Error)|[Codigo](#Teorico-Error-Codigo)| 
+
+</div>
+       
+## [Indice](#Indice)
 <div id = "Estructuras">
 
 # Estructuras
@@ -166,7 +182,7 @@ fuction nombre(...variables){
 </div>
 </div>
 
-
+## [Indice](#Indice)
 <div id = "Funciones">
 
 # Diferentes funciones segun variables
@@ -271,7 +287,7 @@ fuction nombre(...variables){
 </div>
 </div>
 
-
+## [Indice](#Indice)
 <div id = "Clases">
 
 # Clases
@@ -332,7 +348,7 @@ class ClaseHija extends ClasePadre{
 </div>
 
 
-
+## [Indice](#Indice)
 <div id = "Otros">
 
 # Otros
@@ -380,7 +396,7 @@ module.exports = {
 </div>
 
 
-
+## [Indice](#Indice)
 <div id = "JSON">
 
 # JSON
@@ -405,8 +421,9 @@ module.exports = {
 
 ## Como pasar un archivo JSON a javaScript
 `fs.readFileSync("rutaDelJson","utf-8")` =>  nos lee y nos guarda el valor<br>
-</div>
-</div>
+</div> </div>
+
+## [Indice](#Indice)
 
 <div id = "Date">
 
@@ -426,10 +443,9 @@ let fechaActual = new Date() => crea una variable con el informacion del dividid
 |`fechaActual.getMoth()`    | Te da el mes en el que te encontras empezado desde 0
 |`fechaActual.getFullYear()`| Te retorna el año
 |`fechaActual.toUTCString()`| Le da formato al dia 
-</div>
-</div>
+</div> </div>
 
-
+## [Indice](#Indice)
 <div id = "Destructuracion">
 
 # Destructuracion
@@ -452,7 +468,7 @@ let[nombre,edad] = object
 cuando declare nombre va almacenar "fran" 
 </div></div>
 
-
+## [Indice](#Indice)
 <div id = "Express">
 
 # Express
@@ -652,10 +668,16 @@ __------------------ ARREGLAR Y AGREGAR: primeras ------------------------------
 
 
 
-
+## [Indice](#Indice)
+<div id = "Teorico">
 
 # Material Teorico
+
+<div id = "Teorico-express">
+
 ## Estructura de inicio de express
+<div id = "Teorico-express-app.js">
+
 ### Del archivo app.js
 ```
 const express = require("express");
@@ -666,6 +688,9 @@ const app = express();
 app.listen(300) => inicia el servidor
 app.use(methodOverride('_method'))
 ```
+</div>
+<div id = "Teorico-express-routers">
+
 ### Del los archivo routers
 ```
 const express = require("express");
@@ -673,6 +698,9 @@ const app = express.Routers();
 const controller = require("../controllers/controladorControllers.js")
 module.imports = router
 ```
+</div>
+<div id = "Teorico-express-controller">
+
 ### Del los archivo controller
 ```
 const controllers{
@@ -684,48 +712,84 @@ const controllers{
 
 module.imports = controllers
 ```
+</div> </div> 
+<div id = "Teorico-CRUD">
+
 ## CRUD
+<div id = "Teorico-CRUD-que">
+
 ### ¿Que es?
  Create, Read, Update y Delete
+</div>  </div> 
+
+<div id = "Teorico-HTTP">
 
 ## HTTP
+<div id = "Teorico-HTTP-Metodos">
+
 ### Metodos
 - get: solicita datos
 - post: envia/crea datos
 - put: remplaza datos
 - patch: modifica parcialmente un dato
 - delete: borra datos
+</div> 
+<div id = "Teorico-HTTP-codigo">
+
 ### Lineas de codigo necesarias 
 `app.use(express.urlencoded({extended:false}));` <br>
 `app.use(express.json())`
+</div> 
+<div id = "Teorico-Middlewares">
 
 ## Middlewares
+<div id = "Teorico-Middlewares-Que">
+
 ### ¿Que es?
 Es un bloque de código que se va a ejecutar en la "mitad" de un determinado request
+</div> 
+<div id = "Teorico-Middlewares-aplicacion">
+
 ### A nivel de la aplicacion
 Son los Middlewares que se ejecutan siempre que se hag aun pedido a la app, se declaran del app.js
+</div> 
+<div id = "Teorico-Middlewares-rutas">
+
 ### A nivel de las rutas
 Son los Middlewares que se ejecutan al momento de ingresar a daterminado link. se declaran como en el siguiente ejemplo: <br>
 ```
 router.get("ruta",(req,res,next) => { codigo }, rutaController.action);
 ```
+</div> </div> 
+<div id = "Teorico-Runtas">
 
 ## Rutas
+<div id = "Teorico-Runtas-Fija">
+
 ### Ruta fija
 una ruta la cual siempre lleva el mismo nombre y no es modificado
 ```
 router.get('/item',carritoController.agregarItem)
 ```
+</div> 
+<div id = "Teorico-Runtas-parametrisada">
+
 ### Ruta parametrisada
 ruta la cual el nombre es modificado ya se por un producto, una seccion etc
 ```
 router.get('/:item',carritoController.agregarItem)
 ```
+</div> 
+<div id = "Teorico-Runtas-obtativa">
+
 ### Ruta parametrisada obtativa
 ruta la cual el nombre es modificado ya se por un producto, una seccion etc y no es obligatoria que este
 ```
 router.get('/:item?',CB)
 ```
+</div> 
+<div id = "Teorico-Carpeta">
+
 ## Carpeta Rutas
 para cada ruta.js
 `express.Router()` => te permite crear rutas montables y desmontables en nuestra app<br>
@@ -734,12 +798,17 @@ para cada ruta.js
 para app.js
 - primero se importa el modulo
 - `app.use("/ruta",imporDeRutas)` => el metodo use llama a nnuestras rutas y las utiliza con la funcion que le pasamos
+</div> 
+<div id = "Teorico-Error">
 
 ## Error 404
 Este error se genera cuando un recurso no se encuentra dentro del servidor
+<div id = "Teorico-Error-Codigo">
+
 ### Codigo
 ```
 app.use((req,res,next) =>{
     res.status(404).render('not-found')
 })
 ```
+</div> </div> 
