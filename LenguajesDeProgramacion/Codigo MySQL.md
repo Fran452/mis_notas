@@ -51,12 +51,7 @@
 
 
 ## [Indice](#Indice)
-<div id = "datos">
-
-# Tipos de datos
-
-<div id = "datos-numericos">
-
+<div id = "datos">null
 ## Datos numericos 
 | datos     |           definicion                  |
 |:---------:|---------------------------------------|
@@ -222,10 +217,10 @@ para agregar mas de un filtro se agrega AND o OR.
 | `<>`      | Diferente a               |
 | `!=`      | Diferente a               |
 | `IS NULL` | Es null    
-| `NOT NULL` | Es null                     |
+| `NOT NULL` | No es null                     |
 | `BETWEEN valor AND valor` | Entre dos valores
 | `IN`      | Lista de valores          |
-| `LIKE`    | Se ajusta a (%a => termina) (a% => inicia) (%a% => contiene)
+| `LIKE ("string")`    | Se ajusta a la estring. Puede ser (%string => termina) (string% => inicia) (%string% => contiene)
 |`LIMIT int`| no selecciona hasta el limite. va al final de todas las sentencias 
 |`OFFSET int`| nos saltea los primeros int resultados al final de todo despues de LIMIT 
 </div>
@@ -306,7 +301,7 @@ Elimina duplicados 100% iguales en sus filas  <br>
 
 ## GRUP BY  
 Se crean grupos por diferentes categorias para aplicarle diferentes funciones:<br>
-`GRUP BY campoDeAgrupacion`<br> 
+`GROUP BY campoDeAgrupacion`<br> 
 </div>
 <div id = "union-tablas-HAVING">
 

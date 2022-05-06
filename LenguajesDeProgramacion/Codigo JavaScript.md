@@ -1,4 +1,4 @@
-<div id = "Indice">
+<div id = "Indice"> <!----- Inicio de Indice ------->
 
 # Indice
 
@@ -68,8 +68,18 @@
 | [Express Session](#Express-Session)| [Configurarciones](#Express-Session-Configurarciones) <br> [Codigo](#Express-Session-Codigo)| 
 | [Cookies](#Express-Cookies)| [Configurarciones](#Express-Cookies-Configurarciones)| 
 | [Hashing](#Express-Hashing)| [Configurarciones](#Express-Hashing-Configurarciones) <br> [Codigo](#Express-Hashing-Codigo)|
+|[Sequelize](#Express-Sequelize) |[Configuracion](#Express-Sequelize-Configuracion)<br>[Modelos](#Express-Sequelize-Modelos)<br>[Select](#Express-Sequelize-Select)<br>[Where](#Express-Sequelize-Where)<br>[Order](#Express-Sequelize-Order)<br>[Limit](#Express-Sequelize-Limit)<br>[Offset](#Express-Sequelize-Offset)<br>|
+      
 
 10. 
+| [Promesas](#Promesas) |
+|:-------------------------:|
+| [¿Que es?](#Promesas-Que)|
+| [Then](#Promesas-then)| 
+| [Catch](#Promesas-catch)|
+| [Promise](#Promesas-Promise)| 
+
+20. 
 |[Material Teorico](#Teorico)|| 
 |:--------------------:|-----|
 |[Express](#Teorico-express)|[app.js](#Teorico-express-app.js) <br> [routers](#Teorico-express-routers)<br> [controller](#Teorico-express-controller) | 
@@ -80,14 +90,14 @@
 |[Carpeta](#Teorico-Carpeta)|| 
 |[Error](#Teorico-Error)|[Codigo](#Teorico-Error-Codigo)| 
 
-</div>
+</div> <!----- Fin de Indice ------->
        
 ## [Indice](#Indice)
-<div id = "Estructuras">
+<div id = "Estructuras"> <!----- Inicio de Estructuras ------->
 
 # Estructuras
 
-<div id = "Estructuras-Variables">
+<div id = "Estructuras-Variables"> <div id = "Estructuras"> <!----- Inicio de Variables ------->
 
 ## Variables
 | Variable                  |codigo|
@@ -99,9 +109,9 @@
 |variables generales| `var nombreCosntate`
 |variables constantes| `cosnt nombreConsate`
 |variables locales| `let nombreConstate`
-</div>
 
-<div id = "Estructuras-Decicion">
+</div> <!----- Fin de Variables ------->
+<div id = "Estructuras-Decicion"> <!----- Inicio de Decicion ------->
 
 ## Decicion
 ```
@@ -126,10 +136,8 @@ switch(valor){
         funcion;
     }
 ```
-</div>
-
-
-<div id = "Estructuras-Bucle">
+</div> <!----- Fin de Decicion ------->
+<div id = "Estructuras-Bucle"> <!----- Inicio de Bucle ------->
 
 ## Bucle
 ```
@@ -159,10 +167,10 @@ do{
     codigoTrue
 }while(condicion)
 ```
-</div>
 
 
-<div id = "Estructuras-Funciones">
+</div> <!----- Fin de Bucle ------->
+<div id = "Estructuras-Funciones">  <!----- Inicio de Funciones ------->
 
 ## Funciones
 ### Funcion Comun
@@ -179,15 +187,15 @@ fuction nombre(...variables){
     codigo
 }                                
 ```
-</div>
-</div>
+</div> <!----- Fin de Funciones ------->
+</div> <!----- Fin de Estructuras ------->
 
 ## [Indice](#Indice)
-<div id = "Funciones">
+<div id = "Funciones"> <!----- Inicio de Funciones ------->
 
 # Diferentes funciones segun variables
 
-<div id = "Funciones-Array">
+<div id = "Funciones-Array"> <!----- Inicio de Array ------->
 
 ## Funciones a tener en cuenta para array:
 | Codigo                  |Funcion|
@@ -210,9 +218,9 @@ fuction nombre(...variables){
 |`array.forEach(function(elemento){funcion})`     | Cumple la misma funcion que el map sin returnar nada 
 |`array.find(function(elemento){funcionBool})`    | Te trae el elemento que cumpla esa condicion
 |`let array = [...arraA, ...arrayB]`              | Creo un array con los valores de la arraA y la arraB antes declarado
-</div>
 
-<div id = "Funciones-String">
+</div> <!----- Fin de Array ------->
+<div id = "Funciones-String"> <!----- Inicio de String ------->
 
 ## Funcion para String
 | Codigo                  |Funcion|
@@ -227,20 +235,18 @@ fuction nombre(...variables){
 |`string.replace(valor,valor2)`     | Remplaza de la string el primer valor encontrado con valor2
 |`string.replaceAll(valor, valor2)` | Remplaza Todos los valor por valor2 
 |`hola mi nombre es ${nombre}`      | Forma alternativa para el no uso de "" o '' y eliminar + al usar el `` 
-</div>   
 
-
-<div id = "Funciones-Numeros">
+</div> <!----- Fin de String ------->
+<div id = "Funciones-Numeros"> <!----- Inicio de Numeros ------->
 
 ## Funcion para Numeros
 | Codigo                  |Funcion|
 |:-------------------------:|---|
 |`num.toString()`  | pasa el numero a string
 |`parseInt(valor)` | pasa de un valor decima a un valor entero
-</div>
 
-
-<div id = "Funciones-Objetos">
+</div> <!----- Fin de Numeros ------->
+<div id = "Funciones-Objetos"> <!----- Inicio de Objetos ------->
 
 ## Funciones para Objetos
 | Codigo                  |Funcion|
@@ -251,10 +257,9 @@ fuction nombre(...variables){
 |`object.key`|Muestra que contiene la llave
 |`object[key]`| devuelve el valor que almacene esa key del objeto de otra forma
 |`let object = {...objectA}` | Creo un object con las propiedades de objectA antes declarado
-</div>
 
-
-<div id = "Funciones-HTML">
+</div> <!----- Fin de Objetos ------->
+<div id = "Funciones-HTML"> <!----- Inicio de HTML ------->
 
 ## Funciones de HTML
 | Codigo                  |Funcion|
@@ -262,10 +267,9 @@ fuction nombre(...variables){
 |`document.write(valor)`    | Muestra el valor en la pantalla
 |`prompt(valor)`            | Le pide al ususario un valor 
 |`alert(valor)`             | Muestra como alerta el valor
-</div>
 
-
-<div id = "Funciones-FS">
+</div> <!----- Fin de HTML ------->
+<div id = "Funciones-FS"> <!----- Inicio de FS ------->
 
 ## FS
 | Codigo                  |Funcion| 
@@ -273,10 +277,9 @@ fuction nombre(...variables){
 |`fs.readFileSync("archivo",utg-8)`|lee el archivo indicado en el primer parametro y en el segundo parametro indica el decodificado
 |`fs.writeFileSync("archivo",informacionString)`|El archivo es sobreescrito por la informacionString
 |`fs.appendFileSync("archivo",informacionString)`|la informacionString se agrega al final del archivo
-</div>
 
-
-<div id = "Funciones-path">
+</div> <!----- Fin de FS ------->
+<div id = "Funciones-path"> <!----- Inicio de path ------->
 
 ## path
 | Codigo                  |Funcion|
@@ -284,15 +287,16 @@ fuction nombre(...variables){
 |`path.join(carpeta1,carpeta2,carpeta3)`| se crea una ruta que indica hacia donde va
 |`path.extname(direccion)`|te declara cual es la extencion del archivo
 |`path.dirname(direccion)`|te daclara el directorio de un archivo
-</div>
-</div>
+
+</div> <!----- Fin de path ------->
+</div> <!----- Fin de Funciones ------->
 
 ## [Indice](#Indice)
-<div id = "Clases">
+<div id = "Clases"> <!----- Inicio de Clases ------->
 
 # Clases
 
-<div id = "Clases-Estructura">
+<div id = "Clases-Estructura"> <!----- Inicio de Estructura ------->
 
 ## Estructura
 ### Declaracion de clase
@@ -323,8 +327,8 @@ const Clase = class Clase{
     }
 }
 ```
-</div>
-<div id = "Clases-Herencia">
+</div> <!----- Fin de Estructura ------->
+<div id = "Clases-Herencia"> <!----- Inicio de Herencia ------->
 
 ## Herencia
 se le agrega el atributo extends y de que clase se hereda
@@ -344,12 +348,13 @@ class ClaseHija extends ClasePadre{
     }
 }
 ```
-</div>
-</div>
+
+</div> <!----- Fin de Herencia ------->
+</div> <!----- Fin de Clases ------->
 
 
 ## [Indice](#Indice)
-<div id = "Otros">
+<div id = "Otros"> <!----- Inicio de Otros ------->
 
 # Otros
 `nombreDelCiclo:` -> Le pone una etiqueta al ciclo para poder utilizarlo en el caso de break o continue <br>
@@ -362,22 +367,21 @@ class ClaseHija extends ClasePadre{
 | Codigo                  |Funcion| 
 |:-------------------------:|---|
 |`tipeof valor`    | nos dice el tipo del valor
-</div>
 
 
-<div id = "Modulos">
+</div> <!----- Fin de Otros ------->
+<div id = "Modulos">  <!----- Inicio de Modulos ------->
 
 # Modulos JavaScritp
-<div id = "Modulos-Variables">
+<div id = "Modulos-Variables">  <!----- Inicio de Variables ------->
 
 ## Variables
 `module.exports = nombreDeLaVariable` => __Exportar__ variable del archivo fuente <br>
 `module.exports = {variable1, variable2, variable3, ... , variableN}` => Para varias variables <br>
 `require("ubicacionDelArchivoFuente")` => __Importar__ variable en un archivo
-</div>
 
-
-<div id = "Modulos-Funciones">
+</div> <!----- Fin de Variables ------->
+<div id = "Modulos-Funciones"> <!----- Inicio de Funciones ------->
 
 ## Funciones 
 __exporta__ una lista de funciones
@@ -392,48 +396,52 @@ module.exports = {
 
 `let funciones = require("ubicacionDelArchivoFuente")` => __Importar__ las funciones en la variable <br>
 `funciones.funcion1()`                                 => convoca a la funcion <br>
-</div>
-</div>
+
+</div> <!----- Fin de Funciones ------->
+</div> <!----- Fin de Modulos ------->
 
 
 ## [Indice](#Indice)
-<div id = "JSON">
+<div id = "JSON">  <!----- Inicio de JSON ------->
 
 # JSON
-<div id = "JSON-Estructura">
+<div id = "JSON-Estructura">  <!----- Inicio de Estructura ------->
 
 ## Estructura de un archivo .json
 ```
 '[{"name":"Argentina","capital":"CABA","reguion":"America"}]'
 ```
-</div>
 
-<div id = "JSON-Funciones">
+</div>  <!----- Fin de Estructura ------->
+<div id = "JSON-Funciones"> <!----- Inicio de Funciones ------->
 
 ## Funciones JSON
 | Codigo                  |Funcion|
 |:-------------------------:|---|
 |`JSON.parse(datoJSON)`|convierte el dato JSON a objeto literal<br>
 |`JSON.stringify(datoObjeto)`|convierte el objeto literal en dato JSON<br>
-</div>
 
-<div id = "JSON-Escritura">
+</div> <!----- Fin de Funciones ------->
+<div id = "JSON-Escritura"> </div> <!----- Inicio de Escritura ------->
 
 ## Como pasar un archivo JSON a javaScript
 `fs.readFileSync("rutaDelJson","utf-8")` =>  nos lee y nos guarda el valor<br>
-</div> </div>
+
+</div> <!----- Fin de Escritura ------->
+</div> <!----- Fin de JSON ------->
 
 ## [Indice](#Indice)
 
-<div id = "Date">
+<div id = "Date"> <!----- Incicio de Date ------->
 
 # Objeto Date
-<div id = "Date-Estructura">
+<div id = "Date-Estructura"> <!----- Incicio de Estructura ------->
 
 ## Estructura
 let fechaActual = new Date() => crea una variable con el informacion del dividida
-</div>
-<div id = "Date-Funciones">
+
+</div> <!----- Fin de Estructura ------->
+<div id = "Date-Funciones"> <!----- Incicio de Funciones ------->
 
 ## Funciones
 | Codigo                  |Funcion|
@@ -443,13 +451,17 @@ let fechaActual = new Date() => crea una variable con el informacion del dividid
 |`fechaActual.getMoth()`    | Te da el mes en el que te encontras empezado desde 0
 |`fechaActual.getFullYear()`| Te retorna el año
 |`fechaActual.toUTCString()`| Le da formato al dia 
-</div> </div>
+
+</div> <!----- Fin de Funciones ------->
+</div> <!----- Fin de Date ------->
+
+
 
 ## [Indice](#Indice)
-<div id = "Destructuracion">
+<div id = "Destructuracion"> <!----- Inicio de Destructuracion ------->
 
 # Destructuracion
-<div id = "Destructuracion-array">
+<div id = "Destructuracion-array"> <!----- Inicio de array ------->
 
 ## Para array
 ```
@@ -457,8 +469,10 @@ let array = ["val1", "val2", "val3", ... , "valN"];
 let[val1,val2] = array 
 ```
 val1 va ser igual a "val1"
-</div>
-<div id = "Destructuracion-Objetos">
+
+</div> <!----- Fin de array ------->
+<div id = "Destructuracion-Objetos"> <!----- Inicio de Objetos ------->
+
 
 ## Para Objetos
 ```
@@ -466,13 +480,15 @@ let object = {nombre : "fran", edad : 19, trabajo : "programador"}
 let[nombre,edad] = object
 ```
 cuando declare nombre va almacenar "fran" 
-</div></div>
+
+</div> <!----- Fin de Objetos ------->
+</div> <!----- Fin de Destructuracion ------->
 
 ## [Indice](#Indice)
-<div id = "Express">
+<div id = "Express">  <!----- Inicio de Express ------->
 
 # Express
-<div id = "Express-Paquetes">
+<div id = "Express-Paquetes"> <!----- Inicio de Paquetes ------->
 
 ## Paquetes necesarios y distribucion de carpetas
 ### paquetes necesarios
@@ -487,7 +503,9 @@ para una mejor implementaicon de node es necesario descargar estos paquetes de n
 |npm i cookie-parser       | `require('cookie-parser')`     | Sirve para la utilizacion de la coockies en una pagina web
 |npm i bcryptjs            | `require('bcryptjs')`          | Se utiliza para incriptar codigo
 |npm i ejs                 | `app.set('view engine', 'ejs')`| Se utiliza para poder usar los archivos ejs en nuestra pagina web
-|npm i multer              | `require("multer")`            | Se utiliza para poder subir fotos a nuestra base de datos        
+|npm i multer              | `require("multer")`            | Se utiliza para poder subir fotos a nuestra base de datos
+|npm i sequelize@5.21      | `require("sequelize")`         |
+|npm i mysql2              |        
 #### interno
 `require(path)` <br>
 `require(fs)`
@@ -497,8 +515,9 @@ para una mejor implementaicon de node es necesario descargar estos paquetes de n
 >  __router__ en esta carpeta se guardan todas las direcciones de nuestra web en archivos como `person.js`
 > __controller__ en esta carpeta se almacena todas las acciones req res de cada ruta anteriormente mencionada. el nombre de los rachivos es `personController.js`
 -------------------------- ARREGLAR---------------------
-</div>
-<div id = "Express-Codigo-app/router">
+
+</div> <!----- Fin de Paquetes ------->
+<div id = "Express-Codigo-app/router"> <!----- Inicio de app/router ------->
 
 ## Codigo app/router
 | Codigo                  |Funcion|
@@ -513,9 +532,9 @@ para una mejor implementaicon de node es necesario descargar estos paquetes de n
 |`router.post('ruta',(req,res) => {})`| recibe la informacion recibida en un cuestionario anteriormente, la info se almacena en `req.body`
 |`router.put('ruta',(req,res) => {})`|sirve para modificar datos enviados por un formulario
 |`router.delete('ruta',(req,res) => {})`|elimina el objeto enviado por html
-</div>
-<div id = "Express-Codigo-req/res">
 
+</div> <!----- Fin de app/router ------->
+<div id = "Express-Codigo-req/res"> <!----- Inicio de app/router ------->
 ## Codigo req/res
 | Codigo                  |Funcion| 
 |:-------------------------:|---|
@@ -532,11 +551,12 @@ para una mejor implementaicon de node es necesario descargar estos paquetes de n
 |`res.redirect('link')`                         | Redirige de una pagina a otra
 |`res.cookie(nombre,valor,{configuraciones})`   | Se almacena una coookie con el nombre que le asignemos (String) y el valor almacenado, al final se almacena un objeto literal con las configuraciones pj(`maxAge: 60000` guarda la variable por 60 segundos)
 |`res.locals.variable`                          | Almacena la variable en locals para poder utilirse en las vistas
-</div>
-<div id = "Express-Multer">
+
+</div> <!----- Fin de req/res ------->
+<div id = "Express-Multer"> <!----- Inicio de Multer ------->
 
 ## Multer
-<div id = "Express-Multer-Configurarciones">
+<div id = "Express-Multer-Configurarciones"> <!----- Inicio de configurarciones ------->
 
 ### Primeras configurarciones
 #### JS
@@ -561,12 +581,12 @@ para subir varias => <br>
 `upload.any("fotoDePerfil")`
 __------------------ ARREGLAR Y AGREGAR: HTML --------------------------------------__
 
-</div>
-</div>
-<div id = "Express-Validator">
+</div> <!----- Fin de Configurarciones ------->
+</div> <!----- Fin de Multer ------->
+<div id = "Express-Validator"> <!----- Inicio de Validator ------->
 
 ## Express Validator 
-<div id = "Express-Validator-Configurarciones">
+<div id = "Express-Validator-Configurarciones"> <!----- Inicio de Configurarciones ------->
 
 ### Primeras configurarciones
 #### Router
@@ -601,7 +621,9 @@ errors:[
 ]
 ```
 - tramformamos ese array en un objeto con esta funcion => `validaciones.mapped()`
-<div id = "Express-Validator-Codigo">
+
+</div> <!----- Fin de Configurarciones -------> 
+<div id = "Express-Validator-Codigo">  <!----- Inicio de Codigo -------> 
 
 ### Codigo
 | Codigo                  |Funcion|
@@ -612,28 +634,34 @@ errors:[
 |`check('nomrbeDelImput').isLength({min : valorMinimo, max: valorMaximo})`| valida si se cumple el rango seleccionado
 |`array.isEmpaty()`|nos dice si hay no hay errores de validacion
 |`check('nomrbeDelImput').bail()`| corta las siguiente validaciones
-</div> </div>
-<div id = "Express-Session">
+
+</div>  <!----- Fin de Codigo -------> 
+</div>  <!----- Fin de Validator -------> 
+<div id = "Express-Session">  <!----- Inicio de Session -------> 
 
 ## Express Session
-<div id = "Express-Session-Configurarciones">
+<div id = "Express-Session-Configurarciones"> <!----- Inicio de Configurarciones -------> 
 
 ### Primeras Configurarciones
 #### app.js
 - requerimos elpaquete
 - usamos el Middlewares: app.use({secret : "texto"})
-</div>
-<div id = "Express-Session-Codigo">
+
+</div> <!----- Fin de Configurarciones -------> 
+<div id = "Express-Session-Codigo"> <!----- Inicio de Codigo -------> 
 
 ### Codigo
 | Codigo                  |Funcion|
 |:-------------------------:|---|
 |`get.session.parametro`| se almacena de forma global el parametro seleccionado 
-</div> </div>
-<div id = "Express-Cookies">
+
+</div> <!----- Fin de Codigo -------> 
+</div> <!----- Fin de Session -------> 
+<div id = "Express-Cookies"> <!----- Inicio de Cookies -------> 
 
 ## Cookies
-<div id = "Express-Cookies-Configurarciones">
+<div id = "Express-Cookies-Configurarciones"> <!----- Inicio de Configurarciones -------> 
+
 
 ### Primeras configurarciones
 #### app.js
@@ -645,31 +673,246 @@ errors:[
 #### Controller
 - para utilisarse primero se almacena un valor en `res.cookie(nombre,valor,{configuraciones})`
 - se llama utilizando la funcion `req.cookie.nombreDelvalor`
-</div> </div>
-<div id = "Express-Hashing">
 
-## Hashing
-<div id = "Express-Hashing-Configurarciones">
+</div> <!----- Fin de Configurarciones-------> 
+</div> <!----- Fin de Cookies-------> 
+<div id = "Express-Hashing"> <!----- Inicio de Hashing-------> 
+
+## Hashing 
+<div id = "Express-Hashing-Configurarciones"> <!----- Inicio de Configurarciones-------> 
 
 ### Primeras configurarciones
 - requerimos el paquete
 - lo importamos
 __------------------ ARREGLAR Y AGREGAR: primeras --------------------------------------__
- </div>
-<div id = "Express-Hashing-Codigo">
+
+</div><!----- Fin de Configurarciones------->  
+<div id = "Express-Hashing-Codigo"><!----- Inicio de Codigo-------> 
 
 ### Codigo 
 | Codigo                  |Funcion|
 |:-------------------------:|---|
 |`bcrypt.hashSync("estring",int)`| Se incripta la string seleccionada con la dificultad enumerada en el int 
 |`bcrypt.compareSync(contraseña,contraseñaIncriptada)`| indica si la contraseñas concuerda con la contraseñaIncriptada
-</div>  </div>  </div>
+
+</div>  <!----- Fin de Codigo-------> 
+</div> <!----- Fin de Hashing------->  
+
+<div id = "Express-Sequelize"><!----- Inicio de Sequelize-------> 
+
+## Sequelize
+
+<div id = "Express-Sequelize-Configuracion"> <!----- Inicio de Configuracion-------> 
+
+### Configuracion
+1. Requerimos el paquete con:  `sudo npm i -g sequelize@5.21 sequelize-cli` 
+2. Requerimos la base de dato que vamos a usar: `sudo npm i mysql`
+3. Creamos el arichivo `.sequelizerc`. En este se espesifica donde se almacena todo lo relacionado a nuestra base de datos. como por ejemplo:
+```
+const path=require('path');
+
+module.exports={
+    config: path.resolve('./database/config', 'config.js'),
+    'models-path': path.resolve('./database/models'),
+    'seeders-path': path.resolve('./database/seeders'),
+    'migrations-path': path.resolve('./database/migrations'),
+}
+```
+
+4. Corremos en consola el siguiente comando: `sequelize init` el cual nos crea algunas carpetas.
+5. Configuramos config.js, en este configuramos el nombre de la base de datos, tipo, usuario contraseña etc
+6. En index.js se realiza la conxion con la base de datos.
+
+</div> <!----- Fin de Configuracion-------> 
+<div id = "Express-Sequelize-Modelos"> <!----- Inicio de Modelos-------> 
+
+### Modelos
+#### Estructura 
+Un modelo es el detalle de una table en especifico. Este se almacena en database/models con el nombre `NombreDeLaTabla.js` . El modelo siguie la siguiente estructura: 
+```
+module.exports = (sequelize, dataTypes) => {
+    const Tabla = sequelize.define("nombreDeLaTabla",
+        {
+            valor1: {
+                propiedades,
+                type: dataTypes.TIPO
+            },
+            valor2: {
+                propiedades,
+                type: dataTypes.TIPO
+            },
+            valor3: {
+                propiedades,
+                type: dataTypes.TIPO
+            }
+        },
+        {
+            tableName : "nombreDeLaTabla",
+            timestamps: false
+        }
+    );
+    return Tabla:
+}
+```
+#### Tipos
+| Codigo Sequelize      |Tipo SQL|
+|:-----------------------:|---|
+|`dataTypes.INTEGER`          | INTEGER
+|`dataTypes.BIGINT`           | BIGIN
+|`dataTypes.FLOAT`            | FLOAT
+|`dataTypes.DOUBLE`           | DOUBLE
+|`dataTypes.DECIMAL`          | DECIMAL
+|`dataTypes.DATE`             | DATE
+|`dataTypes.STRING`           | VARCHAR(255)
+|`dataTypes.STRING(VALOR)`    | VARCHAR(VALOR)
+
+Estos son algunos tipos, para mas informacion: [TIPOS DE DATOS Sequelize](#https://sequelize.org/docs/v6/core-concepts/model-basics/#data-types)
+#### Operadores
+| Codigo                    |Funcion|
+|:-------------------------:|---|
+|`autoIncrement: true`      | Auto incremento
+|`primaryKey: true`         | Clave Primaria
+|`unique: true`             | La clable tiene que ser unica
+|`allowNull: true`          | 
+|`defaultValue: valor`      | Determina el valor en caso de null en la propiedad valor
+|`isEmail: true`            | Tiene que ser un mail
+|`isNumeric: true`          | Tiene que ser un numero
+|`notEmpty: true`           |no permitir cadenas vacías
+
+</div> 
+
+<div id = "Express-Sequelize-Select">
+
+### Select en Sequelize
+| Codigo Sequelize      |       funcion SQL         |
+|:---------------------:|---------------------------|
+|`Tabla.findAll()`      |SELECT * FROM Tabla        |
+|`Tabla.findByPk(id)`    |SELECT * FROM Tabla WHERE Tabla.id = id|
+|`Tabla.findOne({where:{columna: condicion}})`|SELECT * FROM Tabla WHERE columna = condicion|
+
+</div> </div> <!----- Fin de Estructura------->
+<div id = "Express-Sequelize-Where"> <!----- Inicio de Where-------> 
+
+### Where
+De esta forma filtramos por igualdad dentro de una tabla
+```
+Tabla.funcionSeleccio(
+    {
+        where: {columna : valor}
+    }
+)
+```
+#### Operadores del where
+```
+Tabla.funcionSeleccio(
+    {
+        where: {columna : {
+                [db.Sequelize.Op.operador]: valor
+        }}
+    }
+)
+```
+Para ver todos los operadores entrar al siguiente link: [Operadores](#https://sequelize.org/v5/manual/querying.html) 
+
+</div> <!----- Fin de where------->
+<div id = "Express-Sequelize-Order"> <!----- Inicio de Order-------> 
+
+### Order
+```
+Tabla.funcionSeleccio(
+    {
+        order: [
+            ['columna','orden']
+        ]
+    }
+)
+```
+El orden puede ser dos o `ASC` (ascendente) o `DESC` (descendente)
+
+</div>  <!----- Fin de Order------->
+<div id = "Express-Sequelize-Limit"> <!----- Inicio de Limit-------> 
+
+### Limit
+```
+Tabla.funcionSeleccio(
+    {
+        limit: valor
+    }
+)
+```
+
+</div> <!----- Fin de Limit------->
+<div id = "Express-Sequelize-Offset">  <!----- Inicio de Offset-------> 
+
+### Offset
+```
+Tabla.funcionSeleccio(
+    {
+        offset: valor
+    }
+)
+```
+
+</div> <!------ Fin de Offset------>
+</div> <!----- Fin de Sequelize------->
+</div> <!----- Fin de expres------->
+
+
+
+<div id = "Express-Promesas"> <!----- Inicio de Promesas-------> 
+
+## [Indice](#Indice)
+<div id = "Promesas"> <!----- Inicio de Promesas ------->  
+
+# Promesas
+
+<div id = "Promesas-Que"> <!----- Inicio de Que son -------> 
+
+## ¿Que son?
+Las promesas son funciones que permiten ejecutar código asincrónico de forma eficiente.
+
+</div> <!----- Fin de Que son -------> 
+<div id = "Promesas-then"> <!----- Inicio de then -------> 
+
+## .then() 
+Promesa que retorna algo en si
+```
+funcion(valor)
+    .then(fuction(){
+        codigo
+    })
+
+```
+
+</div> <!----- Fin de then -------> 
+<div id = "Promesas-catch"> <!----- Inicio de catch -------> 
+
+## .catch()
+Codigo que se ejecute al momento de encontrarse con un error
+```
+funcion(valor)
+    .catch(fuction(){
+        codigo
+    })
+
+```
+</div> <!----- Fin de catch -------> 
+<div id = "Promesas-Promise"> <!----- Inicio de Promise -------> 
+
+## Promise.all([])
+Esto es una array de promesas que una vez que se hayan hecho se ejecutara un then. ejemplo: <br>
+`Promise.all([promesa1,promesa2,...,promesaN])`
+
+
+</div> <!----- Fin de Promise -------> 
+</div> <!----- Fin de Promesas -------> 
+
 
 
 
 
 ## [Indice](#Indice)
-<div id = "Teorico">
+<div id = "Teorico"> <!----- Inicio de Teoria-------> 
 
 # Material Teorico
 
