@@ -854,6 +854,71 @@ Tabla.funcionSeleccio(
 ```
 
 </div> <!------ Fin de Offset------>
+<div id = "Express-Sequelize-Create"> <!------ Inicio de Create------>
+
+### Create
+Sirve para crear una fila dentro de una tabla. El metodo que usamos se llama create el cual recibe por parametro un objeto con las propiedades de cada columa
+``` 
+db.Tabla.create({
+    columna : dato,
+    columna : dato,
+    columna : dato,
+    columna : dato,
+});
+```
+#### bulkCreate()
+Este metodo crear mas filas que solo una como en el create. El metodo se llama bulkCreate y en si se recive un array de objetos con las propiedades de las columnas.
+``` 
+db.Tabla.bulkCreate([{
+    columna : dato,
+    columna : dato,
+    },{
+    columna : dato,
+    columna : dato,
+}]);
+```
+
+</div> <!------ Fin de Create------>
+<div id = "Express-Sequelize-Update"> <!------ Inicio de Update------>
+
+## Update
+Esta funcionalida nos permite actualizar fila de nuestra base de datos.
+``` 
+db.Tabla.pdate({
+    columnaAActualizar : dato,
+    columnaAActualizar : dato
+},{
+    where:{condicion}
+});
+```
+### upsert()
+Esta funcion lo que hace es modificar o crear (en el caso que no exista) un campo de una fila
+db.Tabla.pdate({
+    columnaAActualizar : dato,
+    columnaAActualizar : dato,
+    columnaUnicaDeDato : dato
+});
+
+</div> <!------ Fin de Update------>
+<div id = "Express-Sequelize-Destroy"> <!------ Inicio de Destroy------>
+
+## Destroy
+Esta funcion lo que hace es eliminar un registro de la base de datos. para ellos se la pasa un objeto con la condicion para ser eliminado.
+```
+db.Tabla.destroy({
+    where : {propiedad}
+}); 
+```
+
+</div> <!------ Fin de Destroy------>
+<div id = "Express-Sequelize-****"> <!------ Inicio de ****------>
+
+## ****
+
+
+</div> <!------ Fin de ****------>
+
+
 </div> <!----- Fin de Sequelize------->
 </div> <!----- Fin de expres------->
 
