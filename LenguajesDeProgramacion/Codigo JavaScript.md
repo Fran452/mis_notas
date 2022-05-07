@@ -68,9 +68,9 @@
 | [Express Session](#Express-Session)| [Configurarciones](#Express-Session-Configurarciones) <br> [Codigo](#Express-Session-Codigo)| 
 | [Cookies](#Express-Cookies)| [Configurarciones](#Express-Cookies-Configurarciones)| 
 | [Hashing](#Express-Hashing)| [Configurarciones](#Express-Hashing-Configurarciones) <br> [Codigo](#Express-Hashing-Codigo)|
-|[Sequelize](#Express-Sequelize) |[Configuracion](#Express-Sequelize-Configuracion)<br>[Modelos](#Express-Sequelize-Modelos)<br>[Select](#Express-Sequelize-Select)<br>[Where](#Express-Sequelize-Where)<br>[Order](#Express-Sequelize-Order)<br>[Limit](#Express-Sequelize-Limit)<br>[Offset](#Express-Sequelize-Offset)<br>|
+|[Sequelize](#Express-Sequelize) |[Configuracion](#Express-Sequelize-Configuracion)<br>[Modelos](#Express-Sequelize-Modelos)<br>[Select](#Express-Sequelize-Select)<br>[Where](#Express-Sequelize-Where)<br>[Order](#Express-Sequelize-Order)<br>[Limit](#Express-Sequelize-Limit)<br>[Offset](#Express-Sequelize-Offset)<br>[Create](#Express-Sequelize-Create)<br>[Update](#Express-Sequelize-Update)<br>[Destroy](#Express-Sequelize-Destroy)|
       
-
+  
 10. 
 | [Promesas](#Promesas) |
 |:-------------------------:|
@@ -535,6 +535,7 @@ para una mejor implementaicon de node es necesario descargar estos paquetes de n
 
 </div> <!----- Fin de app/router ------->
 <div id = "Express-Codigo-req/res"> <!----- Inicio de app/router ------->
+
 ## Codigo req/res
 | Codigo                  |Funcion| 
 |:-------------------------:|---|
@@ -881,19 +882,19 @@ db.Tabla.bulkCreate([{
 </div> <!------ Fin de Create------>
 <div id = "Express-Sequelize-Update"> <!------ Inicio de Update------>
 
-## Update
+### Update
 Esta funcionalida nos permite actualizar fila de nuestra base de datos.
 ``` 
-db.Tabla.pdate({
+db.Tabla.update({
     columnaAActualizar : dato,
     columnaAActualizar : dato
 },{
     where:{condicion}
 });
 ```
-### upsert()
+#### upsert()
 Esta funcion lo que hace es modificar o crear (en el caso que no exista) un campo de una fila
-db.Tabla.pdate({
+db.Tabla.upsert({
     columnaAActualizar : dato,
     columnaAActualizar : dato,
     columnaUnicaDeDato : dato
@@ -902,7 +903,7 @@ db.Tabla.pdate({
 </div> <!------ Fin de Update------>
 <div id = "Express-Sequelize-Destroy"> <!------ Inicio de Destroy------>
 
-## Destroy
+### Destroy
 Esta funcion lo que hace es eliminar un registro de la base de datos. para ellos se la pasa un objeto con la condicion para ser eliminado.
 ```
 db.Tabla.destroy({
@@ -913,7 +914,7 @@ db.Tabla.destroy({
 </div> <!------ Fin de Destroy------>
 <div id = "Express-Sequelize-****"> <!------ Inicio de ****------>
 
-## ****
+### ****
 
 
 </div> <!------ Fin de ****------>
@@ -981,10 +982,10 @@ Esto es una array de promesas que una vez que se hayan hecho se ejecutara un the
 
 # Material Teorico
 
-<div id = "Teorico-express">
+<div id = "Teorico-express">  <!----- Inicio de express -------> 
 
 ## Estructura de inicio de express
-<div id = "Teorico-express-app.js">
+<div id = "Teorico-express-app.js"> <!----- Inicio de Estructura -------> 
 
 ### Del archivo app.js
 ```
@@ -996,8 +997,9 @@ const app = express();
 app.listen(300) => inicia el servidor
 app.use(methodOverride('_method'))
 ```
-</div>
-<div id = "Teorico-express-routers">
+
+</div> <!----- Fin de Estructura -------> 
+<div id = "Teorico-express-routers"> <!----- Inicio de routers -------> 
 
 ### Del los archivo routers
 ```
@@ -1006,8 +1008,9 @@ const app = express.Routers();
 const controller = require("../controllers/controladorControllers.js")
 module.imports = router
 ```
-</div>
-<div id = "Teorico-express-controller">
+
+</div> <!----- Fin de routers -------> 
+<div id = "Teorico-express-controller"> <!----- Inicio de controller -------> 
 
 ### Del los archivo controller
 ```
@@ -1020,20 +1023,22 @@ const controllers{
 
 module.imports = controllers
 ```
-</div> </div> 
-<div id = "Teorico-CRUD">
+</div> <!----- Fin de controller -------> 
+</div> <!----- Fin de express -------> 
+<div id = "Teorico-CRUD"> <!----- Inicio de CRUD -------> 
 
 ## CRUD
-<div id = "Teorico-CRUD-que">
+<div id = "Teorico-CRUD-que"> <!----- Inicio de que -------> 
 
 ### ¿Que es?
  Create, Read, Update y Delete
-</div>  </div> 
 
-<div id = "Teorico-HTTP">
+</div> <!----- Fin de que -------> 
+</div> <!----- Fin de CRUD -------> 
+<div id = "Teorico-HTTP">  <!----- Inicio de HTTP -------> 
 
 ## HTTP
-<div id = "Teorico-HTTP-Metodos">
+<div id = "Teorico-HTTP-Metodos"> <!----- Inicio de Metodos -------> 
 
 ### Metodos
 - get: solicita datos
@@ -1041,62 +1046,73 @@ module.imports = controllers
 - put: remplaza datos
 - patch: modifica parcialmente un dato
 - delete: borra datos
-</div> 
-<div id = "Teorico-HTTP-codigo">
+
+</div> <!----- Fin de Metodos ------->  
+<div id = "Teorico-HTTP-codigo"> <!----- Inicio de codigo -------> 
 
 ### Lineas de codigo necesarias 
 `app.use(express.urlencoded({extended:false}));` <br>
 `app.use(express.json())`
-</div> 
-<div id = "Teorico-Middlewares">
+
+</div> <!----- Fin de codigo -------> 
+</div> <!----- Fin de HTTP ------->  
+<div id = "Teorico-Middlewares"> <!----- Inicio de Middlewares -------> 
 
 ## Middlewares
-<div id = "Teorico-Middlewares-Que">
+<div id = "Teorico-Middlewares-Que">  <!----- Inicio de Que -------> 
 
 ### ¿Que es?
 Es un bloque de código que se va a ejecutar en la "mitad" de un determinado request
-</div> 
-<div id = "Teorico-Middlewares-aplicacion">
+
+</div> <!----- Fin de Que ------->  
+<div id = "Teorico-Middlewares-aplicacion"> <!----- Inicio de aplicacion -------> 
 
 ### A nivel de la aplicacion
 Son los Middlewares que se ejecutan siempre que se hag aun pedido a la app, se declaran del app.js
-</div> 
-<div id = "Teorico-Middlewares-rutas">
+
+</div> <!----- Fin de aplicacion ------->  
+<div id = "Teorico-Middlewares-rutas"> <!----- Inicio de rutas -------> 
 
 ### A nivel de las rutas
 Son los Middlewares que se ejecutan al momento de ingresar a daterminado link. se declaran como en el siguiente ejemplo: <br>
 ```
 router.get("ruta",(req,res,next) => { codigo }, rutaController.action);
 ```
-</div> </div> 
-<div id = "Teorico-Runtas">
+
+</div> <!----- Fin de rutas ------->  
+</div> <!----- Fin de Middlewares -------> 
+<div id = "Teorico-Runtas"> <!----- Inicio de rutas -------> 
 
 ## Rutas
-<div id = "Teorico-Runtas-Fija">
+<div id = "Teorico-Runtas-Fija"> <!----- Inicio de Fija -------> 
 
 ### Ruta fija
 una ruta la cual siempre lleva el mismo nombre y no es modificado
 ```
 router.get('/item',carritoController.agregarItem)
 ```
-</div> 
-<div id = "Teorico-Runtas-parametrisada">
+
+</div>  <!----- Fin de Fija ------->
+<div id = "Teorico-Runtas-parametrisada">  <!----- Inicio de parametrisada -------> 
 
 ### Ruta parametrisada
 ruta la cual el nombre es modificado ya se por un producto, una seccion etc
 ```
 router.get('/:item',carritoController.agregarItem)
 ```
-</div> 
-<div id = "Teorico-Runtas-obtativa">
+
+</div>  <!----- Fin de parametrisada ------->
+<div id = "Teorico-Runtas-obtativa"> <!----- Inicio de obtativa -------> 
 
 ### Ruta parametrisada obtativa
 ruta la cual el nombre es modificado ya se por un producto, una seccion etc y no es obligatoria que este
 ```
 router.get('/:item?',CB)
 ```
-</div> 
-<div id = "Teorico-Carpeta">
+
+</div>  <!----- Fin de obtativa ------->
+</div>  <!----- Fin de Runtas ------->
+<div id = "Teorico-Carpeta"> <!----- Inicio de Carpeta -------> 
 
 ## Carpeta Rutas
 para cada ruta.js
@@ -1106,12 +1122,13 @@ para cada ruta.js
 para app.js
 - primero se importa el modulo
 - `app.use("/ruta",imporDeRutas)` => el metodo use llama a nnuestras rutas y las utiliza con la funcion que le pasamos
-</div> 
-<div id = "Teorico-Error">
+
+</div>  <!----- Fin de Carpeta ------->
+<div id = "Teorico-Error"> <!----- Inicio de Error -------> 
 
 ## Error 404
 Este error se genera cuando un recurso no se encuentra dentro del servidor
-<div id = "Teorico-Error-Codigo">
+<div id = "Teorico-Error-Codigo"> <!----- Inicio de Codigo -------> 
 
 ### Codigo
 ```
@@ -1119,4 +1136,6 @@ app.use((req,res,next) =>{
     res.status(404).render('not-found')
 })
 ```
-</div> </div> 
+
+</div>  <!----- Fin de Codigo ------->
+</div>  <!----- Fin de Error ------->
