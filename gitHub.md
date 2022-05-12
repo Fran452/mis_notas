@@ -29,7 +29,7 @@
     4| ramas auxiliares => ramas para trabajos diferidos
 
 ## Comandos
-    git checkout -b "nuevaRama"=> crea y te envia a x rama
+    git checkout -b "nuevaRama" => crea y te envia a x rama
     git checkout "rama" => moverse entre ramas
     git merge ramaAClonar => clona una rama a la rama actual
     git branch -m nombre => renombrar una rama
@@ -37,3 +37,6 @@
     git branch -d nombre_rama => eliminar rama online
     git stash => formatea la rama a la ultima version subida al git
     
+
+<div id = "****"> <!----- Inicio de **** ------->
+</div> <!----- Fin de **** ------->

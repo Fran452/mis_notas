@@ -1,45 +1,55 @@
+<div id = "indice"> <!----- Inicio de indice ------->
+
 # Indice
 1. 
-|[](#) |
+|[Funciones](#funciones) |
 |:-------------------------:|
-|[](#)|
-|[](#)|
-|[](#)|
-|[](#)|
-
+|[Varios](#funciones-varios)|
+|[Listas](#funciones-listas)|
+|[Set](#funciones-set)|
+|[Diccionarios](#funciones-diccionarios)|
+   
 2. 
-|[](#) |
+|[Clase](#clase) |
 |:-------------------------:|
-|[](#)|
-|[](#)|
-|[](#)|
-|[](#)|
-
+|[Estructura](#clase-estructura)|
+|[Clases Hijas](#clase-hijas)|
+|[Clases Abstractas](#clase-abstractas)|
+|[Funciones de Clases](#clase-funciones)|
+   
 3. 
-|[](#) |
+|[Definiciones](#definiciones) |
 |:-------------------------:|
-|[](#)|
-|[](#)|
-|[](#)|
-|[](#)|
-
+|[Clases](#definiciones-clases)|
+|[Variables](#definiciones-variables)|
+|[Constante](#definiciones-constante)|
+   
 4. 
-|[](#) |
+|[sobrecarga](#sobrecarga) |
 |:-------------------------:|
-|[](#)|
-|[](#)|
-|[](#)|
-|[](#)|
-
+|[¿Que es?](#sobrecarga-que-es)|
+|[Funcion](#sobrecarga-funcion)|
+  
 5. 
-|[](#) |
+|[Polimorfismo](#polimorfismo) |
 |:-------------------------:|
-|[](#)|
-|[](#)|
-|[](#)|
-|[](#)|
+|[¿Que es?](#polimorfismo-que-es)|
+|[Metodos](#polimorfismo-metodos)|
+  
+6. 
+|[Errores](#errores) |
+|:-------------------------:|
+|[Estructura](#errores-estructura)|
+|[Tipo](#errores-tipo)|
 
-# Varios 
+</div> <!----- Fin de indice ------->
+<div id = "funciones"> <!----- Inicio de funciones ------->
+
+# Funciones
+
+<div id = "funciones-varios"> <!----- Inicio de varios ------->
+
+## Varios 
 | Codigo                |                          Explicacion                    |
 |:---------------------:|---------------------------------------------------------|
 | `print("texto")`      | Muestra en cosola el texto
@@ -52,7 +62,10 @@
 |`__name__`             | Muestra la ubicacion de donde se utiliza el codigo
 |`del variable`         | Elimina el objeto
 
-# Funciones para listas
+</div> <!----- Fin de varios ------->
+<div id = "funciones-listas"> <!----- Inicio de listas ------->
+
+## Funciones para listas
 | Codigo                            |                       Explicacion                                |
 |:---------------------------------:|------------------------------------------------------------------|
 |`len(lista)`                       | Cantidad de elementos dentro de la lista
@@ -66,7 +79,11 @@
 |`list(tupla)`                      | Convierte la tupla en una lista
 |`tuple(lista)`                     | Convierte la lista en tupla
 
-# Funciones para set
+</div> <!----- Fin de listas ------->
+<div id = "funciones-set"> <!----- Inicio de set ------->
+
+
+## Funciones para set
 | Codigo                |               Explicacion                     |
 |:---------------------:|-----------------------------------------------|
 |`len(set)`             | Cantidad de elementos
@@ -77,7 +94,10 @@
 |`set.clear()`          | Elimina todos los valores dentro de set
 |`del set`              | Elimina el set
 
-# Funciones para diccionarios
+</div> <!----- Fin de set ------->
+<div id = "funciones-diccionarios"> <!----- Inicio de diccionarios ------->
+
+## Funciones para diccionarios
 | Codigo                                      |             Explicacion                     |
 |:-------------------------------------------:|---------------------------------------------|
 |`len(dicc)`                                  | Tamaño de diccionario
@@ -92,8 +112,16 @@
 |`dicc.clear()`                               | Elimina todos los valores del diccionario
 |`del dicc`                                   | Elimina el diccionario
 
+</div> <!----- Fin de diccionarios ------->
+</div> <!----- Fin de funciones ------->
+
+<div id = "clase"> <!----- Inicio de clase ------->
+
 # Funcion y estructuras de la clase
-## Tipo de clases
+
+<div id = "clase-estructura"> <!----- Inicio de estructura ------->
+
+## Estructura de clases
 La clase es un molde para la creacion ya bien de objetos o de clases "hijas" que heredaran toda la estructura de la base
 ```
 class Persona
@@ -105,6 +133,10 @@ class Persona
     def nombreDelMetodo(self):                  |
     metodo                                       > creacion de metodos en clase
 ```
+
+</div> <!----- Fin de estructura ------->
+<div id = "clase-hijas"> <!----- Inicio de hijas ------->
+
 ## Clase hijas
 Son clases provenientes de otras clase ya exixtente, pueden crearse a partir de una o varias clases
 ~~~
@@ -118,6 +150,10 @@ class ClaseHija(ClaseHerdada1, ClaseHeredada2): => herencia de varias clases
         ClaseHerdada1.__init__()       => se inicializa la nueva variable y con el nombre de la 
         ClaseHeredada2.__init__()         herencia las variables del "padre"
 ~~~
+
+</div> <!----- Fin de hijas ------->
+<div id = "clase-abstractas"> <!----- Inicio de abstractas ------->
+
 ## Clases Abstractas
 Es una clase que no admite que se cren objetos a partir de ella. Es meramente de herencia
 ~~~
@@ -128,6 +164,10 @@ class ClaseAbstracta(ABC): => no se puede crear un objeto
     def metodoAbstracto():   > metodo obligatorio para las clases hijas
         pass                |
 ~~~
+
+</div> <!----- Fin de abstractas ------->
+<div id = "clase-funciones"> <!----- Inicio de funciones ------->
+
 ## Funciones       
 
 **variables de lectura (get)**
@@ -181,13 +221,17 @@ se puede accesder a esta variable fuera del contexto
 **No se puede hacer** <br>
 `persona._nombre1`                       
 
-    
-        
+</div> <!----- Fin de funciones ------->
+</div> <!----- Fin de clase ------->    
+<div id = "estructuras"> <!----- Inicio de estructuras ------->
 
 # Estructuras
-## colecciones => 
-| Tipo de lista|codear                  |       funcion                     |
-|:------------:|------------------------|------------------------------------|    
+
+<div id = "estructuras-colecciones"> <!----- Inicio de colecciones ------->
+
+## Colecciones
+| Tipo de lista |codear                 |       funcion                     |
+|:----------0--:|-----------------------|------------------------------------|    
 |listas         |[]                     |   Ordenada y modificable
 |tuplas         |()                     |   Ordenada y no se puede modificar
 |set            |{}                     |   Desordenada y modificable (no admite valores duplicados)
@@ -195,6 +239,8 @@ se puede accesder a esta variable fuera del contexto
 |clases         |class Clase:<br>pass   |   Una clase es lal base para la creacion de objeto
 |objeto         |objeto = clase()       |   Es un variable con las propiedades de la clase
 
+</div> <!----- Fin de colecciones -------> 
+<div id = "estructuras-decicion"> <!----- Inicio de decicion ------->
 
 ## Decicion
 ```
@@ -208,6 +254,9 @@ else:
 ```
 codigoTrue if condicion else codigoFalse
 ```
+
+</div> <!----- Fin de decicion -------> 
+<div id = "estructuras-ciclo"> <!----- Inicio de ciclo ------->
 
 ## Ciclo
 ```
@@ -227,6 +276,10 @@ breack => sale del ciclo
 continue => saltea codigo seleccionado
 range(valor)   => imprime un rango segun el valor colocado
 ```
+
+</div> <!----- Fin de ciclo -------> 
+<div id = "estructuras-funciones"> <!----- Inicio de funciones ------->
+
 ## Funciones
 ```
 def nombreDeLaFuncion(variable,varible2): -> returnTipoDeVariable:
@@ -236,6 +289,9 @@ def nombreDeLaFuncion(variable,varible2): -> returnTipoDeVariable:
 def nombreDeLaFuncion(*variablesN):  => si no se sabe la cantidad de parametros a tomar
 def nombreDeLaFuncion(**terminos):   => si queremos que los elementos sean un diccionario
 ```
+
+</div> <!----- Fin de funciones -------> 
+<div id = "estructuras-import"> <!----- Inicio de import ------->
 
 ## Import
 `from Persona import Persona` => para importart solo una clase <br>
@@ -247,26 +303,53 @@ def nombreDeLaFuncion(**terminos):   => si queremos que los elementos sean un di
 if __name__ == "__main__":
     pruebas             => esto no se va a importar
 ```
+
+</div> <!----- Fin de import -------> 
+</div> <!----- Fin de estructuras -------> 
+
+<div id = "definiciones"> <!----- Inicio de definiciones ------->
+
 # DEFINICIONES IMPORTANTES  
+
+<div id = "definiciones-clases"> <!----- Inicio de clases ------->
+
 ## Clases
     get => trae elementos fijos de clases sin romper encapsulamiento
     set => modifica elementos fijos de clases sin romper encapsulamiento
     read-only => variables que solo tienen get y no ser
 
+</div> <!----- Fin de clases -------> 
+<div id = "definiciones-variables"> <!----- Inicio de variables ------->
+
 ## Variables
     estaticas = estan atadas al contexto
     dinamicas = pueden modificarse fuera del contexto
+
+</div> <!----- Fin de variables -------> 
+<div id = "definiciones-constante"> <!----- Inicio de constante ------->
 
 ## Constante
 se escribe en mayusculas y se separan las palabras por _ ejemplo: <br>
 `MI_CONSTANTE`<br>
 las cosntantes **no** se tiene que modificar
 
+</div> <!----- Fin de constante -------> 
+</div> <!----- Fin de definiciones -------> 
+
+<div id = "sobrecarga"> <!----- Inicio de sobrecarga ------->
+
 # Sobrecarga de operadores
+
+<div id = "sobrecarga-que-es"> <!----- Inicio de -que-es ------->
+
 ## ¿Que es?
 Se le dice a una funcion que actua distinto segun el argumento que se le ingresa como el signo de + que segun que argumentos se les pasa cumple diferentes funciones como la de sumar concatenar etc
+
+</div> <!----- Fin de -que-es ------->
+<div id = "sobrecarga-funcion"> <!----- Inicio de funcion ------->
+
 ## Como funciona
-para sobrecargar un atributo en una classe se la tiene que sobrescribir. en la siguiente tabla se visualiza como sobrescribir algunos operadore:
+Para sobrecargar un atributo en una classe se la tiene que sobrescribir. en la siguiente tabla se visualiza como sobrescribir algunos operadore:
 
 |Operador|        methodo                |
 |:------:|-------------------------------|
@@ -291,16 +374,36 @@ para sobrecargar un atributo en una classe se la tiene que sobrescribir. en la s
 | %=     | `__imod__(self, other)`       |
 | **=    | `__ipow__(self, other)`       |
 
+</div> <!----- Fin de funcion ------->
+</div> <!----- Fin de sobrecarga ------->
+<div id = "polimorfismo"> <!----- Inicio de polimorfismo ------->
+
 # Polimorfismo
+
+<div id = "polimorfismo-que-es"> <!----- Inicio de que-es ------->
+
 ## ¿Que es?
 Es la ejecucion de varios metodos en tiempo de ejecucion
+
+</div> <!----- Fin de que-es ------->
+<div id = "polimorfismo-metodos"> <!----- Inicio de metodos ------->
+
 ## Algunos metodos
 
 |           Metodo         |                       Accion                      |
 |:------------------------:|---------------------------------------------------|
 | `isintance(objeto,clase)`| si el objeto seleccionado pertenece a sierta clase|
 
+</div> <!----- Fin de metodos ------->
+</div> <!----- Fin de polimorfismo ------->
+
+<div id = "errores"> <!----- Inicio de errores ------->
+
 # Manejo de errores
+
+<div id = "errores-estructura"> <!----- Inicio de estructura ------->
+
+## Estructura
 ```
 try:
     error => por ejemplo 1/0
@@ -312,5 +415,12 @@ except Exeption as nombre:
     codigo
 ```
 exepcion1 tanto exepcion2 son algun tipo de exepcion posibles. En cambio Exeption es la forma generica de poner a cualquier exepcion 
+
+</div> <!----- Fin de estructura ------->
+<div id = "errores-tipo"> <!----- Inicio de tipo ------->
+
 ## Tipo de exepciones 
-<img src = "./img/manejo-errores.png">
+<img src = "../img/manejo-errores.png">
+
+</div> <!----- Fin de tipo ------->
+</div> <!----- Fin de errores ------->

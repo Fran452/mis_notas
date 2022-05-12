@@ -366,7 +366,7 @@ class ClaseHija extends ClasePadre{
 
 | Codigo                  |Funcion| 
 |:-------------------------:|---|
-|`tipeof valor`    | nos dice el tipo del valor
+|`typeof valor`    | nos dice el tipo del valor
 
 
 </div> <!----- Fin de Otros ------->
@@ -646,7 +646,7 @@ errors:[
 ### Primeras Configurarciones
 #### app.js
 - requerimos elpaquete
-- usamos el Middlewares: app.use({secret : "texto"})
+- usamos el Middlewares: app.use(session({secret : "texto"}))
 
 </div> <!----- Fin de Configurarciones -------> 
 <div id = "Express-Session-Codigo"> <!----- Inicio de Codigo -------> 
@@ -780,21 +780,24 @@ Estos son algunos tipos, para mas informacion: [TIPOS DE DATOS Sequelize](#https
 |`isNumeric: true`          | Tiene que ser un numero
 |`notEmpty: true`           |no permitir cadenas vacías
 
-</div> 
+</div> <!----- Fin de Modelos------->
+<div id = "Express-Sequelize-Pedidos"> <!----- Inicio de Pedidos------->
 
-<div id = "Express-Sequelize-Select">
+### Pedidos De Datos
 
-### Select en Sequelize
+<div id = "Express-Sequelize-Select"> <!----- Inicio de Select------->
+
+#### Select 
 | Codigo Sequelize      |       funcion SQL         |
 |:---------------------:|---------------------------|
 |`Tabla.findAll()`      |SELECT * FROM Tabla        |
 |`Tabla.findByPk(id)`    |SELECT * FROM Tabla WHERE Tabla.id = id|
 |`Tabla.findOne({where:{columna: condicion}})`|SELECT * FROM Tabla WHERE columna = condicion|
 
-</div> </div> <!----- Fin de Estructura------->
+</div><!----- Fin de Select------->
 <div id = "Express-Sequelize-Where"> <!----- Inicio de Where-------> 
 
-### Where
+#### Where
 De esta forma filtramos por igualdad dentro de una tabla
 ```
 Tabla.funcionSeleccio(
@@ -803,7 +806,7 @@ Tabla.funcionSeleccio(
     }
 )
 ```
-#### Operadores del where
+__Operadores del where__
 ```
 Tabla.funcionSeleccio(
     {
@@ -818,7 +821,7 @@ Para ver todos los operadores entrar al siguiente link: [Operadores](#https://se
 </div> <!----- Fin de where------->
 <div id = "Express-Sequelize-Order"> <!----- Inicio de Order-------> 
 
-### Order
+#### Order
 ```
 Tabla.funcionSeleccio(
     {
@@ -833,7 +836,7 @@ El orden puede ser dos o `ASC` (ascendente) o `DESC` (descendente)
 </div>  <!----- Fin de Order------->
 <div id = "Express-Sequelize-Limit"> <!----- Inicio de Limit-------> 
 
-### Limit
+#### Limit
 ```
 Tabla.funcionSeleccio(
     {
@@ -845,7 +848,7 @@ Tabla.funcionSeleccio(
 </div> <!----- Fin de Limit------->
 <div id = "Express-Sequelize-Offset">  <!----- Inicio de Offset-------> 
 
-### Offset
+#### Offset
 ```
 Tabla.funcionSeleccio(
     {
@@ -854,10 +857,27 @@ Tabla.funcionSeleccio(
 )
 ```
 
-</div> <!------ Fin de Offset------>
-<div id = "Express-Sequelize-Create"> <!------ Inicio de Create------>
+</div> <!------ Fin de Offset ------>
+<div id = "Express-Sequelize-Manejo"> <!------ Inicio de Include ------>
 
-### Create
+#### include
+```
+Tabla.funcionSeleccio(
+    {
+        include: [{association : "tablaAAsociar"}]
+    }
+)
+```
+
+</div> <!------ Fin de Include ------>
+</div> <!------ Fin de Pedidos ------>
+<div id = "Express-Sequelize-Manejo"> <!------ Inicio de Manejo ------>
+
+### Manejo de datos
+
+<div id = "Express-Sequelize-Create"> <!------ Inicio de Create ------>
+
+#### Create
 Sirve para crear una fila dentro de una tabla. El metodo que usamos se llama create el cual recibe por parametro un objeto con las propiedades de cada columa
 ``` 
 db.Tabla.create({
@@ -867,7 +887,7 @@ db.Tabla.create({
     columna : dato,
 });
 ```
-#### bulkCreate()
+__bulkCreate()__ <br>
 Este metodo crear mas filas que solo una como en el create. El metodo se llama bulkCreate y en si se recive un array de objetos con las propiedades de las columnas.
 ``` 
 db.Tabla.bulkCreate([{
@@ -879,10 +899,10 @@ db.Tabla.bulkCreate([{
 }]);
 ```
 
-</div> <!------ Fin de Create------>
-<div id = "Express-Sequelize-Update"> <!------ Inicio de Update------>
+</div> <!------ Fin de Create ------>
+<div id = "Express-Sequelize-Update"> <!------ Inicio de Update ------>
 
-### Update
+#### Update
 Esta funcionalida nos permite actualizar fila de nuestra base de datos.
 ``` 
 db.Tabla.update({
@@ -892,7 +912,7 @@ db.Tabla.update({
     where:{condicion}
 });
 ```
-#### upsert()
+__upsert()__ <br>
 Esta funcion lo que hace es modificar o crear (en el caso que no exista) un campo de una fila
 db.Tabla.upsert({
     columnaAActualizar : dato,
@@ -903,7 +923,7 @@ db.Tabla.upsert({
 </div> <!------ Fin de Update------>
 <div id = "Express-Sequelize-Destroy"> <!------ Inicio de Destroy------>
 
-### Destroy
+#### Destroy
 Esta funcion lo que hace es eliminar un registro de la base de datos. para ellos se la pasa un objeto con la condicion para ser eliminado.
 ```
 db.Tabla.destroy({
@@ -911,17 +931,73 @@ db.Tabla.destroy({
 }); 
 ```
 
-</div> <!------ Fin de Destroy------>
-<div id = "Express-Sequelize-****"> <!------ Inicio de ****------>
+</div> <!------ Fin de Destroy ------>
+</div> <!------ Fin de Manejo ------>
+<div id = "Express-Sequelize-Relaciones"> <!------ Inicio de Relaciones ------>
 
-### ****
+### Relaciones
+<div id = "Express-Sequelize-Relaciones-1aM"> <!------ Inicio de 1aM ------>
 
+##### De 1 a muchos
+##### Estructura:
+En el archivo de model en cada modelo se utiliza la siguiente funciones para declarar las relaciones: <br>
+- __hasMany__ <br>
+Se utiliza para la tabla que contiene muchos campos en la otra tabla, por ejemplo en la relacion generos y peliculas. Se utiliza para asociar todos los generos a sus repectivas peliculas 
+```
+Tabla.associate = (models) => {
+    db.Tabla.hasMany(models.tablaAsociada,{
+        foreignKey : 'nombreDeLaClaveForania',
+        as: 'campoDeLaTablaAsociada'
+    })
+}
+```
+- __belongsTo__ <br>
+Se utiliza para la tabla que contiene un campo en la otra tabla, por ejemplo en la relacion generos y peliculas. Se utiliza para asociar cada pelicula a su genero
+```
+Tabla.associate = (models) => {    
+    db.Tabla.belongsTo(models.tablaAsociada,{
+        foreignKey : 'nombreDeLaClaveForania',
+        as: 'campoDeLaTablaAsociada'
+    })
+}
+```
+</div> <!----- Fin de 1aM ------->
+<div id = "Express-Sequelize-Relaciones-****"> <!------ Inicio de NaN ------>
 
-</div> <!------ Fin de ****------>
+#### De muchos a muchos
+##### Estructura:
+__belongsToMany__ <br>
+Se repiten en ambas relaciones el mismo formato 
+```
+Tabla.associate = (models) => {    
+    db.Tabla.belongsToMany(models.tablaAsociada,{
+        as: 'campoDeLaTablaAsociada',
+        through : 'tablaDeUnion',
+        foreignKey : 'nombreDeLaClaveForaniaPropia',
+        otherKey: 'nombreDeLaClaveForaniaTA',
+        timestamps : false
+        
+    })
+}
+```
+__Estructura de la tabla de union__ <br>
+Para hacer la union de muchos a muchos antes se necesita un tabla intermedia para unirlos. Esta tabla tendra la siguiente estructura
+```
+const Tabla = sequelize.define("NombreDeLaTabla", {
+    Relaion1: {
+         type: Sequelize.INTEGER, 
+         references: {model: "TablaRelacion", key: "ColumnRelacion"}},
+    Relaion2: {
+        type: Sequelize.INTEGER, 
+        references: {model: "TablaRelacion", key: "ColumnRelacion"}}
+})
 
-
-</div> <!----- Fin de Sequelize------->
-</div> <!----- Fin de expres------->
+module.exports = Tabla;
+```
+</div> <!----- Fin de NaN ------->
+</div> <!------ Fin de Relaciones ------>
+</div> <!----- Fin de Sequelize ------->
+</div> <!----- Fin de Express ------->
 
 
 

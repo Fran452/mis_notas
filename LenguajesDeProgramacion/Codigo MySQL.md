@@ -1,4 +1,4 @@
-<div id = "indice">
+<div id = "indice"> <!----- Inicio de indice ------->
 
 # Indice
 
@@ -44,14 +44,20 @@
 6. 
 |[Funciones de Agregación](#Funciones-agregación)|
 |:------------------:| 
-</div>
 
+</div> <!----- Fin de Indice ------->
 
 <br> 
 
 
 ## [Indice](#Indice)
-<div id = "datos">null
+
+<div id = "datos"> <!----- Inicio de datos ------->
+
+# Datos
+
+<div id = "datos-numericos"> <!----- Inicio de numericos ------->
+
 ## Datos numericos 
 | datos     |           definicion                  |
 |:---------:|---------------------------------------|
@@ -62,8 +68,9 @@
 |biging     |innecesariamente grande para aclarar   |
 |decimal    |decimales                              |
 |float      |numeros con coma                       |
-</div>
-<div id = "datos-texto">
+
+</div> <!----- Fin de numericos ------->
+<div id = "datos-texto"> <!----- Inicio de texto ------->
 
 ## Datos de texto 
 | datos         |           definicion                              | 
@@ -71,8 +78,9 @@
 |char(num)      |El numero indica la cantidad exacta de caractereres|
 |varchar(num)   |El numero indica el valor maximo de caracteres     |
 |text           |               No tiene maximo                     |
-</div>
-<div id = "datos-fecha">
+
+</div> <!----- Fin de texto ------->
+<div id = "datos-fecha"> <!----- Inicio de fecha ------->
 
 ## Datos fecha
 | datos    |                   definicion                             | 
@@ -80,18 +88,21 @@
 |date       |Fecha en formato YYY-MM-DD                               |
 |time       |Almacena la hora en formato HH:MM:SS                     |
 |datetime   |Almacena fecha y hora en anteriores formatos mencionados |
-</div> </div>
 
+</div> <!----- Fin de fecha ------->
+</div> <!----- Fin de datos ------->
+ 
 ## [Indice](#Indice)
-<div id = "constraints">
+<div id = "constraints"> <!----- Inicio de constraints ------->
 
 # Constraints
-<div id = "constraints-Que-es">
+<div id = "constraints-Que-es"> <!----- Inicio de Que-es ------->
 
 ## ¿Que es?
 Limitaciones en tipo de datos de una columna para mantener la integridad de nuestra base de datos. Estas estan diferenciadas de la validacion hecha anteriormente.
-</div>
-<div id = "constraints-tipos">
+
+</div> <!----- Fin de Que-es ------->
+<div id = "constraints-tipos"> </div> <!----- Inicio de tipos ------->
 
 ## Tipos
 | tipos         |              definicion                               | 
@@ -101,13 +112,15 @@ Limitaciones en tipo de datos de una columna para mantener la integridad de nues
 |PRIMARY KEY    | Identificador de forma unica a una fila (obligatoria) |
 |DEFAULT        | Aplica un valor por defecto                           |
 |AUTO_INCREMENT | Generta un numero unico y lo incrementa automaticamente |
-</div> </div>
+
+</div> <!----- Fin de tipos ------->
+</div> <!----- Fin de constraints ------->
 
 ## [Indice](#Indice)
-<div id = "funciones">
+<div id = "funciones"> <!----- Inicio de funciones ------->
 
 # Funciones
-<div id = "funciones-crear">
+<div id = "funciones-crear"> <!----- Inicio de crear ------->
 
 ## Crear
 ```
@@ -129,16 +142,18 @@ CREATE TABLE productos(
     FOREIGN KEY(direccion_id) REFERENCES direcciones(id)
 )
 ```
-</div>
-<div id = "funciones-eliminar">
+
+</div> <!----- Fin de crear ------->
+<div id = "funciones-eliminar"> <!----- Inicio de eliminar ------->
 
 ## Eliminar
 `DROP TABLE IF EXIST nombre_de_la_tabla;`
-</div>
-<div id = "funciones-editar">
+
+</div> <!----- Fin de eliminar ------->
+<div id = "funciones-editar"> <!----- Inicio de editar ------->
 
 ## Editar
-<div id = "funciones-editar-estructura">
+<div id = "funciones-editar-estructura"> <!----- Inicio de estructura ------->
 
 ### Estructura
 ```
@@ -148,8 +163,9 @@ ALTER TABLE productos(
     DROP mail
 )
 ```
-</div>
-<div id = "funciones-editar-operadores">
+
+</div> <!----- Fin de estructura ------->
+<div id = "funciones-editar-operadores"> <!----- Inicio de operadores ------->
 
 ### Operadores
 |Operador   |   Funcion                 | 
@@ -157,14 +173,17 @@ ALTER TABLE productos(
 |ADD        | Para agregar una columna  |
 |MODIFY     | Para modificar una columna|
 |DROP       | Para borrar una columna   |
-</div> </div> </div>
+
+</div> <!----- Fin de operadores ------->
+</div> <!----- Fin de editar ------->
+</div> <!----- Fin de funciones ------->
 
 ## [Indice](#Indice)
-<div id = "funciones-manipulacion">
+<div id = "funciones-manipulacion"> <!----- Inicio de manipulacion ------->
 
 # Manipulacion de datos
 
-<div id = "funciones-manipulacion-Incertar">
+<div id = "funciones-manipulacion-Incertar"> <!----- Inicio de Incertar ------->
 
 ## Incertar Datos
 Con cada uno de los campos
@@ -173,8 +192,9 @@ INSERT INTO tabla VALUES (valor1,valor2,valor3)
 ```
 si no queremos aclarar cada campo<br>
 `INSERT INTO tabla(campo1,campo2,campo3) VALUE (valor1,valor2,valor3)`
-</div>
-<div id = "funciones-manipulacion-Modificar">
+
+</div> <!----- Fin de Incertar ------->
+<div id = "funciones-manipulacion-Modificar"> <!----- Inicio de Modificar ------->
 
 ## Modificar Datos
 ```
@@ -182,13 +202,15 @@ UPDATE movie
 SET modifiacion  
 WHERE criterio
 ```
-</div>
-<div id = "funciones-manipulacion-Eliminar">
+
+</div> <!----- Fin de Modificar------->
+<div id = "funciones-manipulacion-Eliminar"> <!----- Inicio de Eliminar ------->
 
 ## Eliminar datos
 `DELETE FROM MOVIE WHERE bool`
-</div>
-<div id = "funciones-manipulacion-Seleccionar">
+
+</div> <!----- Fin de Eliminar ------->
+<div id = "funciones-manipulacion-Seleccionar"> <!----- Inicio de Seleccionar ------->
 
 ## Seleccionar
 solicita todos los datos * de una tabla <br>
@@ -197,14 +219,15 @@ si quiero solicitar X campo:<br>
 `SELECT campo1,campo2,campo3 FROM movies` <br>
 
 
-<div id = "funciones-manipulacion-Seleccionar-Filtro">
+<div id = "funciones-manipulacion-Seleccionar-Filtro"> <!----- Inicio de Filtro ------->
 
 ### Seleccionar segun filtro
 se solicita el filtro agregando WHEARE y la condicion: <br>
 `SELECT * FROM movies WHERE rating > 5` <br>
 para agregar mas de un filtro se agrega AND o OR.
-</div>
-<div id = "funciones-manipulacion-Seleccionar-Operadores">
+
+</div> <!----- Fin de Filtro ------->
+<div id = "funciones-manipulacion-Seleccionar-Operadores"> <!----- Inicio de Operadores ------->
 
 ### Operadores
 |Operador   |   Funcion                 | 
@@ -223,8 +246,10 @@ para agregar mas de un filtro se agrega AND o OR.
 | `LIKE ("string")`    | Se ajusta a la estring. Puede ser (%string => termina) (string% => inicia) (%string% => contiene)
 |`LIMIT int`| no selecciona hasta el limite. va al final de todas las sentencias 
 |`OFFSET int`| nos saltea los primeros int resultados al final de todo despues de LIMIT 
-</div>
-<div id = "funciones-manipulacion-Ordenar">
+
+</div> <!----- Fin de Operadores ------->
+</div> <!----- Fin de Seleccionar -------> 
+<div id = "funciones-manipulacion-Ordenar"> <!----- Inicio de Ordenar ------->
 
 ### Ordenar datos seleccionados
 Se ordenan los datos agregando ORDER BY campo <br>
@@ -234,14 +259,15 @@ si se quiere ordenar de mayor a menor se le agrega al final del campo un DESC<br
 y para agregar una regla de desenpate se hace de la siguente forma: <br>
 `SELECT * FROM movies ORDER BY campo DESC, campoDesenpate`
 
-<div id = "funciones-manipulacion-Apodar">
+</div> <!----- Fin de Ordenar ------->
+<div id = "funciones-manipulacion-Apodar"> <!----- Inicio de Apodar ------->
 
 ### Darle un apodo a los campos:
 para darle un apodo a los campos seleccionados se le agrega el nombre original mas AS y el apodo dado como en el siguiente ejmplo: <br>
 `SELECT nombreOrigina AS apodo FROM movies`
-</div>
 
-<div id = "funciones-manipulacion-Edicion">
+</div> <!----- Fin de Apodar ------->
+<div id = "funciones-manipulacion-Edicion"> <!----- Inicio de Edicion ------->
 
 ## Funciones de edicion
 |Operador   |   Funcion                 | 
@@ -255,8 +281,9 @@ para darle un apodo a los campos seleccionados se le agrega el nombre original m
 |`REPLACE(columna,variable,variableRemplazante)`| Remplaza la variable con variableRemplazante en la columna seleccionada
 |`LENGHT(columna)`| Te da el tamaño de los datos almacenados dentro de la columna
 |`COALESCE(variable,variable,variable)`| Te toma el primer valor no null de los x
-</div>
-<div id = "funciones-manipulacion-CASE">
+
+</div> <!----- Fin de Edicion ------->
+<div id = "funciones-manipulacion-CASE"> <!----- Inicio de CASE ------->
 
 ## CASE
 Se selecciona distintos casos como en la estructura: <br>
@@ -267,14 +294,16 @@ CASE
     ELSE valor
 END
 ```
-</div> </div>
+
+</div> <!----- Fin de CASE ------->
+</div> <!----- Fin de manipulacion ------->
 
 ## [Indice](#Indice)
-<div id = "union-tablas">
+<div id = "union-tablas"> <!----- Inicio de union ------->
 
 # Union de tablas
 
-<div id = "union-tablas-JOIN">
+<div id = "union-tablas-JOIN"> <!----- Inicio de JOIN ------->
 
 ## INNER JOIN
 ```
@@ -282,37 +311,43 @@ SELECTO movies.id, campo2,campo3
 FROM tabla
 INNSER JOIN tablaAUnir ON campoTabala = campoTablaB
 ```
-</div>
-<div id = "union-tablas-JOIN-otros">
+
+</div> <!----- Fin de JOIN ------->
+<div id = "union-tablas-JOIN-otros"> <!----- Inicio de otros ------->
 
 ### Otras variables:
 |Operador   |   Funcion                 | 
 |:---------:|---------------------------|
 |`LEFT JOIN` | tabla de la izquierda va a ser aceptado aun no tiendo vinculo
 |`RIGHT JOIN`| tabla de la derecha va a ser aceptada aun sin vinculos
-</div>
-<div id = "union-tablas-DISTINCT">
+
+</div> <!----- Fin de otros ------->
+<div id = "union-tablas-DISTINCT"> <!----- Inicio de DISTINCT ------->
 
 ## DISTINCT
 Elimina duplicados 100% iguales en sus filas  <br>
 `SELECTO DISTINCT movies.id, campo2,campo3 FROM tabla`
-</div>
-<div id = "union-tablas-GRUP">
+
+</div> <!----- Fin de DISTINCT ------->
+<div id = "union-tablas-GRUP"> <!----- Inicio de GRUP ------->
 
 ## GRUP BY  
 Se crean grupos por diferentes categorias para aplicarle diferentes funciones:<br>
 `GROUP BY campoDeAgrupacion`<br> 
-</div>
-<div id = "union-tablas-HAVING">
+
+</div> <!----- Fin de GRUP ------->
+<div id = "union-tablas-HAVING"> <!----- Inicio de HAVING ------->
 
 ## HAVING
 Agrega condiciones a los datos agrupados <br>
 `GRUP BY campoDeAgrupacion HAVING condicionDeGrupacion`<br> 
-</div> </div>
+
+</div> <!----- Fin de HAVING ------->
+</div> <!----- Fin de union ------->
 
 
 ## [Indice](#Indice)
-<div id = "Funciones-agregación">
+<div id = "Funciones-agregación"> <!----- Inicio de agregación ------->
 
 # Funciones de agregación
 |Operador   |   Funcion                 | 
@@ -322,4 +357,5 @@ Agrega condiciones a los datos agrupados <br>
 |`MIN(campo)`       | Nos devuelve el campo minimo de la tabla segun el campo
 |`SUM(campo)`       | Hace la sumatoria de todos la tambla segun el campo
 |`AVG(campo)`       | Saca el promedio de todas las filas segun el campo
-</div>
+
+</div> <!----- Fin de agregación ------->
