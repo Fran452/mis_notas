@@ -504,8 +504,9 @@ para una mejor implementaicon de node es necesario descargar estos paquetes de n
 |npm i bcryptjs            | `require('bcryptjs')`          | Se utiliza para incriptar codigo
 |npm i ejs                 | `app.set('view engine', 'ejs')`| Se utiliza para poder usar los archivos ejs en nuestra pagina web
 |npm i multer              | `require("multer")`            | Se utiliza para poder subir fotos a nuestra base de datos
-|npm i sequelize@5.21      | `require("sequelize")`         |
-|npm i mysql2              |        
+|npm i sequelize@5.21      | `require("sequelize")`         | Se utiliza para el manejo de bases de datos 
+|npm i mysql2              |                                | Se utiliza para la utilizacion de bases de datos de sql      
+|npm i node-fetch          | `require("node-fetch")`        | Nos permite hacer pedidos a una api de terceros desde nuestro back-end
 #### interno
 `require(path)` <br>
 `require(fs)`
@@ -997,7 +998,27 @@ module.exports = Tabla;
 </div> <!----- Fin de NaN ------->
 </div> <!------ Fin de Relaciones ------>
 </div> <!----- Fin de Sequelize ------->
+
+## Fetch
+### ¿Que es?
+### Configuracion
+- npm i node-fetch
+- requeir el paquete : ` const fetch = require(node-fetch);`
+
+### Estructura 
+
+controllers = {
+    fuction : async (req,res){
+        fetch("url")
+            .then(respuesta de api)
+            .then(respuesta del front end)
+    }
+}
+
+
+
 </div> <!----- Fin de Express ------->
+
 
 
 
@@ -1026,7 +1047,17 @@ funcion(valor)
 
 ```
 
-</div> <!----- Fin de then -------> 
+</div> <!----- Fin de then ------->
+
+## function async
+Este es otro metodo para crear funciones asincronicas con una estructura mas limpia que ustilizando el .then(). <br>
+Su estructura se basa en la utilizacion del async en la funcion y la utilizacion de await para aclarar que funciones son asincronicas<br>
+```
+async(parametros){
+    const valor = await funcionAsicronica;
+    codigo
+}
+```
 <div id = "Promesas-catch"> <!----- Inicio de catch -------> 
 
 ## .catch()
@@ -1048,9 +1079,6 @@ Esto es una array de promesas que una vez que se hayan hecho se ejecutara un the
 
 </div> <!----- Fin de Promise -------> 
 </div> <!----- Fin de Promesas -------> 
-
-
-
 
 
 ## [Indice](#Indice)
