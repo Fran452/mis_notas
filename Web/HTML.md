@@ -134,6 +134,8 @@ Son la base del lenguaje
     <a href = "enlace web" target = "donde se abriar el recurso"> 
         texto 
     </a> => para subir links
+
+    <script src = "archivo.js">  </script> => codigo JS en el head
 </div>
 <div id = "etiquetas-semantica">
 
@@ -327,4 +329,5 @@ Es un Template Engine. Esto permite que mis archivos html sean completamente din
 
 ## Parametros Compartidos
 Vamos a poder compartir con la vista cualquier tipo de dato existente en JavaScript
-</div> </div> 
+</div> 
+</div>

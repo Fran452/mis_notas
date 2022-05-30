@@ -57,7 +57,6 @@
 | [Objetos](#Destructuracion-Objetos)| 
 
 9. 
- 
 | [Express](#Express) | Extenciones | 
 |:-------------------------:|-----|
 | [Paquetes](#Express-Paquetes)| sin extencion |
@@ -68,16 +67,17 @@
 | [Express Session](#Express-Session)| [Configurarciones](#Express-Session-Configurarciones) <br> [Codigo](#Express-Session-Codigo)| 
 | [Cookies](#Express-Cookies)| [Configurarciones](#Express-Cookies-Configurarciones)| 
 | [Hashing](#Express-Hashing)| [Configurarciones](#Express-Hashing-Configurarciones) <br> [Codigo](#Express-Hashing-Codigo)|
-|[Sequelize](#Express-Sequelize) |[Configuracion](#Express-Sequelize-Configuracion)<br>[Modelos](#Express-Sequelize-Modelos)<br>[Select](#Express-Sequelize-Select)<br>[Where](#Express-Sequelize-Where)<br>[Order](#Express-Sequelize-Order)<br>[Limit](#Express-Sequelize-Limit)<br>[Offset](#Express-Sequelize-Offset)<br>[Create](#Express-Sequelize-Create)<br>[Update](#Express-Sequelize-Update)<br>[Destroy](#Express-Sequelize-Destroy)|
-      
-  
+| [Sequelize](#Express-Sequelize) |[Configuracion](#Express-Sequelize-Configuracion)<br>[Modelos](#Express-Sequelize-Modelos)<br>[Select](#Express-Sequelize-Select)<br>[Where](#Express-Sequelize-Where)<br>[Order](#Express-Sequelize-Order)<br>[Limit](#Express-Sequelize-Limit)<br>[Offset](#Express-Sequelize-Offset)<br>[Create](#Express-Sequelize-Create)<br>[Update](#Express-Sequelize-Update)<br>[Destroy](#Express-Sequelize-Destroy)|
+| [Fetch](#Express-Fetch)| [¿Que es?](#Express-Fetch-Que) <br> [Configuracion](#Express-Fetch-Configuracion)<br> [Estructura](#Express-Fetch-Estructura)|
+    
 10. 
 | [Promesas](#Promesas) |
 |:-------------------------:|
 | [¿Que es?](#Promesas-Que)|
 | [Then](#Promesas-then)| 
 | [Catch](#Promesas-catch)|
-| [Promise](#Promesas-Promise)| 
+| [Promise](#Promesas-Promise)|
+| [async](#Promesas-async)|
 
 20. 
 |[Material Teorico](#Teorico)|| 
@@ -267,6 +267,8 @@ fuction nombre(...variables){
 |`document.write(valor)`    | Muestra el valor en la pantalla
 |`prompt(valor)`            | Le pide al ususario un valor 
 |`alert(valor)`             | Muestra como alerta el valor
+|`confirm(valor)`| Envia al js un booleano de una ventana emergente 
+|``|
 
 </div> <!----- Fin de HTML ------->
 <div id = "Funciones-FS"> <!----- Inicio de FS ------->
@@ -963,7 +965,7 @@ Tabla.associate = (models) => {
 }
 ```
 </div> <!----- Fin de 1aM ------->
-<div id = "Express-Sequelize-Relaciones-****"> <!------ Inicio de NaN ------>
+<div id = "Express-Sequelize-Relaciones-NaN"> <!------ Inicio de NaN ------>
 
 #### De muchos a muchos
 ##### Estructura:
@@ -998,12 +1000,22 @@ module.exports = Tabla;
 </div> <!----- Fin de NaN ------->
 </div> <!------ Fin de Relaciones ------>
 </div> <!----- Fin de Sequelize ------->
+<div id = "Express-Fetch"> <!----- Inicio de Fetch-------> 
 
 ## Fetch
+<div id = "Express-Fetch-Que"> <!----- Inicio de Que -------> 
+
 ### ¿Que es?
+
+</div> <!----- Fin de Que ------->
+<div id = "Express-Fetch-Configuracion"> <!----- Inicio de Configuracion -------> 
+
 ### Configuracion
 - npm i node-fetch
 - requeir el paquete : ` const fetch = require(node-fetch);`
+
+</div> <!----- Fin de Configuracion ------->
+<div id = "Express-Fetch-Estructura"> <!----- Inicio de Estructura -------> 
 
 ### Estructura 
 
@@ -1016,7 +1028,8 @@ controllers = {
 }
 
 
-
+</div> <!----- Fin de Estructura ------->
+</div> <!----- Fin de Fetch ------->
 </div> <!----- Fin de Express ------->
 
 
@@ -1048,16 +1061,6 @@ funcion(valor)
 ```
 
 </div> <!----- Fin de then ------->
-
-## function async
-Este es otro metodo para crear funciones asincronicas con una estructura mas limpia que ustilizando el .then(). <br>
-Su estructura se basa en la utilizacion del async en la funcion y la utilizacion de await para aclarar que funciones son asincronicas<br>
-```
-async(parametros){
-    const valor = await funcionAsicronica;
-    codigo
-}
-```
 <div id = "Promesas-catch"> <!----- Inicio de catch -------> 
 
 ## .catch()
@@ -1069,6 +1072,7 @@ funcion(valor)
     })
 
 ```
+
 </div> <!----- Fin de catch -------> 
 <div id = "Promesas-Promise"> <!----- Inicio de Promise -------> 
 
@@ -1076,13 +1080,74 @@ funcion(valor)
 Esto es una array de promesas que una vez que se hayan hecho se ejecutara un then. ejemplo: <br>
 `Promise.all([promesa1,promesa2,...,promesaN])`
 
-
 </div> <!----- Fin de Promise -------> 
-</div> <!----- Fin de Promesas -------> 
+<div id = "Promesas-async"> <!----- Inicio de async ------->
 
+## function async
+Este es otro metodo para crear funciones asincronicas con una estructura mas limpia que ustilizando el .then(). <br>
+Su estructura se basa en la utilizacion del async en la funcion y la utilizacion de await para aclarar que funciones son asincronicas<br>
+```
+async(parametros){
+    const valor = await funcionAsicronica;
+    codigo
+}
+```
+
+
+</div> <!----- Fin de async -------> 
+</div> <!----- Fin de Promesas -------> 
+<div id = "Front"> <!----- Inicio de Front end ------->
+
+# Front end
+
+## Window
+### ¿Ques es?
+Es un objeto literal que tiene funciones para modificar o preguntar propiedades de la venta del navegador
+### Codigo
+| Codigo                  |Funcion|
+|:-------------------------:|---|
+|`window.location`|Trae un objeto literal con diferentes datos de la pagina 
+|`window.innerHeight`| Te dice cuanto mide de alto la pagina
+|`window.innerWidth`|Te dice cuanto mide de ancho la pagina
+
+Para mas informacion <a href = "https://www.w3schools.com/js/js_window.asp"> LINK </a>
+
+## Document
+Para mas informacion ingresar al siguiente link <a href = "https://developer.mozilla.org/es/docs/Web/API/Document">LINK </a>
+### ¿Ques es?
+Es un objeto literal que tiene funciones para modificar o preguntar propiedades del documento html
+### Codigo Seleccion
+| Codigo                  |Funcion|
+|:-------------------------:|---|
+|`document.bgColor`| Propiedad con el color de fondo 
+|`document.styleSheets`| Propiedad con las hojas de estilos
+|`document.querySelector("etiqueta")`| Propiedad que nos permite modificar un selector ejemplo (form , form.class , form#id, .class , #id)
+|`document.querySelectorAll("etiqueta")`| Nos retorna un array con todos los selectores que cumpla con la etiqueta
+|`document.getElementById("id")`| Almacena la informacion del id seleccionado en el html
+|`document.getElementByClassName("class")`|Almacena la informacion del class seleccionado en el html
+|`document.querySelector("etiqueta").innerHTML`| Captura el conetenido del html con el = se lo puede cambiar y con += modificar
+|`document.querySelector("etiqueta").innerText`|Trae el texto plano de la etiqueta y de querer modifica sin procesarse la etiquetas html
+|`document.querySelector("etiqueta").style.propiedadCss`| Trae el valor de la propiedad seleccionada con la posibilidad de cambiarlo
+
+### Codigo modificacion de clases 
+`let query = document.querySelector("etiqueta")`
+
+| Codigo                  |Funcion|
+|:-------------------------:|---|
+|`query.classList.add("clase")`|agrega una clase a un query
+|`query.classList.remove("clase")`| quita una clase a un query
+|`query.classList.toggle("clase")`| quita o agrega segun la existienca de la clase
+|`query.classList.contains("clase")`| Nos retorna un bool con el valor de existencia de la clase
+
+
+
+
+</div> <!----- Fin de Front end -------> 
 
 ## [Indice](#Indice)
 <div id = "Teorico"> <!----- Inicio de Teoria-------> 
+
+
 
 # Material Teorico
 
