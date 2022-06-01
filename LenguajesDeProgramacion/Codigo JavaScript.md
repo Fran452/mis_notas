@@ -1124,7 +1124,7 @@ Es un objeto literal que tiene funciones para modificar o preguntar propiedades 
 |`document.querySelector("etiqueta")`| Propiedad que nos permite modificar un selector ejemplo (form , form.class , form#id, .class , #id)
 |`document.querySelectorAll("etiqueta")`| Nos retorna un array con todos los selectores que cumpla con la etiqueta
 |`document.getElementById("id")`| Almacena la informacion del id seleccionado en el html
-|`document.getElementByClassName("class")`|Almacena la informacion del class seleccionado en el html
+|`document.getElementsByClassName("class")`|Almacena la informacion del class seleccionado en el html
 |`document.querySelector("etiqueta").innerHTML`| Captura el conetenido del html con el = se lo puede cambiar y con += modificar
 |`document.querySelector("etiqueta").innerText`|Trae el texto plano de la etiqueta y de querer modifica sin procesarse la etiquetas html
 |`document.querySelector("etiqueta").style.propiedadCss`| Trae el valor de la propiedad seleccionada con la posibilidad de cambiarlo
@@ -1140,8 +1140,57 @@ Es un objeto literal que tiene funciones para modificar o preguntar propiedades 
 |`query.classList.contains("clase")`| Nos retorna un bool con el valor de existencia de la clase
 
 
+## Eventos 
+### ¿Que son?
+Los eventos son cualquier accion que ocurra en un sitio web
+### Variable e
+La variable e cumple la funcion de espesificar el evento en si. Esta funcion tiene varias acciones segun el evento
+### Estructuras
 
+1. Con addEventListener nos permite ejecutar varios eventos simultaneamente
+```
+window.addEventListener("load", function(){
+    
+    selector.addEventListener("evento",function(){
+        codigo a ejecutar en el evento 
+    })
+    
+})
+```
 
+2. Con on + algo. con este evento no nos permite utilizar mas de un evento a la vez
+```
+window.onload = () => {
+codigo
+}
+
+```
+Los eventos mas usados en este tipo son: 
+| Evento                  |Funcion|
+|:-------------------------:|---|
+|`onclick`| Cuando el usuario hace clic.
+|`ondblclick`| Cuando el usuario hace doble clic.
+|`onmouseover`| Cuando el mouse se mueve sobre el elemento.
+|`onmousemove`|   Cuando se mueve el mouse.
+|`onscroll`|  Cuando se hace scroll.
+|`onkeydown`| Cuando se aprieta una tecla.
+|`onload`| Cuando se carga la página.
+|`onsubmit`| Cuando se envía un formulario.
+
+### Mouse
+| Evento                  |Funcion|
+|:-------------------------:|---|
+|`click`| Se ejecuta al momento que se hace click en el query  
+|`mouseover`| Se ejecuta cuando se pasa el mause por encima 
+|`mouseout`| Se ejecuta cuando el mouse sale del area del query
+### Teclado
+| Evento                  |Funcion|
+|:-------------------------:|---|
+|`keydown`| Se utiliza cuando se presiona la tecla
+|`keyup`| Se utiliza cuando se suelta la tecla
+|`keypress`| Se ejecuta cuando el se finaliza la accion de precion y suelte de la tecla  
+|`e.key`| No indica la tecla precionada             
+                 
 </div> <!----- Fin de Front end -------> 
 
 ## [Indice](#Indice)
