@@ -1189,7 +1189,16 @@ Los eventos mas usados en este tipo son:
 |`keydown`| Se utiliza cuando se presiona la tecla
 |`keyup`| Se utiliza cuando se suelta la tecla
 |`keypress`| Se ejecuta cuando el se finaliza la accion de precion y suelte de la tecla  
-|`e.key`| No indica la tecla precionada             
+|`e.key`| No indica la tecla precionada 
+
+### Formularios
+| Evento                  |Funcion|
+|:-------------------------:|---|
+|focus| Se ejecuta cuando el usuario ingres a un campo del fromulario 
+|blur| Se ejecuta cuando el cursor sale del campo del formulario 
+|change| Nos detecta camvios en el fromulario
+|submit| Se ejecuta cuando se envia un formulario
+|query.value| Nos indica que se coloco en el formulario
                  
 </div> <!----- Fin de Front end -------> 
 
