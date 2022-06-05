@@ -1199,7 +1199,40 @@ Los eventos mas usados en este tipo son:
 |change| Nos detecta camvios en el fromulario
 |submit| Se ejecuta cuando se envia un formulario
 |query.value| Nos indica que se coloco en el formulario
-                 
+
+<!----    FALTA REMARCAR EL CODIGO  -->
+
+## Fetch
+### Que es?
+Es una funcion asincronica que nos devolvera una api en formato JSON
+### Estructura
+__Por GET__
+```
+fetch('linkDeLaApi')
+.then(api => {
+    return api.json();
+})
+.then(api => {
+    codigo
+})
+```
+__Por POST__
+```
+let data = {
+    objeto enviado por post
+}
+fetch('linkDeLaApi',{
+    'method':'POST';
+    'body': JSON.stringify(data)
+})
+.then(api => {
+    return api.json();
+})
+.then(api => {
+    codigo
+})
+```
+        
 </div> <!----- Fin de Front end -------> 
 
 ## [Indice](#Indice)
