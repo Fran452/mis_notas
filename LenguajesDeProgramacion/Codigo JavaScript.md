@@ -67,10 +67,19 @@
 | [Express Session](#Express-Session)| [Configurarciones](#Express-Session-Configurarciones) <br> [Codigo](#Express-Session-Codigo)| 
 | [Cookies](#Express-Cookies)| [Configurarciones](#Express-Cookies-Configurarciones)| 
 | [Hashing](#Express-Hashing)| [Configurarciones](#Express-Hashing-Configurarciones) <br> [Codigo](#Express-Hashing-Codigo)|
-| [Sequelize](#Express-Sequelize) |[Configuracion](#Express-Sequelize-Configuracion)<br>[Modelos](#Express-Sequelize-Modelos)<br>[Select](#Express-Sequelize-Select)<br>[Where](#Express-Sequelize-Where)<br>[Order](#Express-Sequelize-Order)<br>[Limit](#Express-Sequelize-Limit)<br>[Offset](#Express-Sequelize-Offset)<br>[Create](#Express-Sequelize-Create)<br>[Update](#Express-Sequelize-Update)<br>[Destroy](#Express-Sequelize-Destroy)|
+|  |<br>[Modelos](#Express-Sequelize-Modelos)<br>[Select](#Express-Sequelize-Select)<br>[Where](#Express-Sequelize-Where)<br>[Order](#Express-Sequelize-Order)<br>[Limit](#Express-Sequelize-Limit)<br>[Offset](#Express-Sequelize-Offset)<br>[Create](#Express-Sequelize-Create)<br>[Update](#Express-Sequelize-Update)<br>[Destroy](#Express-Sequelize-Destroy)|
 | [Fetch](#Express-Fetch)| [¿Que es?](#Express-Fetch-Que) <br> [Configuracion](#Express-Fetch-Configuracion)<br> [Estructura](#Express-Fetch-Estructura)|
-    
+
 10. 
+| [Sequelize](#Sequelize) | Extenciones | 
+|:-------------------------:|-----|
+| [Configuracion](#Express-Sequelize-Configuracion) | sin extencion |
+| [Modelos](#Sequelize-Modelos) |sin extencion |
+| | sin extencion |
+| | sin extencion |
+| | sin extencion |
+
+12. 
 | [Promesas](#Promesas) |
 |:-------------------------:|
 | [¿Que es?](#Promesas-Que)|
@@ -79,7 +88,7 @@
 | [Promise](#Promesas-Promise)|
 | [async](#Promesas-async)|
 
-11. 
+13. 
 | [Front-End](#Front) |
 |:-------------------------:|
 | [](#)|
@@ -706,14 +715,15 @@ __------------------ ARREGLAR Y AGREGAR: primeras ------------------------------
 
 </div>  <!----- Fin de Codigo-------> 
 </div> <!----- Fin de Hashing------->  
+</div> <!----- Fin de Express ------->
 
-<div id = "Express-Sequelize"><!----- Inicio de Sequelize-------> 
+<div id = "Sequelize"><!----- Inicio de Sequelize-------> 
 
-## Sequelize
+# Sequelize
 
-<div id = "Express-Sequelize-Configuracion"> <!----- Inicio de Configuracion-------> 
+<div id = "Sequelize-Configuracion"> <!----- Inicio de Configuracion-------> 
 
-### Configuracion
+## Configuracion
 1. Requerimos el paquete con:  `sudo npm i -g sequelize@5.21 sequelize-cli` 
 2. Requerimos la base de dato que vamos a usar: `sudo npm i mysql`
 3. Creamos el arichivo `.sequelizerc`. En este se espesifica donde se almacena todo lo relacionado a nuestra base de datos. como por ejemplo:
@@ -733,9 +743,9 @@ module.exports={
 6. En index.js se realiza la conxion con la base de datos.
 
 </div> <!----- Fin de Configuracion-------> 
-<div id = "Express-Sequelize-Modelos"> <!----- Inicio de Modelos-------> 
+<div id = "Sequelize-Modelos"> <!----- Inicio de Modelos-------> 
 
-### Modelos
+## Modelos
 #### Estructura 
 Un modelo es el detalle de una table en especifico. Este se almacena en database/models con el nombre `NombreDeLaTabla.js` . El modelo siguie la siguiente estructura: 
 ```
@@ -763,7 +773,7 @@ module.exports = (sequelize, dataTypes) => {
     return Tabla:
 }
 ```
-#### Tipos
+### Tipos
 | Codigo Sequelize      |Tipo SQL|
 |:-----------------------:|---|
 |`dataTypes.INTEGER`          | INTEGER
@@ -776,7 +786,7 @@ module.exports = (sequelize, dataTypes) => {
 |`dataTypes.STRING(VALOR)`    | VARCHAR(VALOR)
 
 Estos son algunos tipos, para mas informacion: [TIPOS DE DATOS Sequelize](#https://sequelize.org/docs/v6/core-concepts/model-basics/#data-types)
-#### Operadores
+### Operadores
 | Codigo                    |Funcion|
 |:-------------------------:|---|
 |`autoIncrement: true`      | Auto incremento
@@ -789,13 +799,13 @@ Estos son algunos tipos, para mas informacion: [TIPOS DE DATOS Sequelize](#https
 |`notEmpty: true`           |no permitir cadenas vacías
 
 </div> <!----- Fin de Modelos------->
-<div id = "Express-Sequelize-Pedidos"> <!----- Inicio de Pedidos------->
+<div id = "Sequelize-Pedidos"> <!----- Inicio de Pedidos------->
 
-### Pedidos De Datos
+## Pedidos De Datos
 
-<div id = "Express-Sequelize-Select"> <!----- Inicio de Select------->
+<div id = "Sequelize-Select"> <!----- Inicio de Select------->
 
-#### Select 
+### Select 
 | Codigo Sequelize      |       funcion SQL         |
 |:---------------------:|---------------------------|
 |`Tabla.findAll()`      |SELECT * FROM Tabla        |
@@ -805,7 +815,7 @@ Estos son algunos tipos, para mas informacion: [TIPOS DE DATOS Sequelize](#https
 </div><!----- Fin de Select------->
 <div id = "Express-Sequelize-Where"> <!----- Inicio de Where-------> 
 
-#### Where
+### Where
 De esta forma filtramos por igualdad dentro de una tabla
 ```
 Tabla.funcionSeleccio(
@@ -829,7 +839,7 @@ Para ver todos los operadores entrar al siguiente link: [Operadores](#https://se
 </div> <!----- Fin de where------->
 <div id = "Express-Sequelize-Order"> <!----- Inicio de Order-------> 
 
-#### Order
+### Order
 ```
 Tabla.funcionSeleccio(
     {
@@ -842,9 +852,9 @@ Tabla.funcionSeleccio(
 El orden puede ser dos o `ASC` (ascendente) o `DESC` (descendente)
 
 </div>  <!----- Fin de Order------->
-<div id = "Express-Sequelize-Limit"> <!----- Inicio de Limit-------> 
+<div id = "Sequelize-Limit"> <!----- Inicio de Limit-------> 
 
-#### Limit
+### Limit
 ```
 Tabla.funcionSeleccio(
     {
@@ -854,9 +864,9 @@ Tabla.funcionSeleccio(
 ```
 
 </div> <!----- Fin de Limit------->
-<div id = "Express-Sequelize-Offset">  <!----- Inicio de Offset-------> 
+<div id = "Sequelize-Offset">  <!----- Inicio de Offset-------> 
 
-#### Offset
+### Offset
 ```
 Tabla.funcionSeleccio(
     {
@@ -866,9 +876,9 @@ Tabla.funcionSeleccio(
 ```
 
 </div> <!------ Fin de Offset ------>
-<div id = "Express-Sequelize-Manejo"> <!------ Inicio de Include ------>
+<div id = "Sequelize-Manejo"> <!------ Inicio de Include ------>
 
-#### include
+### include
 ```
 Tabla.funcionSeleccio(
     {
@@ -879,11 +889,11 @@ Tabla.funcionSeleccio(
 
 </div> <!------ Fin de Include ------>
 </div> <!------ Fin de Pedidos ------>
-<div id = "Express-Sequelize-Manejo"> <!------ Inicio de Manejo ------>
+<div id = "Sequelize-Manejo"> <!------ Inicio de Manejo ------>
 
-### Manejo de datos
+## Manejo de datos
 
-<div id = "Express-Sequelize-Create"> <!------ Inicio de Create ------>
+<div id = "Sequelize-Create"> <!------ Inicio de Create ------>
 
 #### Create
 Sirve para crear una fila dentro de una tabla. El metodo que usamos se llama create el cual recibe por parametro un objeto con las propiedades de cada columa
@@ -908,9 +918,9 @@ db.Tabla.bulkCreate([{
 ```
 
 </div> <!------ Fin de Create ------>
-<div id = "Express-Sequelize-Update"> <!------ Inicio de Update ------>
+<div id = "Sequelize-Update"> <!------ Inicio de Update ------>
 
-#### Update
+### Update
 Esta funcionalida nos permite actualizar fila de nuestra base de datos.
 ``` 
 db.Tabla.update({
@@ -929,9 +939,9 @@ db.Tabla.upsert({
 });
 
 </div> <!------ Fin de Update------>
-<div id = "Express-Sequelize-Destroy"> <!------ Inicio de Destroy------>
+<div id = "Sequelize-Destroy"> <!------ Inicio de Destroy------>
 
-#### Destroy
+### Destroy
 Esta funcion lo que hace es eliminar un registro de la base de datos. para ellos se la pasa un objeto con la condicion para ser eliminado.
 ```
 db.Tabla.destroy({
@@ -941,13 +951,13 @@ db.Tabla.destroy({
 
 </div> <!------ Fin de Destroy ------>
 </div> <!------ Fin de Manejo ------>
-<div id = "Express-Sequelize-Relaciones"> <!------ Inicio de Relaciones ------>
+<div id = "Sequelize-Relaciones"> <!------ Inicio de Relaciones ------>
 
-### Relaciones
-<div id = "Express-Sequelize-Relaciones-1aM"> <!------ Inicio de 1aM ------>
+## Relaciones
+<div id = "Sequelize-Relaciones-1aM"> <!------ Inicio de 1aM ------>
 
-##### De 1 a muchos
-##### Estructura:
+### De 1 a muchos
+#### Estructura:
 En el archivo de model en cada modelo se utiliza la siguiente funciones para declarar las relaciones: <br>
 - __hasMany__ <br>
 Se utiliza para la tabla que contiene muchos campos en la otra tabla, por ejemplo en la relacion generos y peliculas. Se utiliza para asociar todos los generos a sus repectivas peliculas 
@@ -970,10 +980,10 @@ Tabla.associate = (models) => {
 }
 ```
 </div> <!----- Fin de 1aM ------->
-<div id = "Express-Sequelize-Relaciones-NaN"> <!------ Inicio de NaN ------>
+<div id = "Sequelize-Relaciones-NaN"> <!------ Inicio de NaN ------>
 
-#### De muchos a muchos
-##### Estructura:
+### De muchos a muchos
+#### Estructura:
 __belongsToMany__ <br>
 Se repiten en ambas relaciones el mismo formato 
 ```
@@ -1035,7 +1045,7 @@ controllers = {
 
 </div> <!----- Fin de Estructura ------->
 </div> <!----- Fin de Fetch ------->
-</div> <!----- Fin de Express ------->
+
 
 
 
