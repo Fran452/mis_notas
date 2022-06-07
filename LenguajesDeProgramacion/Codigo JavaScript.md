@@ -67,7 +67,7 @@
 | [Express Session](#Express-Session)| [Configurarciones](#Express-Session-Configurarciones) <br> [Codigo](#Express-Session-Codigo)| 
 | [Cookies](#Express-Cookies)| [Configurarciones](#Express-Cookies-Configurarciones)| 
 | [Hashing](#Express-Hashing)| [Configurarciones](#Express-Hashing-Configurarciones) <br> [Codigo](#Express-Hashing-Codigo)|
-|  |<br>[Modelos](#Express-Sequelize-Modelos)<br>[Select](#Express-Sequelize-Select)<br>[Where](#Express-Sequelize-Where)<br>[Order](#Express-Sequelize-Order)<br>[Limit](#Express-Sequelize-Limit)<br>[Offset](#Express-Sequelize-Offset)<br>[Create](#Express-Sequelize-Create)<br>[Update](#Express-Sequelize-Update)<br>[Destroy](#Express-Sequelize-Destroy)|
+|  |<br><br><br><br>[Offset](#Express-Sequelize-Offset)<br>[Create](#Express-Sequelize-Create)<br>[Update](#Express-Sequelize-Update)<br>[Destroy](#Express-Sequelize-Destroy)|
 | [Fetch](#Express-Fetch)| [¿Que es?](#Express-Fetch-Que) <br> [Configuracion](#Express-Fetch-Configuracion)<br> [Estructura](#Express-Fetch-Estructura)|
 
 10. 
@@ -75,9 +75,16 @@
 |:-------------------------:|-----|
 | [Configuracion](#Express-Sequelize-Configuracion) | sin extencion |
 | [Modelos](#Sequelize-Modelos) |sin extencion |
-| | sin extencion |
-| | sin extencion |
-| | sin extencion |
+| [Pedidos](#Sequelize-Pedidos) | [Select](#Sequelize-Pedidos-Select) <br> [Where](#Sequelize-Pedidos-Where) <br> [Order](#Sequelize-Pedidos-Order) <br> [Limit](#Sequelize-Pedidos-Limit) <br> [Offset](#Sequelize-Pedidos-Offset) <br> [Include](#Sequelize-Pedidos-Include) |
+| [Manejo de datos](#Sequelize-Manejo)| [Create](#Sequelize-Manejo-Create) <br> [Update](#Sequelize-Manejo-Update) <br> [Destroy](#Sequelize-Manejo-Destroy) <br>|
+|[Relaciones](#Sequelize-Relaciones) | [1aM](#Sequelize-Relaciones-1aM) <br> [NaN](#Sequelize-Relaciones-NaN) |
+
+11. 
+| [Fetch](#Fetch) |
+|:-------------------------:|
+| [Que es?](#Fetch-Que)|
+| [Configuracion](#Fetch-Configuracion)|
+| [Estructura](#Fetch-Estructura)|
 
 12. 
 | [Promesas](#Promesas) |
@@ -803,7 +810,7 @@ Estos son algunos tipos, para mas informacion: [TIPOS DE DATOS Sequelize](#https
 
 ## Pedidos De Datos
 
-<div id = "Sequelize-Select"> <!----- Inicio de Select------->
+<div id = "Sequelize-Pedidos-Select"> <!----- Inicio de Select------->
 
 ### Select 
 | Codigo Sequelize      |       funcion SQL         |
@@ -813,7 +820,7 @@ Estos son algunos tipos, para mas informacion: [TIPOS DE DATOS Sequelize](#https
 |`Tabla.findOne({where:{columna: condicion}})`|SELECT * FROM Tabla WHERE columna = condicion|
 
 </div><!----- Fin de Select------->
-<div id = "Express-Sequelize-Where"> <!----- Inicio de Where-------> 
+<div id = "Sequelize-Pedidos-Where"> <!----- Inicio de Where-------> 
 
 ### Where
 De esta forma filtramos por igualdad dentro de una tabla
@@ -837,7 +844,7 @@ Tabla.funcionSeleccio(
 Para ver todos los operadores entrar al siguiente link: [Operadores](#https://sequelize.org/v5/manual/querying.html) 
 
 </div> <!----- Fin de where------->
-<div id = "Express-Sequelize-Order"> <!----- Inicio de Order-------> 
+<div id = "Sequelize-Pedidos-Order"> <!----- Inicio de Order-------> 
 
 ### Order
 ```
@@ -852,7 +859,7 @@ Tabla.funcionSeleccio(
 El orden puede ser dos o `ASC` (ascendente) o `DESC` (descendente)
 
 </div>  <!----- Fin de Order------->
-<div id = "Sequelize-Limit"> <!----- Inicio de Limit-------> 
+<div id = "Sequelize-Pedidos-Limit"> <!----- Inicio de Limit-------> 
 
 ### Limit
 ```
@@ -864,7 +871,7 @@ Tabla.funcionSeleccio(
 ```
 
 </div> <!----- Fin de Limit------->
-<div id = "Sequelize-Offset">  <!----- Inicio de Offset-------> 
+<div id = "Sequelize-Pedidos-Offset">  <!----- Inicio de Offset-------> 
 
 ### Offset
 ```
@@ -876,7 +883,7 @@ Tabla.funcionSeleccio(
 ```
 
 </div> <!------ Fin de Offset ------>
-<div id = "Sequelize-Manejo"> <!------ Inicio de Include ------>
+<div id = "Sequelize-Pedidos-Include"> <!------ Inicio de Include ------>
 
 ### include
 ```
@@ -893,7 +900,7 @@ Tabla.funcionSeleccio(
 
 ## Manejo de datos
 
-<div id = "Sequelize-Create"> <!------ Inicio de Create ------>
+<div id = "Sequelize-Manejo-Create"> <!------ Inicio de Create ------>
 
 #### Create
 Sirve para crear una fila dentro de una tabla. El metodo que usamos se llama create el cual recibe por parametro un objeto con las propiedades de cada columa
@@ -918,7 +925,7 @@ db.Tabla.bulkCreate([{
 ```
 
 </div> <!------ Fin de Create ------>
-<div id = "Sequelize-Update"> <!------ Inicio de Update ------>
+<div id = "Sequelize-Manejo-Update"> <!------ Inicio de Update ------>
 
 ### Update
 Esta funcionalida nos permite actualizar fila de nuestra base de datos.
@@ -939,7 +946,7 @@ db.Tabla.upsert({
 });
 
 </div> <!------ Fin de Update------>
-<div id = "Sequelize-Destroy"> <!------ Inicio de Destroy------>
+<div id = "Sequelize-Manejo-Destroy"> <!------ Inicio de Destroy------>
 
 ### Destroy
 Esta funcion lo que hace es eliminar un registro de la base de datos. para ellos se la pasa un objeto con la condicion para ser eliminado.
@@ -1015,22 +1022,22 @@ module.exports = Tabla;
 </div> <!----- Fin de NaN ------->
 </div> <!------ Fin de Relaciones ------>
 </div> <!----- Fin de Sequelize ------->
-<div id = "Express-Fetch"> <!----- Inicio de Fetch-------> 
+<div id = "Fetch"> <!----- Inicio de Fetch-------> 
 
-## Fetch
-<div id = "Express-Fetch-Que"> <!----- Inicio de Que -------> 
+# Fetch
+<div id = "Fetch-Que"> <!----- Inicio de Que -------> 
 
 ### ¿Que es?
 
 </div> <!----- Fin de Que ------->
-<div id = "Express-Fetch-Configuracion"> <!----- Inicio de Configuracion -------> 
+<div id = "Fetch-Configuracion"> <!----- Inicio de Configuracion -------> 
 
 ### Configuracion
 - npm i node-fetch
 - requeir el paquete : ` const fetch = require(node-fetch);`
 
 </div> <!----- Fin de Configuracion ------->
-<div id = "Express-Fetch-Estructura"> <!----- Inicio de Estructura -------> 
+<div id = "Fetch-Estructura"> <!----- Inicio de Estructura -------> 
 
 ### Estructura 
 
