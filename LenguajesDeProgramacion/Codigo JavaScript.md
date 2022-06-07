@@ -1053,12 +1053,6 @@ controllers = {
 </div> <!----- Fin de Estructura ------->
 </div> <!----- Fin de Fetch ------->
 
-
-
-
-
-<div id = "Express-Promesas"> <!----- Inicio de Promesas-------> 
-
 ## [Indice](#Indice)
 <div id = "Promesas"> <!----- Inicio de Promesas ------->  
 
@@ -1216,13 +1210,12 @@ Los eventos mas usados en este tipo son:
 ### Formularios
 | Evento                  |Funcion|
 |:-------------------------:|---|
-|focus| Se ejecuta cuando el usuario ingres a un campo del fromulario 
-|blur| Se ejecuta cuando el cursor sale del campo del formulario 
-|change| Nos detecta camvios en el fromulario
-|submit| Se ejecuta cuando se envia un formulario
-|query.value| Nos indica que se coloco en el formulario
+|`focus`| Se ejecuta cuando el usuario ingres a un campo del fromulario 
+|`blur`| Se ejecuta cuando el cursor sale del campo del formulario 
+|`change`| Nos detecta camvios en el fromulario
+|`submit`| Se ejecuta cuando se envia un formulario
+|`query.value`| Nos indica que se coloco en el formulario
 
-<!----    FALTA REMARCAR EL CODIGO  -->
 
 ## Fetch
 ### Que es?
@@ -1254,7 +1247,33 @@ fetch('linkDeLaApi',{
     codigo
 })
 ```
-        
+##  Object location
+
+### Que es ??
+Es un objeto que nos permite operar con la url en la que nos encontramos
+
+### Estructura
+se escribe `location.` y la propiedad que se desea incluir
+
+### Propidades
+| propiedad                  |Funcion|
+|:-------------------------:|---|
+|`.href`| Nos indica el url en el que nos encontramos
+|`.reload()`|Recarga la pagina 
+|`.search`| Devuelve la query string entera
+
+### URLSearchParams 
+Se utiliza para intancias un objeto unicamente de nuetra query estring. Para hacerlo seguimos con la siguiente estructura: <br>
+```
+let query = new URLSearchParams(location.search);
+```
+y algunos de los metodos que tiene este objeto en si son los siguientes: 
+
+|Metodo                     |Funcion|
+|:-------------------------:|---|
+|`query.has('queryString')`| Nos indica si queryString se encuentra en el objeto
+|`query.get('queryString')`| Nos devuelve el valor de queryString
+
 </div> <!----- Fin de Front end -------> 
 
 ## [Indice](#Indice)
