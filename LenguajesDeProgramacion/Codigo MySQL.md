@@ -74,7 +74,7 @@
 
 ## Datos de texto 
 | datos         |           definicion                              | 
-|:------ ------:|---------------------------------------------------|
+|:-------------:|---------------------------------------------------|
 |char(num)      |El numero indica la cantidad exacta de caractereres|
 |varchar(num)   |El numero indica el valor maximo de caracteres     |
 |text           |               No tiene maximo                     |

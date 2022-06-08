@@ -67,8 +67,6 @@
 | [Express Session](#Express-Session)| [Configurarciones](#Express-Session-Configurarciones) <br> [Codigo](#Express-Session-Codigo)| 
 | [Cookies](#Express-Cookies)| [Configurarciones](#Express-Cookies-Configurarciones)| 
 | [Hashing](#Express-Hashing)| [Configurarciones](#Express-Hashing-Configurarciones) <br> [Codigo](#Express-Hashing-Codigo)|
-|  |<br><br><br><br>[Offset](#Express-Sequelize-Offset)<br>[Create](#Express-Sequelize-Create)<br>[Update](#Express-Sequelize-Update)<br>[Destroy](#Express-Sequelize-Destroy)|
-| [Fetch](#Express-Fetch)| [¿Que es?](#Express-Fetch-Que) <br> [Configuracion](#Express-Fetch-Configuracion)<br> [Estructura](#Express-Fetch-Estructura)|
 
 10. 
 | [Sequelize](#Sequelize) | Extenciones | 
@@ -1273,6 +1271,26 @@ y algunos de los metodos que tiene este objeto en si son los siguientes:
 |:-------------------------:|---|
 |`query.has('queryString')`| Nos indica si queryString se encuentra en el objeto
 |`query.get('queryString')`| Nos devuelve el valor de queryString
+
+## localStorage
+Es un objeto que almacena valores para la utilizacion del front, el almacenamiento es en el pc del usuario por lo tanto es por tiempo indeterminado.
+### funciones
+|Metodo                     |Funcion|
+|:-------------------------:|---|
+|`localStorage.setItem("nombreClave","valor")`| Nos almacena el valor en una clave que le pasemos en el primer parametro
+|`localStorage.getItem("nombreClave")`| Nos devuelve el valor almacenado en la clave
+|`localStorage.remove("nombreClave")`| Elimina el valor almacenado con esa clave
+|`localStorage.clear()`| Elimina todos los valores almacenados 
+## sessionStorage
+Es un objeto que almacena valores para la utilizacion del front, el almacenamiento en el usuario asi que cuando se sale de la pagina se borra
+
+### funciones
+|Metodo                     |Funcion|
+|:-------------------------:|---|
+|`sessionStorage.setItem("nombreClave","valor")`| Nos almacena el valor en una clave que le pasemos en el primer parametro
+|`sessionStorage.getItem("nombreClave")`| Nos devuelve el valor almacenado en la clave
+|`sessionStorage.remove("nombreClave")`| Elimina el valor almacenado con esa clave
+|`sessionStorage.clear()`| Elimina todos los valores almacenados 
 
 </div> <!----- Fin de Front end -------> 
 
