@@ -1110,6 +1110,7 @@ async(parametros){
 
 </div> <!----- Fin de async -------> 
 </div> <!----- Fin de Promesas -------> 
+
 <div id = "Front"> <!----- Inicio de Front end ------->
 
 # Front end
@@ -1152,7 +1153,6 @@ Es un objeto literal que tiene funciones para modificar o preguntar propiedades 
 |`query.classList.remove("clase")`| quita una clase a un query
 |`query.classList.toggle("clase")`| quita o agrega segun la existienca de la clase
 |`query.classList.contains("clase")`| Nos retorna un bool con el valor de existencia de la clase
-
 
 ## Eventos 
 ### ¿Que son?
@@ -1295,9 +1295,22 @@ Es un objeto que almacena valores para la utilizacion del front, el almacenamien
 </div> <!----- Fin de Front end -------> 
 
 ## [Indice](#Indice)
+<div id = "React"> <!----- Inicio de React ------->
+
+# React
+## ¿Que es?
+React es una librería de JavaScript para crear proyectos del lado del front-end. Su implementación permite que la carga de la aplicación sea más rápida y performante. 
+## Implemetacion
+- npm init react-app nombreDelArchivo
+##
+
+
+
+
+</div> <!----- Fin de React ------->
+
+## [Indice](#Indice)
 <div id = "Teorico"> <!----- Inicio de Teoria-------> 
-
-
 
 # Material Teorico
 
