@@ -1110,6 +1110,7 @@ async(parametros){
 
 </div> <!----- Fin de async -------> 
 </div> <!----- Fin de Promesas -------> 
+
 <div id = "Front"> <!----- Inicio de Front end ------->
 
 # Front end
@@ -1152,7 +1153,6 @@ Es un objeto literal que tiene funciones para modificar o preguntar propiedades 
 |`query.classList.remove("clase")`| quita una clase a un query
 |`query.classList.toggle("clase")`| quita o agrega segun la existienca de la clase
 |`query.classList.contains("clase")`| Nos retorna un bool con el valor de existencia de la clase
-
 
 ## Eventos 
 ### ¿Que son?
@@ -1295,9 +1295,62 @@ Es un objeto que almacena valores para la utilizacion del front, el almacenamien
 </div> <!----- Fin de Front end -------> 
 
 ## [Indice](#Indice)
+<div id = "React"> <!----- Inicio de React ------->
+
+# React
+## ¿Que es?
+React es una librería de JavaScript para crear proyectos del lado del front-end. Su implementación permite que la carga de la aplicación sea más rápida y performante. 
+## Implemetacion
+- npm init react-app nombreDelArchivo
+- modificar archivo ./src/index.js
+- npm start
+## Componentes
+### ¿Que es?
+es una pueza de la interfaz de usuario que permite ser reutilizable, que cumple una funcion determinada y que trabaja de manera aisalada
+
+### Como aplicarlo
+- Creamos un arcivo .js con el contenido del componente
+- El componente tendra que contener el siguiente formato: (este componente se lo denomina stateless) 
+```
+import React form 'react';
+function Componente(){
+    return(
+        codigo html
+    );
+};
+
+export default Componente;
+```
+
+- Lo importamos en el app.js con el componete de la siguiente forma `import Componente from 'ubicacion'`
+- Lo ejecuto en la funcion de la siguente manera: 
+```
+fuction App(){
+    return (
+        <div className ="App">
+            <main>
+            <Modulo />
+            </main>
+        </div>
+    )
+}
+```
+
+## JSX - JavaScript XML
+### ¿ Que es?
+Es una extension de JS que sirve para generar bloques de codigo HTML pero con sentencias JS 
+
+### Limitaciones
+No se permite la utilizacion de for o forEach, en su remplazo se utilizac .map y se utiliza el if terneari al if comun. <br>
+Tambien se modifica el nombre de el metodo class de las etiquetas de html a className en su utilizacion en react. <br>
+No se permiten etiquetas abiertas de html como  `<img>` para react y JSX se cierra al final asi `<img/>`
+
+### Utilizacion
+Se utiliza igual al la metodologia de los componentes pero al momento de querer agregar codigo JS se lo agrega entre {}
+</div> <!----- Fin de React ------->
+
+## [Indice](#Indice)
 <div id = "Teorico"> <!----- Inicio de Teoria-------> 
-
-
 
 # Material Teorico
 
