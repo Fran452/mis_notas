@@ -40,7 +40,7 @@
 |[breakpoints](#MediaQueries-breakpoints)|
 
 6. 
-|[Flex](#) |
+|[Flex](#flex) |
 |:-------------------------:|
 |[estructura](#flex-estructura)|
 |[ejes](#flex-ejes)|
@@ -293,8 +293,6 @@ Son los puntos recomendados en los cuales hacer un Media queries
 
 ## [indice](#indice)
 # flex
-
-
 <div id = "flex-estructura">
 
 ## Estructura basica
@@ -351,6 +349,10 @@ Son los puntos recomendados en los cuales hacer un Media queries
 
 
 <div id = "pseudoSelectores">
+
+# Grid 
+<!------- A COMPLETAR ----->
+
 
 ## [indice](#indice)
 # Pseudo selectores
