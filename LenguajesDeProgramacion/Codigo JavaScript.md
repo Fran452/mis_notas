@@ -1336,6 +1336,49 @@ fuction App(){
 }
 ```
 
+## Porps
+### Que es? 
+Las Props son las propiedades del componente. Valores que se le pasan al componente para ser llamadas desde el mismo. Este ceuenta con una estructura de objeto con todas sus propiedades
+
+### Estructura 
+__Dentro del componente__
+```
+import React form 'react';
+function Componente(props){
+    return(
+        codigo html
+        <h1> propes.propiedad </h1>
+    );
+};
+
+export default Componente;
+```
+__Dentro del app__
+```
+fuction App(){
+    return (
+        <div className ="App">
+            <main>
+            <Modulo 
+                Propiedad1 = valor
+                Propiedad2 = valor
+            />
+            </main>
+        </div>
+    )
+}
+```
+### Mas de una etiqueta
+Si se selecciona mas de una etiqueta se le tiene que agregar a la etiqueta `key = 'valor'` que el valor no se repita en mas de dos key 
+## PropTypes
+### que es?
+Es un paquete que nos perimte determina que tipo de dato tiene que recibir cada propiedad
+### Intalacione
+- npm i prop-types
+- importar en el componente donde se quiera usar las propTypes `import propTypes from prop-types;`
+
+
+###
 ## JSX - JavaScript XML
 ### ¿ Que es?
 Es una extension de JS que sirve para generar bloques de codigo HTML pero con sentencias JS 
