@@ -1376,9 +1376,50 @@ Es un paquete que nos perimte determina que tipo de dato tiene que recibir cada 
 ### Intalacione
 - npm i prop-types
 - importar en el componente donde se quiera usar las propTypes `import propTypes from prop-types;`
+- indicar en objeto que cada propiedad y su tipo en el siguiente formato
+```
+Componente.propType = {
+    propiedad: proptype.array
+}
+```
+## defaultProps
+### Que es ?
+Con esta propiedad podemos darle valores por defecto a las props
+### Implementacion
+Para implementarlo indicamos en un objeto literal la key y el valor por defecto:
+```
+Componente.defaultProps = {
+    propiedad = valorPorDefecto,
+    propiedad2 = valorPorDefecto
+}
+```
 
-
-###
+## Children
+### Que es? 
+Como lo indica el nombre, este serian hijos del componente en el codigo.
+### Implementacion
+La implementacion en el Componente seria: 
+```
+fuction Componente(porps) {
+    return (
+        {props.children}
+    )
+}
+```
+En el app:
+```
+fuction App(){
+    return (
+        <div className ="App">
+            <main>
+                <Modulo>
+                    <etiqueta> </etiqueta> => esto es el children 
+                </Modulo> 
+            </main>
+        </div>
+    )
+}
+```
 ## JSX - JavaScript XML
 ### ¿ Que es?
 Es una extension de JS que sirve para generar bloques de codigo HTML pero con sentencias JS 
