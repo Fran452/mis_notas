@@ -97,6 +97,10 @@
 | [Front-End](#Front) |
 |:-------------------------:|
 | [](#)|
+14. 
+| [React](#React) |
+|:-------------------------:|
+| [](#)|
 
 20. 
 |[Material Teorico](#Teorico)|| 
@@ -276,6 +280,7 @@ fuction nombre(...variables){
 |`object.key`|Muestra que contiene la llave
 |`object[key]`| devuelve el valor que almacene esa key del objeto de otra forma
 |`let object = {...objectA}` | Creo un object con las propiedades de objectA antes declarado
+|`Object.keys(objeto)`| te devuelve un array con las keys del objeto dado 
 
 </div> <!----- Fin de Objetos ------->
 <div id = "Funciones-HTML"> <!----- Inicio de HTML ------->
@@ -286,7 +291,7 @@ fuction nombre(...variables){
 |`document.write(valor)`    | Muestra el valor en la pantalla
 |`prompt(valor)`            | Le pide al ususario un valor 
 |`alert(valor)`             | Muestra como alerta el valor
-|`confirm(valor)`| Envia al js un booleano de una ventana emergente 
+|`confirm(valor)`           | Envia al js un booleano de una ventana emergente 
 |``|
 
 </div> <!----- Fin de HTML ------->
@@ -1431,6 +1436,8 @@ No se permiten etiquetas abiertas de html como  `<img>` para react y JSX se cier
 
 ### Utilizacion
 Se utiliza igual al la metodologia de los componentes pero al momento de querer agregar codigo JS se lo agrega entre {}
+
+
 </div> <!----- Fin de React ------->
 
 ## [Indice](#Indice)
