@@ -1312,7 +1312,6 @@ React es una librería de JavaScript para crear proyectos del lado del front-end
 ## Componentes
 ### ¿Que es?
 es una pueza de la interfaz de usuario que permite ser reutilizable, que cumple una funcion determinada y que trabaja de manera aisalada
-
 ### Como aplicarlo
 - Creamos un arcivo .js con el contenido del componente
 - El componente tendra que contener el siguiente formato: (este componente se lo denomina stateless) 
@@ -1340,6 +1339,50 @@ fuction App(){
     )
 }
 ```
+## Tipos de Componenetes
+### Statefull
+Estos componentes te permiten modificar su informacion interna a partir de eventos y interaccion con la misma. <br>
+Tambien estos componentes almacenan datos de manera local <br>
+para usarlos se utiliza la siguiente estructura: 
+```
+import React, {Component} from 'react';
+
+class Componente extends Component{
+    render() {
+        return (
+            codigo JSX
+        )
+    }
+}
+
+export default Componente
+```
+#### Valores Por defecto 
+Este tipo de componente tiene valor predefinidos. para poder utilizarlos dentro de la clase hay que implementar la siguiente estructura
+
+```
+constructor (props) {
+    super(props);
+    ths.state = {
+        key : valor; => valor seteado desde la clase
+        key2 : props.keyProp => valor seteado desde las props
+    }
+}
+```
+y para implementarlo se utiliza el valor en JSX se utiliza: `this.state.key`
+
+#### Modificar valores internos
+Para modificar un valor interno se utiliza la funcion del objeto setState dentro de un metodo siguiendo la siguiente estructura
+```
+modificarValor () {
+    this.setState({
+        key: valorModificado
+    })
+}
+```
+y para asignarlo en EJX se lo llama con un evento y una funcion con este formato: `{() => modificarValor()}`
+### Componentes sin estado
+En estos comoponentes no se pueden camviar una ves renderizados
 
 ## Porps
 ### Que es? 
@@ -1398,7 +1441,6 @@ Componente.defaultProps = {
     propiedad2 = valorPorDefecto
 }
 ```
-
 ## Children
 ### Que es? 
 Como lo indica el nombre, este serian hijos del componente en el codigo.
@@ -1437,7 +1479,14 @@ No se permiten etiquetas abiertas de html como  `<img>` para react y JSX se cier
 ### Utilizacion
 Se utiliza igual al la metodologia de los componentes pero al momento de querer agregar codigo JS se lo agrega entre {}
 
+## Eventos 
+Para definir los eventos se utiliza al igual que en JS para el front pero con el metodo onEvento, por ejemplo onClick y con llaves que encierren una funcion con la accion que hace: `onClick = { () => accion()}`
 
+## Ciclo de vida
+El cliclo de vida de un componente es el proceso en el cual se encuentra al momento de ejecutarse, esete mismo es funcional a los componenetes con estado. El orden es el siguiente: 
+1. Montaje: El metodo que lo convoca es `componentDidMount()`. Este metodo se ejecuta justo despues de renderizarce el componente.
+2. Actualizacion: El metodo que lo convoca es `componentDidUpdate()`. Este metodo se ejecuta cada vez que el componenete sufra un cambio de estado ya sea por si mismo o por el componente padre.
+3. Desmontaje: El metodo que lo convoca es `componentWillUnmount()` se invoca inmediatamente al momento de desmontar un componente.
 </div> <!----- Fin de React ------->
 
 ## [Indice](#Indice)
