@@ -123,7 +123,7 @@ Limitaciones en tipo de datos de una columna para mantener la integridad de nues
 <div id = "funciones-crear"> <!----- Inicio de crear ------->
 
 ## Crear
-```
+```SQL
 CREATE TABLE nombre_de_la_tabla(
     nombre_de_la_columna_1 TIPO_DE_DATO CONSTRAINTS,
     nombre_de_la_columna_2 TIPO_DE_DATO CONSTRAINTS,
@@ -132,7 +132,7 @@ CREATE TABLE nombre_de_la_tabla(
 )
 ```
 ejemplo: 
-```
+```SQL
 CREATE TABLE productos(
     id INT NOT NULL AUTO_INCREMENT,
     nombre VARCHAR(100) NOT NULL,
@@ -156,7 +156,7 @@ CREATE TABLE productos(
 <div id = "funciones-editar-estructura"> <!----- Inicio de estructura ------->
 
 ### Estructura
-```
+```SQL
 ALTER TABLE productos(
     ADD id INT NOT NULL AUTO_INCREMENT,
     MODIFY nombre VARCHAR(100) NOT NULL,
@@ -187,7 +187,7 @@ ALTER TABLE productos(
 
 ## Incertar Datos
 Con cada uno de los campos
-```
+```SQL
 INSERT INTO tabla VALUES (valor1,valor2,valor3)
 ```
 si no queremos aclarar cada campo<br>
@@ -197,7 +197,7 @@ si no queremos aclarar cada campo<br>
 <div id = "funciones-manipulacion-Modificar"> <!----- Inicio de Modificar ------->
 
 ## Modificar Datos
-```
+```SQL
 UPDATE movie 
 SET modifiacion  
 WHERE criterio
@@ -309,7 +309,7 @@ END
 ```
 SELECTO movies.id, campo2,campo3
 FROM tabla
-INNSER JOIN tablaAUnir ON campoTabala = campoTablaB
+INNER JOIN tablaAUnir ON campoTabala = campoTablaB
 ```
 
 </div> <!----- Fin de JOIN ------->
@@ -331,7 +331,7 @@ Elimina duplicados 100% iguales en sus filas  <br>
 </div> <!----- Fin de DISTINCT ------->
 <div id = "union-tablas-GRUP"> <!----- Inicio de GRUP ------->
 
-## GRUP BY  
+## GROUP BY  
 Se crean grupos por diferentes categorias para aplicarle diferentes funciones:<br>
 `GROUP BY campoDeAgrupacion`<br> 
 

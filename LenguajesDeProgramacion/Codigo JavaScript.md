@@ -137,7 +137,7 @@
 <div id = "Estructuras-Decicion"> <!----- Inicio de Decicion ------->
 
 ## Decicion
-```
+```js
 if(condicion){
     codigoTrue
 }else if(condicion2){
@@ -146,10 +146,10 @@ if(condicion){
     codigoFalse
 }
 ```
-```
+```js
 let variable = bool ? valorTrue : valoFalse
 ```
-```
+```js
 switch(valor){
     case "caso1":
         funcion;
@@ -163,29 +163,29 @@ switch(valor){
 <div id = "Estructuras-Bucle"> <!----- Inicio de Bucle ------->
 
 ## Bucle
-```
+```js
 for(let valorInicial ;condicion; modificacionValorInicial){
     codigoBucle
 }
 ```
 Repite la cantidad de veces segun la cantidad de objetos del mismo, se toma el indice en clave 
-```
+```js
 for(clave in valor){ 
     funcion;            
 }
 ```
-repite la cantidad de veces segun la cantidad de objetos del mismo, se toma el valor en clave y no la pocicion
-```
+Repite la cantidad de veces segun la cantidad de objetos del mismo, se toma el valor en clave y no la pocicion
+```js
 for(clave of valor){ 
     funcion;            
 }
 ```
-```
+```js
 while(condicion){
     codigoTrue
 }
 ```
-```
+```js
 do{
     codigoTrue
 }while(condicion)
@@ -197,7 +197,7 @@ do{
 
 ## Funciones
 ### Funcion Comun
-```
+```js
 fuction nombre(variables){  
     codigo
 }
@@ -205,7 +205,7 @@ fuction nombre(variables){
 ### Fucion Flecha                         
 `let nombre = (variables) => {codigo}`
 ### Funcion con una cantidad de variables no definidas
-```
+```js
 fuction nombre(...variables){
     codigo
 }                                
@@ -326,7 +326,7 @@ fuction nombre(...variables){
 
 ## Estructura
 ### Declaracion de clase
-```
+```js
 class Clase{
     construnctor(variable1,valriable2){
         this.variable1 = variable1;
@@ -336,7 +336,7 @@ class Clase{
 ```
 ### Exprecion de clase
 #### Anonima
-```
+```js
 const Clase =class{
     construnctor(variable1,valriable2){
         this.variable1 = variable1;
@@ -345,7 +345,7 @@ const Clase =class{
 }
 ```
 #### Nombrada
-```
+```js
 const Clase = class Clase{
     construnctor(variable1,valriable2){
         this.variable1 = variable1;
@@ -358,7 +358,7 @@ const Clase = class Clase{
 
 ## Herencia
 se le agrega el atributo extends y de que clase se hereda
-```
+```js
 class ClasePadre{
     construnctor(variable1,valriable2){
         this.variable1 = variable1;
@@ -366,7 +366,7 @@ class ClasePadre{
     }
 }
 ```
-```
+```js
 class ClaseHija extends ClasePadre{
     construnctor(variable1,valriable2,variableHija){
         super(variable1,variable2);
@@ -411,7 +411,7 @@ class ClaseHija extends ClasePadre{
 
 ## Funciones 
 __exporta__ una lista de funciones
-```
+```js
 module.exports = {         
     funcion1 : funcion1    
     funcion2 : funcion2      
@@ -434,7 +434,7 @@ module.exports = {
 <div id = "JSON-Estructura">  <!----- Inicio de Estructura ------->
 
 ## Estructura de un archivo .json
-```
+```json
 '[{"name":"Argentina","capital":"CABA","reguion":"America"}]'
 ```
 
@@ -490,7 +490,7 @@ let fechaActual = new Date() => crea una variable con el informacion del dividid
 <div id = "Destructuracion-array"> <!----- Inicio de array ------->
 
 ## Para array
-```
+```js
 let array = ["val1", "val2", "val3", ... , "valN"];
 let[val1,val2] = array 
 ```
@@ -501,7 +501,7 @@ val1 va ser igual a "val1"
 
 
 ## Para Objetos
-```
+```js
 let object = {nombre : "fran", edad : 19, trabajo : "programador"}
 let[nombre,edad] = object
 ```
@@ -590,7 +590,7 @@ para una mejor implementaicon de node es necesario descargar estos paquetes de n
 #### JS
 - Requerir el paquete => `const multer = require('multer')`
 - Configurar multer => 
-```
+```js
 const storage = multer.diskStorage({
     destination:(req,file,cb) => {
         cb(null, carpetaDondeSeDeseaAlmacenaElArchivo)
@@ -620,7 +620,7 @@ __------------------ ARREGLAR Y AGREGAR: HTML ----------------------------------
 #### Router
 - requerir el paquete => `const {body} = require('express-validator')`
 - definir los requisito => <br>
-```
+```js
 const validation = {
     validacion1,
     validacion2,
@@ -632,7 +632,7 @@ const validation = {
 - requerir otra parte del paquete => `const {validationResult} = require('express-validator')`
 - llamamos a la funcion en nuestro controller => `let validaciones = validationResult(req)` 
 - esto nos devuelve un array de objetos con diferentes parametrso como en el siguiente ejemplo: 
-```
+```js
 errors:[
     {
         value : "",
@@ -737,7 +737,7 @@ __------------------ ARREGLAR Y AGREGAR: primeras ------------------------------
 1. Requerimos el paquete con:  `sudo npm i -g sequelize@5.21 sequelize-cli` 
 2. Requerimos la base de dato que vamos a usar: `sudo npm i mysql`
 3. Creamos el arichivo `.sequelizerc`. En este se espesifica donde se almacena todo lo relacionado a nuestra base de datos. como por ejemplo:
-```
+```js
 const path=require('path');
 
 module.exports={
@@ -758,7 +758,7 @@ module.exports={
 ## Modelos
 #### Estructura 
 Un modelo es el detalle de una table en especifico. Este se almacena en database/models con el nombre `NombreDeLaTabla.js` . El modelo siguie la siguiente estructura: 
-```
+```js
 module.exports = (sequelize, dataTypes) => {
     const Tabla = sequelize.define("nombreDeLaTabla",
         {
@@ -827,7 +827,7 @@ Estos son algunos tipos, para mas informacion: [TIPOS DE DATOS Sequelize](#https
 
 ### Where
 De esta forma filtramos por igualdad dentro de una tabla
-```
+```js
 Tabla.funcionSeleccio(
     {
         where: {columna : valor}
@@ -835,7 +835,7 @@ Tabla.funcionSeleccio(
 )
 ```
 __Operadores del where__
-```
+```js
 Tabla.funcionSeleccio(
     {
         where: {columna : {
@@ -850,7 +850,7 @@ Para ver todos los operadores entrar al siguiente link: [Operadores](#https://se
 <div id = "Sequelize-Pedidos-Order"> <!----- Inicio de Order-------> 
 
 ### Order
-```
+```js
 Tabla.funcionSeleccio(
     {
         order: [
@@ -865,7 +865,7 @@ El orden puede ser dos o `ASC` (ascendente) o `DESC` (descendente)
 <div id = "Sequelize-Pedidos-Limit"> <!----- Inicio de Limit-------> 
 
 ### Limit
-```
+```js
 Tabla.funcionSeleccio(
     {
         limit: valor
@@ -877,7 +877,7 @@ Tabla.funcionSeleccio(
 <div id = "Sequelize-Pedidos-Offset">  <!----- Inicio de Offset-------> 
 
 ### Offset
-```
+```js
 Tabla.funcionSeleccio(
     {
         offset: valor
@@ -889,7 +889,7 @@ Tabla.funcionSeleccio(
 <div id = "Sequelize-Pedidos-Include"> <!------ Inicio de Include ------>
 
 ### include
-```
+```js
 Tabla.funcionSeleccio(
     {
         include: [{association : "tablaAAsociar"}]
@@ -907,7 +907,7 @@ Tabla.funcionSeleccio(
 
 #### Create
 Sirve para crear una fila dentro de una tabla. El metodo que usamos se llama create el cual recibe por parametro un objeto con las propiedades de cada columa
-``` 
+```js
 db.Tabla.create({
     columna : dato,
     columna : dato,
@@ -917,7 +917,7 @@ db.Tabla.create({
 ```
 __bulkCreate()__ <br>
 Este metodo crear mas filas que solo una como en el create. El metodo se llama bulkCreate y en si se recive un array de objetos con las propiedades de las columnas.
-``` 
+``` js
 db.Tabla.bulkCreate([{
     columna : dato,
     columna : dato,
@@ -932,7 +932,7 @@ db.Tabla.bulkCreate([{
 
 ### Update
 Esta funcionalida nos permite actualizar fila de nuestra base de datos.
-``` 
+``` js
 db.Tabla.update({
     columnaAActualizar : dato,
     columnaAActualizar : dato
@@ -953,7 +953,7 @@ db.Tabla.upsert({
 
 ### Destroy
 Esta funcion lo que hace es eliminar un registro de la base de datos. para ellos se la pasa un objeto con la condicion para ser eliminado.
-```
+``` js
 db.Tabla.destroy({
     where : {propiedad}
 }); 
@@ -971,7 +971,7 @@ db.Tabla.destroy({
 En el archivo de model en cada modelo se utiliza la siguiente funciones para declarar las relaciones: <br>
 - __hasMany__ <br>
 Se utiliza para la tabla que contiene muchos campos en la otra tabla, por ejemplo en la relacion generos y peliculas. Se utiliza para asociar todos los generos a sus repectivas peliculas 
-```
+``` js
 Tabla.associate = (models) => {
     db.Tabla.hasMany(models.tablaAsociada,{
         foreignKey : 'nombreDeLaClaveForania',
@@ -981,7 +981,7 @@ Tabla.associate = (models) => {
 ```
 - __belongsTo__ <br>
 Se utiliza para la tabla que contiene un campo en la otra tabla, por ejemplo en la relacion generos y peliculas. Se utiliza para asociar cada pelicula a su genero
-```
+```js
 Tabla.associate = (models) => {    
     db.Tabla.belongsTo(models.tablaAsociada,{
         foreignKey : 'nombreDeLaClaveForania',
@@ -996,7 +996,7 @@ Tabla.associate = (models) => {
 #### Estructura:
 __belongsToMany__ <br>
 Se repiten en ambas relaciones el mismo formato 
-```
+```js
 Tabla.associate = (models) => {    
     db.Tabla.belongsToMany(models.tablaAsociada,{
         as: 'campoDeLaTablaAsociada',
@@ -1010,7 +1010,7 @@ Tabla.associate = (models) => {
 ```
 __Estructura de la tabla de union__ <br>
 Para hacer la union de muchos a muchos antes se necesita un tabla intermedia para unirlos. Esta tabla tendra la siguiente estructura
-```
+```js
 const Tabla = sequelize.define("NombreDeLaTabla", {
     Relaion1: {
          type: Sequelize.INTEGER, 
@@ -1043,7 +1043,7 @@ module.exports = Tabla;
 <div id = "Fetch-Estructura"> <!----- Inicio de Estructura -------> 
 
 ### Estructura 
-
+```js
 controllers = {
     fuction : async (req,res){
         fetch("url")
@@ -1051,7 +1051,7 @@ controllers = {
             .then(respuesta del front end)
     }
 }
-
+```
 
 </div> <!----- Fin de Estructura ------->
 </div> <!----- Fin de Fetch ------->
@@ -1071,7 +1071,7 @@ Las promesas son funciones que permiten ejecutar código asincrónico de forma e
 
 ## .then() 
 Promesa que retorna algo en si
-```
+```js
 funcion(valor)
     .then(fuction(){
         codigo
@@ -1084,7 +1084,7 @@ funcion(valor)
 
 ## .catch()
 Codigo que se ejecute al momento de encontrarse con un error
-```
+```js
 funcion(valor)
     .catch(fuction(){
         codigo
@@ -1105,7 +1105,7 @@ Esto es una array de promesas que una vez que se hayan hecho se ejecutara un the
 ## function async
 Este es otro metodo para crear funciones asincronicas con una estructura mas limpia que ustilizando el .then(). <br>
 Su estructura se basa en la utilizacion del async en la funcion y la utilizacion de await para aclarar que funciones son asincronicas<br>
-```
+```js
 async(parametros){
     const valor = await funcionAsicronica;
     codigo
@@ -1167,7 +1167,7 @@ La variable e cumple la funcion de espesificar el evento en si. Esta funcion tie
 ### Estructuras
 
 1. Con addEventListener nos permite ejecutar varios eventos simultaneamente
-```
+```js
 window.addEventListener("load", function(){
     
     selector.addEventListener("evento",function(){
@@ -1178,7 +1178,7 @@ window.addEventListener("load", function(){
 ```
 
 2. Con on + algo. con este evento no nos permite utilizar mas de un evento a la vez
-```
+```js
 window.onload = () => {
 codigo
 }
@@ -1225,7 +1225,7 @@ Los eventos mas usados en este tipo son:
 Es una funcion asincronica que nos devolvera una api en formato JSON
 ### Estructura
 __Por GET__
-```
+```js
 fetch('linkDeLaApi')
 .then(api => {
     return api.json();
@@ -1235,7 +1235,7 @@ fetch('linkDeLaApi')
 })
 ```
 __Por POST__
-```
+```js
 let data = {
     objeto enviado por post
 }
@@ -1267,7 +1267,7 @@ se escribe `location.` y la propiedad que se desea incluir
 
 ### URLSearchParams 
 Se utiliza para intancias un objeto unicamente de nuetra query estring. Para hacerlo seguimos con la siguiente estructura: <br>
-```
+```js
 let query = new URLSearchParams(location.search);
 ```
 y algunos de los metodos que tiene este objeto en si son los siguientes: 
@@ -1315,7 +1315,7 @@ es una pueza de la interfaz de usuario que permite ser reutilizable, que cumple 
 ### Como aplicarlo
 - Creamos un arcivo .js con el contenido del componente
 - El componente tendra que contener el siguiente formato: (este componente se lo denomina stateless) 
-```
+```js
 import React form 'react';
 function Componente(){
     return(
@@ -1328,7 +1328,7 @@ export default Componente;
 
 - Lo importamos en el app.js con el componete de la siguiente forma `import Componente from 'ubicacion'`
 - Lo ejecuto en la funcion de la siguente manera: 
-```
+```js
 fuction App(){
     return (
         <div className ="App">
@@ -1344,7 +1344,7 @@ fuction App(){
 Estos componentes te permiten modificar su informacion interna a partir de eventos y interaccion con la misma. <br>
 Tambien estos componentes almacenan datos de manera local <br>
 para usarlos se utiliza la siguiente estructura: 
-```
+```js
 import React, {Component} from 'react';
 
 class Componente extends Component{
@@ -1360,7 +1360,7 @@ export default Componente
 #### Valores Por defecto 
 Este tipo de componente tiene valor predefinidos. para poder utilizarlos dentro de la clase hay que implementar la siguiente estructura
 
-```
+```js
 constructor (props) {
     super(props);
     ths.state = {
@@ -1373,7 +1373,7 @@ y para implementarlo se utiliza el valor en JSX se utiliza: `this.state.key`
 
 #### Modificar valores internos
 Para modificar un valor interno se utiliza la funcion del objeto setState dentro de un metodo siguiendo la siguiente estructura
-```
+```js
 modificarValor () {
     this.setState({
         key: valorModificado
@@ -1390,7 +1390,7 @@ Las Props son las propiedades del componente. Valores que se le pasan al compone
 
 ### Estructura 
 __Dentro del componente__
-```
+```js
 import React form 'react';
 function Componente(props){
     return(
@@ -1402,7 +1402,7 @@ function Componente(props){
 export default Componente;
 ```
 __Dentro del app__
-```
+```js
 fuction App(){
     return (
         <div className ="App">
@@ -1425,7 +1425,7 @@ Es un paquete que nos perimte determina que tipo de dato tiene que recibir cada 
 - npm i prop-types
 - importar en el componente donde se quiera usar las propTypes `import propTypes from prop-types;`
 - indicar en objeto que cada propiedad y su tipo en el siguiente formato
-```
+```js
 Componente.propType = {
     propiedad: proptype.array
 }
@@ -1435,7 +1435,7 @@ Componente.propType = {
 Con esta propiedad podemos darle valores por defecto a las props
 ### Implementacion
 Para implementarlo indicamos en un objeto literal la key y el valor por defecto:
-```
+```js
 Componente.defaultProps = {
     propiedad = valorPorDefecto,
     propiedad2 = valorPorDefecto
@@ -1446,7 +1446,7 @@ Componente.defaultProps = {
 Como lo indica el nombre, este serian hijos del componente en el codigo.
 ### Implementacion
 La implementacion en el Componente seria: 
-```
+```js
 fuction Componente(porps) {
     return (
         {props.children}
@@ -1454,7 +1454,7 @@ fuction Componente(porps) {
 }
 ```
 En el app:
-```
+```js
 fuction App(){
     return (
         <div className ="App">
@@ -1487,6 +1487,208 @@ El cliclo de vida de un componente es el proceso en el cual se encuentra al mome
 1. Montaje: El metodo que lo convoca es `componentDidMount()`. Este metodo se ejecuta justo despues de renderizarce el componente.
 2. Actualizacion: El metodo que lo convoca es `componentDidUpdate()`. Este metodo se ejecuta cada vez que el componenete sufra un cambio de estado ya sea por si mismo o por el componente padre.
 3. Desmontaje: El metodo que lo convoca es `componentWillUnmount()` se invoca inmediatamente al momento de desmontar un componente.
+
+## React Router DOM
+### Que es?
+Es una libreria la cual nos permite gestionar el ruteo de nuestra aplicacion web.
+### Intalacion 
+1. Descargamos el componente en nuestro proyecto de react: `npm install react-router-dom`
+2. Lo importamos en nuestro App.js: `import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';`
+
+### Componentes
+
+| Componentes   |                               Utilizacion                             |           Utilizacion              |
+|:-------------:|-----------------------------------------------------------------------|------------------------------------|
+|`BrowserRouter`| Enrutador genera. Es el que se encarga de la administracion del ruteo | `<BrowserRouter> </BrowserRouter>`
+|`Link`         | Este componente define las rutas de nuestro sitio web                 | `<Link to = "/"> Home </Link>`
+|`Route`        | Este componente sirve para indicar el ruteo                           | `<Ruteo path = "/link" component = {componeneteAUsar}/> `
+|`Switch`       | Este componante sirve para administrar el sistema de ruteo            | `<Switch> <Ruteo> </Ruteo> </Switch>`
+
+### Implmentacion
+1. Cambiar la etiqueta a BrowserRouter en el index.js
+```js
+import { BrowserRouter } from 'react-router-dom';
+
+ReactDOM.render(
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+) 
+```
+2. Ruteo en el app.js
+```js
+import {Link, Route, Switch} from 'react-router-dom';
+import Componente1 from './components/Componente1';
+import Componente2 from './containers/Componente2';
+import Componente3 from './containers/Componente3';
+import RutaDeError from './containers/RutaDeError'
+
+function App() {
+  return (
+    <>
+        /* link de las paginas */
+        <Link to = "/"> Componente1 </Link>
+        <Link to = "/ruta1"> Componente2 </Link>
+        <Link to = "/ruta2"> Componente3 </Link>
+
+        /*Forma 1 de declarar los ruteos */
+        <Ruteo exact path = "/" component = {Componente1} /> => exact para renderizar exactamente esta ruta 
+        <Ruteo path = "/ruta1" component = {Componente2}/>
+        <Ruteo path = "/ruta2" component = {Componente3}/>
+
+        /* Forma 2 de declarar los ruteos */
+        <Ruteo exact path = "/">
+            < Componente1 /> 
+        </Ruteo>
+
+        <Ruteo path = "/ruta1">
+            < Componente2 /> 
+        </Ruteo>
+
+        <Ruteo path = "/ruta2">
+            < Componente3 /> 
+        </Ruteo>
+
+        /* Ruteo con Switch*/
+        <Switch> 
+
+        <Ruteo exact path = "/" component = {Componente1}/> 
+        <Ruteo path = "/ruta1" component = {Componente2}/>
+        <Ruteo path = "/ruta2" component = {Componente3}/>
+        <Ruteo component = {RutaDeError} />
+        
+        </Switch>
+    </Link>   
+  );
+}
+
+export default App;
+```
+
+### Rutas Parametrizadas
+Para utilizar las rutas parametrizadas primero en el ruteo se agregan los dos puntos como una ruta comun `/producto/:id` <br>
+Para utilizarlo en el componente tenemos que utilizar el siguiente comoponente: `props.match.params.parametrizada`, la ruta siempre llega en tipo strign <br>
+Ejemplo:
+- App.js
+
+```js
+import {Link, Route, Switch} from 'react-router-dom';
+import Componente1 from './components/Componente1';
+import Componente2 from './containers/Componente2';
+import Componente3 from './containers/Componente3';
+import RutaDeError from './containers/RutaDeError'
+
+function App() {
+  return (
+    <>
+        /* Ruteo con Switch*/
+        <Switch> 
+
+        <Ruteo exact path = "/" component = {Componente1}/> 
+        <Ruteo path = "/ruta1" component = {Componente2}/>
+        <Ruteo path = "/ruta2/:parametrizada" component = {Componente3}/>
+        <Ruteo component = {RutaDeError} />
+        
+        </Switch>
+    </Link>   
+  );
+}
+
+export default App;
+```
+- En Componente3.js
+
+```js
+import React from "react";
+
+function Componente3(props) {
+    let rutaParametrizada = props.match.params.parametrizada
+    return(
+       <>
+        <h1> {rutaParametrizada} </h1>
+       </>
+    )
+}
+
+export default Componente3;
+```
+
+## Hooks
+### Que son ?
+Los Hooks básicamente son funciones puras de JavaScript que nos van a permitir "enganchar" características  componentes que no sean de clase, o sea a los componentes funcionales. 
+### useState() 
+Este hook se utiliza para manejar el estado de los componentes. <br>
+Estructura: 
+```js
+import { useState } from 'react';
+const [valoresInciales, setValoresIniciales] = useState (valoresIniciales)
+```
+En estado se almacenaran un array de dos pociciones. Siendo la primera (valoresInciales) nuestros valores iniciales y la segunda (setValoresIniciales) una funcion que nos permitira actualizar el estado. Los nombres son genericos.
+
+### useEffect()
+En esta sola función tenemos la posibilidad de controlar lo que pasa cuando: se monta el componente, se actualiza o se desmonta<br>
+las diferentes estructuras entre un componenete de clase y un hook son la siguientes:<br>
+#### Al montarse 
+__componente de clase__
+```js
+componentDidMount() {
+    console.log('Se ejecuto al montarse');
+}
+```
+__hooks__
+```js
+import { useEffect } from 'react';
+useEffecto(() => {
+    console.log('Se ejecuto al montarse');
+},[]);
+```
+El array vacio determina que solo se ejecutara al momento de montarse
+#### Al actualizarce
+__componente de clase__
+```js
+componentDidUpdate() {
+    console.log('Se ejecuto al actualizarse');
+}
+```
+__hooks__
+```js
+import { useEffect } from 'react';
+useEffecto(() => {
+    console.log('Se ejecuto al actualizarse');
+},[miEstado]);
+```
+#### Al desmontarse
+__componente de clase__
+```js
+componentWillUnmount() {
+    console.log('Se ejecuto al Desmontarse');
+}
+```
+__hooks__
+```js
+import { useEffect } from 'react';
+useEffecto(() => {
+    return () => {
+        console.log('Se ejecuto al Desmontarse');
+        }
+},[]);
+```
+### useRef()
+Sirve para capturar cualquier elemento del DOM<br>
+Estructura:
+```js
+import { useRef } from "react";
+function Componente(){
+    const elTitulo = useRef();
+
+    return  (
+        <h1 ref = {elTitulo}> Titulo</h1>
+    )
+}
+
+```
+Para utilizar el objeto se utilizar la propiedad current del objeto 
+
 </div> <!----- Fin de React ------->
 
 ## [Indice](#Indice)
@@ -1500,7 +1702,7 @@ El cliclo de vida de un componente es el proceso en el cual se encuentra al mome
 <div id = "Teorico-express-app.js"> <!----- Inicio de Estructura -------> 
 
 ### Del archivo app.js
-```
+```js
 const express = require("express");
 const rutaA = require("./router/router.js")
 const methodOverride = require('method-override')
@@ -1514,7 +1716,7 @@ app.use(methodOverride('_method'))
 <div id = "Teorico-express-routers"> <!----- Inicio de routers -------> 
 
 ### Del los archivo routers
-```
+```js
 const express = require("express");
 const app = express.Routers();
 const controller = require("../controllers/controladorControllers.js")
@@ -1525,7 +1727,7 @@ module.imports = router
 <div id = "Teorico-express-controller"> <!----- Inicio de controller -------> 
 
 ### Del los archivo controller
-```
+```js
 const controllers{
     rutaA : funcion,
     rutaB : funcion,
@@ -1600,7 +1802,7 @@ router.get("ruta",(req,res,next) => { codigo }, rutaController.action);
 
 ### Ruta fija
 una ruta la cual siempre lleva el mismo nombre y no es modificado
-```
+```js
 router.get('/item',carritoController.agregarItem)
 ```
 
@@ -1609,7 +1811,7 @@ router.get('/item',carritoController.agregarItem)
 
 ### Ruta parametrisada
 ruta la cual el nombre es modificado ya se por un producto, una seccion etc
-```
+```js
 router.get('/:item',carritoController.agregarItem)
 ```
 
@@ -1618,7 +1820,7 @@ router.get('/:item',carritoController.agregarItem)
 
 ### Ruta parametrisada obtativa
 ruta la cual el nombre es modificado ya se por un producto, una seccion etc y no es obligatoria que este
-```
+```js
 router.get('/:item?',CB)
 ```
 
@@ -1643,11 +1845,23 @@ Este error se genera cuando un recurso no se encuentra dentro del servidor
 <div id = "Teorico-Error-Codigo"> <!----- Inicio de Codigo -------> 
 
 ### Codigo
-```
+```js
 app.use((req,res,next) =>{
     res.status(404).render('not-found')
 })
 ```
 
+
 </div>  <!----- Fin de Codigo ------->
 </div>  <!----- Fin de Error ------->
+<div id = "Teorico-SPA"> <!----- Inicio de SPA -------> 
+
+## SPA
+<div id = "Teorico-SPA-Que"> <!----- Inicio de Que -------> 
+
+### Que es ?
+Single Page Application es una aplicación web en la cual solo existe un único punto de entrada, generalmente un archivo index.html.
+
+</div>  <!----- Fin de Que ------->
+</div>  <!----- Fin de SPA ------->
+</div>  <!----- Fin de Teoria ------->
