@@ -8,7 +8,7 @@
 |[Variables](#Estructuras-Variables)|
 |[Decicion](#Estructuras-Decicion)|
 |[Bucle](#Estructuras-Bucle)|
-|[Funcionesz](#Estructuras-Funciones)|
+|[Funciones](#Estructuras-Funciones)|
 
 2. 
 | [Funciones](#Funciones) |
@@ -81,7 +81,6 @@
 | [Fetch](#Fetch) |
 |:-------------------------:|
 | [Que es?](#Fetch-Que)|
-| [Configuracion](#Fetch-Configuracion)|
 | [Estructura](#Fetch-Estructura)|
 
 12. 
@@ -94,14 +93,36 @@
 | [async](#Promesas-async)|
 
 13. 
-| [Front-End](#Front) |
-|:-------------------------:|
-| [](#)|
-14. 
-| [React](#React) |
-|:-------------------------:|
+| [Front-End](#Front) | Extenciones |
+|:-------------------------:|--|
+| [Window](#Front-Window)| [¿Que es?](#Front-Window-Que) <br> [Codigo](#Front-Window-Codigo)
+| [Document](#Front-Document)| [¿Que es?](#Front-Document-Que) <br> [Seleccion](#Front-Document-Seleccion) <br> [clases](#Front-Document-clases) <br>
+| [Eventos](#Front-Eventos)| [¿Que es?](#Front-Eventos-Que) <br> [Valor e](#Front-Eventos-e) <br> [Estructuras](#Front-Eventos-Estructuras) <br> [Mouse](#Front-Eventos-Mouse) <br> [Teclado](#Front-Eventos-Teclado) <br> [Formularios](#Front-Eventos-Formularios) <br>
+| [Location](#Front-location)| [¿Que es?](#Front-location-Que) <br> [Propidades](#Front-location-Propidades) <br> [URLSearchParams](#Front-location-URLSearchParams)
+| [sessionStorage](#Front-sessionStorage)| [funciones](#Front-sessionStorage-funciones)
+| [localStorage](#Front-localStorage)| [funciones](#Front-localStorage-funciones)
 | [](#)|
 
+ 
+
+14. 
+| [React](#React) | Extenciones|
+|:-------------------------:|-----|
+| [](#React-Que)|
+| [¿Que es?](#React-Implemetacion)|
+| [Componentes](#React-Componentes)| [¿Que es?](#React-Componentes-Que) <br> [aplicarlo](#React-Componentes-aplicarlo)
+| [Tipos](#React-Tipos)|  [Statefull](#React-Tipos-Statefull) <br> [](#React-Tipos-sinEstado)
+| [Porps](#React-Porps)|  [¿Que es?](#React-Porps-Que) <br> [Estructura](#React-Porps-Estructura) <br>  [etiquetas](#React-Porps-etiquetas) 
+| [PropTypes](#React-PropTypes)|  [¿Que es?](#React-PropTypes-que) <br> [Intalacione](#React-PropTypes-Intalacione)
+| [defaultProps](#React-defaultProps)|  [¿Que es?](#React-defaultProps-Que) <br> [Implementacion](#React-defaultProps-Implementacion) 
+| [Children](#React-Children)|  [¿Que es?](#React-Children-Que) <br> [Implementacion](#React-Children-Implementacion) 
+| [JSX](#React-JSX)|  [¿Que es?](#React-JSX-Que) <br> [Limitaciones](#React-JSX-Limitaciones) <br>  [Utilizacion](#React-JSX-Utilizacion) 
+| [Eventos](#React-Eventos)|
+| [Ciclos](#React-ciclos)|
+| [Router](#React-Router)|  [¿Que es?](#React-Router-Que) <br>  [Intalacion](#React-Router-Intalacion) <br> [Componentes](#React-Router-Componentes) <br>  [Implmentacion](#React-Router-Implmentacion) <br> [Parametrizadas](#React-Router-Parametrizadas) <br>
+| [Hooks](#React-Hooks)|  [¿Que es?](#React-Hooks-Que) <br> [useState](#React-Hooks-useState) <br>  [useEffect](#React-Hooks-useEffect) <br> [useRef](#React-Hooks-useRef) <br>
+
+   
 20. 
 |[Material Teorico](#Teorico)|| 
 |:--------------------:|-----|
@@ -1028,31 +1049,41 @@ module.exports = Tabla;
 <div id = "Fetch"> <!----- Inicio de Fetch-------> 
 
 # Fetch
-<div id = "Fetch-Que"> <!----- Inicio de Que -------> 
+<div id = "Fetch-Que"> <!----- Inicio de Que-------> 
 
-### ¿Que es?
+## Que es?
+Es una funcion asincronica que nos devolvera una api en formato JSON
 
 </div> <!----- Fin de Que ------->
-<div id = "Fetch-Configuracion"> <!----- Inicio de Configuracion -------> 
+<div id = "Fetch-Estructura"> <!----- Inicio de Fetch-------> 
 
-### Configuracion
-- npm i node-fetch
-- requeir el paquete : ` const fetch = require(node-fetch);`
-
-</div> <!----- Fin de Configuracion ------->
-<div id = "Fetch-Estructura"> <!----- Inicio de Estructura -------> 
-
-### Estructura 
+## Estructura
+__Por GET__
 ```js
-controllers = {
-    fuction : async (req,res){
-        fetch("url")
-            .then(respuesta de api)
-            .then(respuesta del front end)
-    }
-}
+fetch('linkDeLaApi')
+.then(api => {
+    return api.json();
+})
+.then(api => {
+    codigo
+})
 ```
-
+__Por POST__
+```js
+let data = {
+    objeto enviado por post
+}
+fetch('linkDeLaApi',{
+    'method':'POST';
+    'body': JSON.stringify(data)
+})
+.then(api => {
+    return api.json();
+})
+.then(api => {
+    codigo
+})
+```
 </div> <!----- Fin de Estructura ------->
 </div> <!----- Fin de Fetch ------->
 
@@ -1119,10 +1150,16 @@ async(parametros){
 <div id = "Front"> <!----- Inicio de Front end ------->
 
 # Front end
+<div id = "Front-Window"> <!----- Inicio de Window ------->
 
 ## Window
+<div id = "Front-Window-Que"> <!----- Inicio de Que ------->
+
 ### ¿Ques es?
 Es un objeto literal que tiene funciones para modificar o preguntar propiedades de la venta del navegador
+</div> <!----- Fin de Que ------->
+<div id = "Front-Window-Codigo"> <!----- Inicio de Codigo ------->
+
 ### Codigo
 | Codigo                  |Funcion|
 |:-------------------------:|---|
@@ -1132,10 +1169,21 @@ Es un objeto literal que tiene funciones para modificar o preguntar propiedades 
 
 Para mas informacion <a href = "https://www.w3schools.com/js/js_window.asp"> LINK </a>
 
+</div> <!----- Fin de Codigo ------->
+</div> <!----- Fin de Window ------->
+<div id = "Front-Document"> <!----- Inicio de Document ------->
+
 ## Document
 Para mas informacion ingresar al siguiente link <a href = "https://developer.mozilla.org/es/docs/Web/API/Document">LINK </a>
-### ¿Ques es?
+
+<div id = "Front-Document-Que"> <!----- Inicio de Que ------->
+
+### ¿Que es?
 Es un objeto literal que tiene funciones para modificar o preguntar propiedades del documento html
+
+</div> <!----- Fin de Que ------->
+<div id = "Front-Document-Seleccion"> <!----- Inicio de Seleccion ------->
+
 ### Codigo Seleccion
 | Codigo                  |Funcion|
 |:-------------------------:|---|
@@ -1149,6 +1197,9 @@ Es un objeto literal que tiene funciones para modificar o preguntar propiedades 
 |`document.querySelector("etiqueta").innerText`|Trae el texto plano de la etiqueta y de querer modifica sin procesarse la etiquetas html
 |`document.querySelector("etiqueta").style.propiedadCss`| Trae el valor de la propiedad seleccionada con la posibilidad de cambiarlo
 
+</div> <!----- Fin de Seleccion ------->
+<div id = "Front-Document-clases"> <!----- Inicio de clases ------->
+
 ### Codigo modificacion de clases 
 `let query = document.querySelector("etiqueta")`
 
@@ -1159,11 +1210,24 @@ Es un objeto literal que tiene funciones para modificar o preguntar propiedades 
 |`query.classList.toggle("clase")`| quita o agrega segun la existienca de la clase
 |`query.classList.contains("clase")`| Nos retorna un bool con el valor de existencia de la clase
 
+</div> <!----- Fin de clases ------->
+</div> <!----- Fin de Document ------->
+<div id = "Front-Eventos"> <!----- Inicio de Eventos ------->
+
 ## Eventos 
+<div id = "Front-Eventos-Que"> <!----- Inicio de Que ------->
+
 ### ¿Que son?
 Los eventos son cualquier accion que ocurra en un sitio web
+</div> <!----- Fin de Que ------->
+<div id = "Front-Eventos-e"> <!----- Inicio de e ------->
+
 ### Variable e
 La variable e cumple la funcion de espesificar el evento en si. Esta funcion tiene varias acciones segun el evento
+
+</div> <!----- Fin de e ------->
+<div id = "Front-Eventos-Estructuras"> <!----- Inicio de Estructuras ------->
+
 ### Estructuras
 
 1. Con addEventListener nos permite ejecutar varios eventos simultaneamente
@@ -1196,12 +1260,19 @@ Los eventos mas usados en este tipo son:
 |`onload`| Cuando se carga la página.
 |`onsubmit`| Cuando se envía un formulario.
 
+</div> <!----- Fin de Estructuras ------->
+<div id = "Front-Eventos-Mouse"> <!----- Inicio de Mouse ------->
+
 ### Mouse
 | Evento                  |Funcion|
 |:-------------------------:|---|
 |`click`| Se ejecuta al momento que se hace click en el query  
 |`mouseover`| Se ejecuta cuando se pasa el mause por encima 
 |`mouseout`| Se ejecuta cuando el mouse sale del area del query
+
+</div> <!----- Fin de Mouse ------->
+<div id = "Front-Eventos-Teclado"> <!----- Inicio de Teclado ------->
+
 ### Teclado
 | Evento                  |Funcion|
 |:-------------------------:|---|
@@ -1209,6 +1280,9 @@ Los eventos mas usados en este tipo son:
 |`keyup`| Se utiliza cuando se suelta la tecla
 |`keypress`| Se ejecuta cuando el se finaliza la accion de precion y suelte de la tecla  
 |`e.key`| No indica la tecla precionada 
+
+</div> <!----- Fin de Teclado ------->
+<div id = "Front-Eventos-Formularios"> <!----- Inicio de Formularios  ------->
 
 ### Formularios
 | Evento                  |Funcion|
@@ -1219,44 +1293,25 @@ Los eventos mas usados en este tipo son:
 |`submit`| Se ejecuta cuando se envia un formulario
 |`query.value`| Nos indica que se coloco en el formulario
 
+</div> <!----- Fin de Formularios ------->
+</div> <!----- Fin de Eventos ------->
+<div id = "Front-location"> <!----- Inicio de location ------->
 
-## Fetch
-### Que es?
-Es una funcion asincronica que nos devolvera una api en formato JSON
-### Estructura
-__Por GET__
-```js
-fetch('linkDeLaApi')
-.then(api => {
-    return api.json();
-})
-.then(api => {
-    codigo
-})
-```
-__Por POST__
-```js
-let data = {
-    objeto enviado por post
-}
-fetch('linkDeLaApi',{
-    'method':'POST';
-    'body': JSON.stringify(data)
-})
-.then(api => {
-    return api.json();
-})
-.then(api => {
-    codigo
-})
-```
+
 ##  Object location
+<div id = "Front-location-Que"> <!----- Inicio de Que ------->
 
 ### Que es ??
 Es un objeto que nos permite operar con la url en la que nos encontramos
 
+</div> <!----- Fin de Que ------->
+<div id = "Front-location-Estructura"> <!----- Inicio de Estructura ------->
+
 ### Estructura
 se escribe `location.` y la propiedad que se desea incluir
+
+</div> <!----- Fin de Estructura ------->
+<div id = "Front-location-Propidades"> <!----- Inicio de Propidades ------->
 
 ### Propidades
 | propiedad                  |Funcion|
@@ -1264,6 +1319,9 @@ se escribe `location.` y la propiedad que se desea incluir
 |`.href`| Nos indica el url en el que nos encontramos
 |`.reload()`|Recarga la pagina 
 |`.search`| Devuelve la query string entera
+
+</div> <!----- Fin de Propidades ------->
+<div id = "Front-location-URLSearchParams"> <!----- Inicio de URLSearchParams ------->
 
 ### URLSearchParams 
 Se utiliza para intancias un objeto unicamente de nuetra query estring. Para hacerlo seguimos con la siguiente estructura: <br>
@@ -1277,8 +1335,14 @@ y algunos de los metodos que tiene este objeto en si son los siguientes:
 |`query.has('queryString')`| Nos indica si queryString se encuentra en el objeto
 |`query.get('queryString')`| Nos devuelve el valor de queryString
 
+</div> <!----- Fin de URLSearchParams ------->
+</div> <!----- Fin de location ------->
+<div id = "Front-localStorage"> <!----- Inicio de localStorage ------->
+
 ## localStorage
 Es un objeto que almacena valores para la utilizacion del front, el almacenamiento es en el pc del usuario por lo tanto es por tiempo indeterminado.
+<div id = "Front-localStorage-funciones"> <!----- Inicio de funciones ------->
+
 ### funciones
 |Metodo                     |Funcion|
 |:-------------------------:|---|
@@ -1286,8 +1350,14 @@ Es un objeto que almacena valores para la utilizacion del front, el almacenamien
 |`localStorage.getItem("nombreClave")`| Nos devuelve el valor almacenado en la clave
 |`localStorage.remove("nombreClave")`| Elimina el valor almacenado con esa clave
 |`localStorage.clear()`| Elimina todos los valores almacenados 
+
+</div> <!----- Fin de funciones ------->
+</div> <!----- Fin de localStorage ------->
+<div id = "Front-sessionStorage"> <!----- Inicio de sessionStorage ------->
+
 ## sessionStorage
 Es un objeto que almacena valores para la utilizacion del front, el almacenamiento en el usuario asi que cuando se sale de la pagina se borra
+<div id = "Front-sessionStorage-funciones"> <!----- Inicio de funciones ------->
 
 ### funciones
 |Metodo                     |Funcion|
@@ -1297,21 +1367,41 @@ Es un objeto que almacena valores para la utilizacion del front, el almacenamien
 |`sessionStorage.remove("nombreClave")`| Elimina el valor almacenado con esa clave
 |`sessionStorage.clear()`| Elimina todos los valores almacenados 
 
+</div> <!----- Fin de funciones ------->
+</div> <!----- Fin de sessionStorage ------->
 </div> <!----- Fin de Front end -------> 
 
 ## [Indice](#Indice)
 <div id = "React"> <!----- Inicio de React ------->
 
 # React
+<div id = "React-Que"> <!----- Inicio de Que ------->
+</div>
+
 ## ¿Que es?
-React es una librería de JavaScript para crear proyectos del lado del front-end. Su implementación permite que la carga de la aplicación sea más rápida y performante. 
+React es una librería de JavaScript para crear proyectos del lado del front-end. Su implementación permite que la carga de la aplicación sea más rápida y performante.
+
+</div> <!----- Fin de Que -------> 
+<div id = "React-Implemetacion"> <!----- Inicio de Implemetacion ------->
+
 ## Implemetacion
 - npm init react-app nombreDelArchivo
 - modificar archivo ./src/index.js
 - npm start
+
+</div> <!----- Fin de Implemetacion -------> 
+<div id = "React-Componentes"> <!----- Inicio de Componentes ------->
+
 ## Componentes
+
+<div id = "React-Componentes-Que"> <!----- Inicio de Que ------->
+
 ### ¿Que es?
 es una pueza de la interfaz de usuario que permite ser reutilizable, que cumple una funcion determinada y que trabaja de manera aisalada
+
+</div> <!----- Fin de Que -------> 
+<div id = "React-Componentes-aplicarlo"> <!----- Inicio de aplicarlo ------->
+
 ### Como aplicarlo
 - Creamos un arcivo .js con el contenido del componente
 - El componente tendra que contener el siguiente formato: (este componente se lo denomina stateless) 
@@ -1339,7 +1429,14 @@ fuction App(){
     )
 }
 ```
+
+</div> <!----- Fin de aplicarlo -------> 
+</div> <!----- Fin de Componentes -------> 
+<div id = "React-Tipos"> <!----- Inicio de Tipos ------->
+
 ## Tipos de Componenetes
+<div id = "React-Tipos-Statefull"> <!----- Inicio de Statefull ------->
+
 ### Statefull
 Estos componentes te permiten modificar su informacion interna a partir de eventos y interaccion con la misma. <br>
 Tambien estos componentes almacenan datos de manera local <br>
@@ -1370,7 +1467,6 @@ constructor (props) {
 }
 ```
 y para implementarlo se utiliza el valor en JSX se utiliza: `this.state.key`
-
 #### Modificar valores internos
 Para modificar un valor interno se utiliza la funcion del objeto setState dentro de un metodo siguiendo la siguiente estructura
 ```js
@@ -1381,12 +1477,25 @@ modificarValor () {
 }
 ```
 y para asignarlo en EJX se lo llama con un evento y una funcion con este formato: `{() => modificarValor()}`
+
+</div> <!----- Fin de Statefull -------> 
+<div id = "React-Tipos-sinEstado"> <!----- Inicio de sinEstado ------->
+
 ### Componentes sin estado
 En estos comoponentes no se pueden camviar una ves renderizados
 
+</div> <!----- Fin de sinEstado -------> 
+<div id = "React-Porps"> <!----- Inicio de Porps ------->
+
 ## Porps
-### Que es? 
+<div id = "React-Porps-Que"> <!----- Inicio de Que ------->
+
+### ¿Que es? 
 Las Props son las propiedades del componente. Valores que se le pasan al componente para ser llamadas desde el mismo. Este ceuenta con una estructura de objeto con todas sus propiedades
+
+
+</div> <!----- Fin de Que -------> 
+<div id = "React-Porps-Estructura"> <!----- Inicio de Estructura ------->
 
 ### Estructura 
 __Dentro del componente__
@@ -1416,11 +1525,27 @@ fuction App(){
     )
 }
 ```
+
+</div> <!----- Fin de Estructura -------> 
+<div id = "React-Porps-etiquetas" > <!----- Inicio de etiquetas ------->
+
 ### Mas de una etiqueta
 Si se selecciona mas de una etiqueta se le tiene que agregar a la etiqueta `key = 'valor'` que el valor no se repita en mas de dos key 
+
+</div> <!----- Fin de etiquetas -------> 
+</div> <!----- Fin de sinEstado ------->
+<div id = "React-PropTypes"> <!----- Inicio de PropTypes ------->
+
+
 ## PropTypes
-### que es?
+<div id = "React-PropTypes-que"> <!----- Inicio de Que ------->
+
+### ¿Que es?
 Es un paquete que nos perimte determina que tipo de dato tiene que recibir cada propiedad
+
+</div> <!----- Fin de ¿Que ------->
+<div id = "React-PropTypes-Intalacione"> <!----- Inicio de Intalacione ------->
+
 ### Intalacione
 - npm i prop-types
 - importar en el componente donde se quiera usar las propTypes `import propTypes from prop-types;`
@@ -1430,9 +1555,19 @@ Componente.propType = {
     propiedad: proptype.array
 }
 ```
+</div> <!----- Fin de Intalacione ------->
+</div> <!----- Fin de PropTypes ------->
+<div id = "React-defaultProps"> <!----- Inicio de defaultProps ------->
+
 ## defaultProps
-### Que es ?
+<div id = "React-defaultProps-Que"> <!----- Inicio de Que ------->
+
+### ¿Que es?
 Con esta propiedad podemos darle valores por defecto a las props
+
+</div> <!----- Fin de Que ------->
+<div id = "React-defaultProps-Implementacion"> <!----- Inicio de Implementacion ------->
+
 ### Implementacion
 Para implementarlo indicamos en un objeto literal la key y el valor por defecto:
 ```js
@@ -1441,9 +1576,19 @@ Componente.defaultProps = {
     propiedad2 = valorPorDefecto
 }
 ```
+</div> <!----- Fin de Implementacion ------->
+</div> <!----- Fin de defaultProps ------->
+<div id = "React-Children"> <!----- Inicio de Children ------->
+
 ## Children
-### Que es? 
+<div id = "React-Children-Que"> <!----- Inicio de Que ------->
+
+### ¿Que es? 
 Como lo indica el nombre, este serian hijos del componente en el codigo.
+
+</div> <!----- Fin de Que ------->
+<div id = "React-Children-Implementacion"> <!----- Inicio de Implementacion ------->
+
 ### Implementacion
 La implementacion en el Componente seria: 
 ```js
@@ -1467,20 +1612,41 @@ fuction App(){
     )
 }
 ```
+
+</div> <!----- Fin de Implementacion ------->
+</div> <!----- Fin de Children ------->
+<div id = "React-JSX"> <!----- Inicio de JSX ------->
+
 ## JSX - JavaScript XML
-### ¿ Que es?
+<div id = "React-JSX-Que"> <!----- Inicio de Que ------->
+
+### ¿Que es?
 Es una extension de JS que sirve para generar bloques de codigo HTML pero con sentencias JS 
+
+</div> <!----- Fin de Que ------->
+<div id = "React-JSX-Limitaciones"> <!----- Inicio de Limitaciones ------->
+
 
 ### Limitaciones
 No se permite la utilizacion de for o forEach, en su remplazo se utilizac .map y se utiliza el if terneari al if comun. <br>
 Tambien se modifica el nombre de el metodo class de las etiquetas de html a className en su utilizacion en react. <br>
 No se permiten etiquetas abiertas de html como  `<img>` para react y JSX se cierra al final asi `<img/>`
 
+</div> <!----- Fin de Limitaciones ------->
+<div id = "React-JSX-Utilizacion"> <!----- Inicio de Utilizacion ------->
+
 ### Utilizacion
 Se utiliza igual al la metodologia de los componentes pero al momento de querer agregar codigo JS se lo agrega entre {}
 
+</div> <!----- Fin de Utilizacion ------->
+</div> <!----- Fin de JSX ------->
+<div id = "React-Eventos"> <!----- Inicio de Eventos ------->
+
 ## Eventos 
 Para definir los eventos se utiliza al igual que en JS para el front pero con el metodo onEvento, por ejemplo onClick y con llaves que encierren una funcion con la accion que hace: `onClick = { () => accion()}`
+
+</div> <!----- Fin de Eventos ------->
+<div id = "React-Ciclo"> <!----- Inicio de Ciclo ------->
 
 ## Ciclo de vida
 El cliclo de vida de un componente es el proceso en el cual se encuentra al momento de ejecutarse, esete mismo es funcional a los componenetes con estado. El orden es el siguiente: 
@@ -1488,12 +1654,24 @@ El cliclo de vida de un componente es el proceso en el cual se encuentra al mome
 2. Actualizacion: El metodo que lo convoca es `componentDidUpdate()`. Este metodo se ejecuta cada vez que el componenete sufra un cambio de estado ya sea por si mismo o por el componente padre.
 3. Desmontaje: El metodo que lo convoca es `componentWillUnmount()` se invoca inmediatamente al momento de desmontar un componente.
 
+</div> <!----- Fin de Ciclo ------->
+<div id = "React-Router"> <!----- Inicio de Router ------->
+
 ## React Router DOM
+<div id = "React-Router-Que"> <!----- Inicio de Que ------->
+
 ### Que es?
 Es una libreria la cual nos permite gestionar el ruteo de nuestra aplicacion web.
+
+</div> <!----- Fin de Que ------->
+<div id = "React-Router-Intalacion"> <!----- Inicio de Intalacion ------->
+
 ### Intalacion 
 1. Descargamos el componente en nuestro proyecto de react: `npm install react-router-dom`
 2. Lo importamos en nuestro App.js: `import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';`
+
+</div> <!----- Fin de Intalacion ------->
+<div id = "React-Router-Componentes"> <!----- Inicio de Componentes ------->
 
 ### Componentes
 
@@ -1503,6 +1681,10 @@ Es una libreria la cual nos permite gestionar el ruteo de nuestra aplicacion web
 |`Link`         | Este componente define las rutas de nuestro sitio web                 | `<Link to = "/"> Home </Link>`
 |`Route`        | Este componente sirve para indicar el ruteo                           | `<Ruteo path = "/link" component = {componeneteAUsar}/> `
 |`Switch`       | Este componante sirve para administrar el sistema de ruteo            | `<Switch> <Ruteo> </Ruteo> </Switch>`
+
+
+</div> <!----- Fin de Componentes ------->
+<div id = "React-Router-Implmentacion"> <!----- Inicio de Implmentacion ------->
 
 ### Implmentacion
 1. Cambiar la etiqueta a BrowserRouter en el index.js
@@ -1564,6 +1746,8 @@ function App() {
 
 export default App;
 ```
+</div> <!----- Fin de Implmentacion ------->
+<div id = "React-Router-Parametrizadas"> <!----- Inicio de Parametrizadas ------->
 
 ### Rutas Parametrizadas
 Para utilizar las rutas parametrizadas primero en el ruteo se agregan los dos puntos como una ruta comun `/producto/:id` <br>
@@ -1612,10 +1796,19 @@ function Componente3(props) {
 
 export default Componente3;
 ```
+</div> <!----- Fin de Parametrizadas ------->
+</div> <!----- Fin de Router ------->
+<div id = "React-Hooks"> <!----- Inicio de Hooks ------->
 
 ## Hooks
+<div id = "React-Hooks-Que"> <!----- Inicio de Que ------->
+
 ### Que son ?
 Los Hooks básicamente son funciones puras de JavaScript que nos van a permitir "enganchar" características  componentes que no sean de clase, o sea a los componentes funcionales. 
+
+</div> <!----- Fin de Que ------->
+<div id = "React-Hooks-useState"> <!----- Inicio de useState ------->
+
 ### useState() 
 Este hook se utiliza para manejar el estado de los componentes. <br>
 Estructura: 
@@ -1624,6 +1817,9 @@ import { useState } from 'react';
 const [valoresInciales, setValoresIniciales] = useState (valoresIniciales)
 ```
 En estado se almacenaran un array de dos pociciones. Siendo la primera (valoresInciales) nuestros valores iniciales y la segunda (setValoresIniciales) una funcion que nos permitira actualizar el estado. Los nombres son genericos.
+
+</div> <!----- Fin de useState ------->
+<div id = "React-Hooks-useEffect"> <!----- Inicio de useEffect ------->
 
 ### useEffect()
 En esta sola función tenemos la posibilidad de controlar lo que pasa cuando: se monta el componente, se actualiza o se desmonta<br>
@@ -1673,6 +1869,11 @@ useEffecto(() => {
         }
 },[]);
 ```
+
+
+</div> <!----- Fin de useEffect ------->
+<div id = "React-Hooks-useRef"> <!----- Inicio de useRef ------->
+
 ### useRef()
 Sirve para capturar cualquier elemento del DOM<br>
 Estructura:
@@ -1688,7 +1889,8 @@ function Componente(){
 
 ```
 Para utilizar el objeto se utilizar la propiedad current del objeto 
-
+</div> <!----- Fin de useRef ------->
+</div> <!----- Fin de Hooks ------->
 </div> <!----- Fin de React ------->
 
 ## [Indice](#Indice)
