@@ -101,15 +101,13 @@
 | [Location](#Front-location)| [¿Que es?](#Front-location-Que) <br> [Propidades](#Front-location-Propidades) <br> [URLSearchParams](#Front-location-URLSearchParams)
 | [sessionStorage](#Front-sessionStorage)| [funciones](#Front-sessionStorage-funciones)
 | [localStorage](#Front-localStorage)| [funciones](#Front-localStorage-funciones)
-| [](#)|
-
  
 
 14. 
 | [React](#React) | Extenciones|
 |:-------------------------:|-----|
-| [](#React-Que)|
-| [¿Que es?](#React-Implemetacion)|
+| [¿Que es?](#React-Que)|sin extencion
+| [Implemetacion](#React-Implemetacion)|
 | [Componentes](#React-Componentes)| [¿Que es?](#React-Componentes-Que) <br> [aplicarlo](#React-Componentes-aplicarlo)
 | [Tipos](#React-Tipos)|  [Statefull](#React-Tipos-Statefull) <br> [](#React-Tipos-sinEstado)
 | [Porps](#React-Porps)|  [¿Que es?](#React-Porps-Que) <br> [Estructura](#React-Porps-Estructura) <br>  [etiquetas](#React-Porps-etiquetas) 
@@ -117,21 +115,21 @@
 | [defaultProps](#React-defaultProps)|  [¿Que es?](#React-defaultProps-Que) <br> [Implementacion](#React-defaultProps-Implementacion) 
 | [Children](#React-Children)|  [¿Que es?](#React-Children-Que) <br> [Implementacion](#React-Children-Implementacion) 
 | [JSX](#React-JSX)|  [¿Que es?](#React-JSX-Que) <br> [Limitaciones](#React-JSX-Limitaciones) <br>  [Utilizacion](#React-JSX-Utilizacion) 
-| [Eventos](#React-Eventos)|
-| [Ciclos](#React-ciclos)|
+| [Eventos](#React-Eventos)| sin extencion
+| [Ciclos](#React-ciclos)| sin extencion
 | [Router](#React-Router)|  [¿Que es?](#React-Router-Que) <br>  [Intalacion](#React-Router-Intalacion) <br> [Componentes](#React-Router-Componentes) <br>  [Implmentacion](#React-Router-Implmentacion) <br> [Parametrizadas](#React-Router-Parametrizadas) <br>
 | [Hooks](#React-Hooks)|  [¿Que es?](#React-Hooks-Que) <br> [useState](#React-Hooks-useState) <br>  [useEffect](#React-Hooks-useEffect) <br> [useRef](#React-Hooks-useRef) <br>
 
    
 20. 
-|[Material Teorico](#Teorico)|| 
+|[Material Teorico](#Teorico)|Extenciones | 
 |:--------------------:|-----|
 |[Express](#Teorico-express)|[app.js](#Teorico-express-app.js) <br> [routers](#Teorico-express-routers)<br> [controller](#Teorico-express-controller) | 
 |[CRUD](#Teorico-CRUD)|[¿Que es?](#Teorico-CRUD-que)| 
 |[HTTP](#Teorico-HTTP)|[Metodos](#Teorico-HTTP-Metodos) <br> [codigo](#Teorico-HTTP-codigo)| 
 |[Middlewares](#Teorico-Middlewares)|[¿Que es?](#Teorico-Middlewares-Que ) <br> [aplicacion](#Teorico-Middlewares-aplicacion) <br> [rutas](#Teorico-Middlewares-rutas) | 
 |[Runtas](#Teorico-Runtas)|[Fija](#Teorico-Runtas-Fija) <br> [parametrisada](#Teorico-Runtas-parametrisada) <br> [obtativa](#Teorico-Runtas-obtativa)| 
-|[Carpeta](#Teorico-Carpeta)|| 
+|[Carpeta](#Teorico-Carpeta)|sin extencion| 
 |[Error](#Teorico-Error)|[Codigo](#Teorico-Error-Codigo)| 
 
 </div> <!----- Fin de Indice ------->
@@ -748,6 +746,7 @@ __------------------ ARREGLAR Y AGREGAR: primeras ------------------------------
 </div> <!----- Fin de Hashing------->  
 </div> <!----- Fin de Express ------->
 
+## [Indice](#Indice)
 <div id = "Sequelize"><!----- Inicio de Sequelize-------> 
 
 # Sequelize
@@ -1046,6 +1045,8 @@ module.exports = Tabla;
 </div> <!----- Fin de NaN ------->
 </div> <!------ Fin de Relaciones ------>
 </div> <!----- Fin de Sequelize ------->
+
+## [Indice](#Indice)
 <div id = "Fetch"> <!----- Inicio de Fetch-------> 
 
 # Fetch
@@ -1147,6 +1148,7 @@ async(parametros){
 </div> <!----- Fin de async -------> 
 </div> <!----- Fin de Promesas -------> 
 
+## [Indice](#Indice)
 <div id = "Front"> <!----- Inicio de Front end ------->
 
 # Front end
