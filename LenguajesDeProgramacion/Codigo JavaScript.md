@@ -1459,7 +1459,7 @@ export default Componente
 #### Valores Por defecto 
 Este tipo de componente tiene valor predefinidos. para poder utilizarlos dentro de la clase hay que implementar la siguiente estructura
 
-```js
+```javascript
 constructor (props) {
     super(props);
     ths.state = {
