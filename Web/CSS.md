@@ -1,4 +1,4 @@
-<div id = "indice">
+<div id = "indice"> <!----- Inicio de indice ------->
 
 # Indice
 
@@ -77,52 +77,51 @@
 
 <br>
 <br>
-</div>
-
-<div id = "estructuras">
+</div> <!----- Fin de indice ------->
 
 ## [indice](#indice)
+<div id = "estructuras"> <!----- Inicio de Estructuras ------->
+
 # Estructuras
     selector{
         propiedad:valor;
         propiedad:valor;
         propiedad:valor;
     }
-</div>
 
-
-<div id = "selectores">
+</div> <!----- Fin de Estructura ------->
 
 ## [indice](#indice)
 
+<div id = "selectores"> <!----- Inicio de selectores ------->
+
 # Selectores
 
-<div id = "selectores-universal">
+<div id = "selectores-universal">  <!----- Inicio de universal ------->
 
 ## Universal
     *{
 
     }
 
-</div>
-<div id = "selectores-etiqueta">
+</div>  <!----- Fin de universal ------->
+<div id = "selectores-etiqueta">  <!----- Inicio de etiqueta ------->
 
 ## Etiqueta
     p{
 
     }
 
-</div>
-<div id = "selectores-objeto">
+</div>  <!----- Fin de etiqueta ------->
+<div id = "selectores-objeto"> <!----- Inicio de objeto ------->
 
 ## objeto
     nombreDelObjeto{
 
     } 
 
-</div>
-<div id = "selectores-clase">
-
+</div> <!----- Fin de objeto ------->
+<div id = "selectores-clase"> <!----- Inicio de clase ------->
 
 ## clase
     .clase{
@@ -130,8 +129,8 @@
     } => css
     <h3 class = "nombre de la clase"> </h3> => html
 
-</div>
-<div id = "selectores-descendente">
+</div> <!----- Fin de clase ------->
+<div id = "selectores-descendente">  <!----- Inicio de descendente ------->
 
 ## descendente
     .noticia h2{
@@ -141,29 +140,30 @@
         <h2> nciwontexto modificadoisoenf </h2>
     </ul>
 
-</div>
-<div id = "selectores-convinada ">
+</div> <!----- Fin de descendente ------->
+<div id = "selectores-convinada "> <!----- Inicio de convinada ------->
 
 ## convinada
     h2.noticia => css
     <h2 class = "noticia"> texto modificado </h2>
 
-</div>
-<div id = "selectores-id">
+</div> <!----- Fin de convinada ------->
+<div id = "selectores-id"> <!----- Inicio de id ------->
 
 ## id
     #nombre{
 
     } => css
     <h3 id = nombre> texto modificado </h3>
-</div></div>
 
-<div id = "estilos">
+</div> <!----- Fin de id ------->
+</div> <!----- Fin de selectores ------->
 
 ## [indice](#indice)
+<div id = "estilos"> <!----- Inicio de estilos ------->
 
 # Estilos
-<div id = "estilos-Tipografia">
+<div id = "estilos-Tipografia">  <!----- Inicio de Tipografia ------->
 
 ## Tipografia
 | codigo                    |                                  explicacion                              |    
@@ -177,8 +177,9 @@
 |`text-decoration: none`    |agrega un subrallado (underline) o un tachado (line-through)
 |`text-transform: none`     |uppercase(todo en mayuscula), lowercase(todo en minusculas)
 |`line-height: tamaño`      |distancia entre parrafos
-</div>
-<div id = "estilos-Colores">
+
+</div> <!----- Fin de Tipografia ------->
+<div id = "estilos-Colores"> <!----- Inicio de Colores ------->
 
 ## Colores
 | codigo                                |                   explicacion         |
@@ -187,8 +188,9 @@
 |`color: porValorHexa`                  |se menciona los 6 digitos hexadecimal
 |`color: rgb(rojo,verde,azul)`          |se menciona por rgb
 |`color: rgba(rojo,verde,azul,opacidad)`|se le agrega la opacidad al rgb
-</div>
-<div id = "estilos-Fodos">
+
+</div> <!----- Fin de Colores ------->
+<div id = "estilos-Fodos"> <!----- Inicio de Fodos ------->
 
 ## Fodos
 | codigo                              |                                 explicacion                                 |
@@ -199,8 +201,9 @@
 |`background-position: center botton` |define la posicion de la imagen
 |`background-attachment: scroll`      |scroll(baja segun la pagina) fixed (queda fija)
 |`background-size: contain `          |tamaño de la imagen contein(que entre la imagen) cover(ocupe toda la pagina )
-</div>
-<div id = "estilos-Bloques">
+
+</div> <!----- Fin de Fodos ------->
+<div id = "estilos-Bloques"> <!----- Inicio de Bloques ------->
 
 ## Bloques
 | codigo                      |                                  explicacion                                            |
@@ -223,8 +226,11 @@
 | `margin-bottom: valor px`   |se le aplica un margenes al costado inferior
 | `margin-left: valor px `    |se le aplica un margenes al costado lateral izquierdo
 | `box-sizing: border-box `   |fina los valores de alto y ancho del width y height
-</div>
-<div id = "estilos-Otros">
+| `overflow: visible`         | Nos indica que hacer con el exedente visual de la pagina: visible (El contenido no es recortado) hidden (El contenido es recortado y no se muestran barras de posición) scroll (
+el contenido es recortado y el navegador web usa las barras de desplazamiento) auto (depende del agente de usuario)
+
+</div> <!----- Fin de Bloques ------->
+<div id = "estilos-Otros"> <!----- Inicio de Otros ------->
 
 ## Otros comandos
 | codigo            |                       explicacion                             |
@@ -232,37 +238,39 @@
 |`opacity: valor`   | se le agrega transparencia
 |`content: algo`    | se agrega algo al archivo por ejemplo conten: "hola"
 |`transition: propiedad tiempo`| se le agrega una trancicion a algun psudocodigo
-</div> </div>
 
-
-<div id = "medida">
+</div> <!----- Fin de Otros ------->
+</div> <!----- Fin de estilos ------->
 
 ## [indice](#indice)
+<div id = "medida"> <!----- Inicio de medida ------->
 
 # tipos de medida
-<div id = "medida-relativa">
+<div id = "medida-relativa"> <!----- Inicio de relativa ------->
 
 ## medida relativa
 son aquellas que se modifican segun el contexto alguns ejemplos son:
     % (porsentaje)
     vw (viewport-width)
     vh (viewport-height)
-</div>
-<div id = "medida-absolutas">
+
+</div> <!----- Fin de relativa ------->
+<div id = "medida-absolutas"> <!----- Inicio de absolutas ------->
 
 ## medidas absolutas
 son aquella que no se modifican selgun el contexto algunos ejemplos son:
     px (pixel)
-</div> </div>
 
-
-<div id = "MediaQueries">
+</div> <!----- Fin de absolutas ------->
+</div> <!----- Fin de medida ------->
 
 ## [indice](#indice)
+<div id = "MediaQueries"> <!----- Inicio de MediaQueries ------->
+
 # Media queries
 ### Es una regla de estilo para que nuestra pagina se vea bien en todas las resoluciones, que se define al final del archivo css
 
-<div id = "MediaQueries-estructura">
+<div id = "MediaQueries-estructura"> <!----- Inicio de estructura ------->
 
 ## Estructura
     @media(){
@@ -271,37 +279,41 @@ son aquella que no se modifican selgun el contexto algunos ejemplos son:
     min-width: x px => como minimo (para mobile first)
     max-width x px  => como maximo (para mobile last)
     and (orientation: ) => si se define una orientacion portrait o landscape
-</div>
-<div id = "MediaQueries-tipos">
+
+</div> <!----- Fin de estructura ------->
+<div id = "MediaQueries-tipos"> <!----- Inicio de tipos ------->
 
 ## Tipos de forma
 mobile first: se empiza por el formato de celular y se va adaptando al modelo de PC (el ma recomendado)
 mobile last:  se empieza por el formato de PC a la version de celular 
 
 <img src = "../img/mobile-first.jpg">
-</div>
-<div id = "MediaQueries-breakpoints">
+
+</div> <!----- Fin de tipos ------->
+<div id = "MediaQueries-breakpoints"> <!----- Inicio de breakpoints ------->
 
 ## Breakpoints
 Son los puntos recomendados en los cuales hacer un Media queries
 
 <img src = "../img/breakpoints.jpg"  height = 200>
-</div> </div>
 
-
-<div id = "flex">
+</div> <!----- Fin de breakpoints ------->
+</div> <!----- Fin de MediaQueries ------->
 
 ## [indice](#indice)
+<div id = "flex"> <!----- Inicio de flex ------->
+
 # flex
-<div id = "flex-estructura">
+<div id = "flex-estructura"> <!----- Inicio de estructura ------->
 
 ## Estructura basica
     .contenedor{
         displey: flex => hace que los elementos sean flex
         flex-wrap: wrap => matener tamaño de los elementos
     }
-</div>
-<div id = "flex-ejes">
+
+</div> <!----- Fin de estructura ------->
+<div id = "flex-ejes"> <!----- Inicio de ejes ------->
 
 ## Ejes
 | codigo                          |explicacion| | | |
@@ -310,8 +322,9 @@ Son los puntos recomendados en los cuales hacer un Media queries
 |`flex-direction: column `        |Eje principal el largo de arriba a abajo
 |`flex-direction: row-reverse`    |Eje principal el ancho de derecha a izquiera
 |`flex-direction: column-reverse` |Eje principal el ancho de abajo a arriba
-</div>
-<div id = "flex-manejo-ejes">
+
+</div> <!----- Fin de ejes ------->
+<div id = "flex-manejo-ejes"> <!----- Inicio de manejo ------->
 
 ### Manejo de los ejes
 #### Main axis (eje X)
@@ -336,8 +349,9 @@ Son los puntos recomendados en los cuales hacer un Media queries
 |`align-self: flex-end`   |Se ubican al final de cross (anulana lign-items )
 |`align-self: center`     |Se ubican en el centro (anulana lign-items )
 |`align-self: baseline`   |Muestra elementos en la línea base del contenedor (anulana lign-items )
-</div>
-<div id = "flex-otros">
+
+</div> <!----- Fin de manejo ------->
+<div id = "flex-otros"> <!----- Inicio de otros ------->
 
 ## otros
 | codigo                                  |explicacion| | | |
@@ -345,24 +359,29 @@ Son los puntos recomendados en los cuales hacer un Media queries
 |`flew-flow: <flex-direction> <flex-wrap>`|Convina los dos por ejemplo flew-flow: column warp
 |`order: valor`                           |Mueve el elemto al valor pos o neg que se le indeque
 |`flex-grow: valor`                       |Agranda un elemento segun el valor que se le indique
-</div> </div>
 
+</div> <!----- Fin de otros ------->
+</div> <!----- Fin de flex ------->
 
-<div id = "pseudoSelectores">
+## [indice](#indice)
+<div id = "grid"> <!----- Inicio de grid ------->
 
 # Grid 
 <!------- A COMPLETAR ----->
-
+</div> <!----- Fin de grid ------->
 
 ## [indice](#indice)
+<div id = "pseudoSelectores"> <!----- Inicio de pseudoSelectores ------->
+
 # Pseudo selectores
 
-<div id = "pseudoSelectores-Definicion">
+<div id = "pseudoSelectores-Definicion">  <!----- Inicio de Definicion ------->
 
 ## ¿que es?
 es diferenciar un comportamiento al momento de pasar por encima del objeto con un cursor
-</div>
-<div id = "pseudoSelectores-tipos">
+
+</div> <!----- Fin de Definicion ------->
+<div id = "pseudoSelectores-tipos">  <!----- Inicio de tipos ------->
 
 ## Tipos
 ### Pseudo clases
@@ -373,8 +392,9 @@ es diferenciar un comportamiento al momento de pasar por encima del objeto con u
     hs::pseudo-codigo{
         codigo
     }
-</div>
-<div id = "pseudoSelectores-propiedades"> 
+
+</div> <!----- Fin de tipos ------->
+<div id = "pseudoSelectores-propiedades">  <!----- Inicio de propiedades ------->
 
 ### propiedades:
 | codigo             |explicacion| | | |
@@ -386,11 +406,13 @@ es diferenciar un comportamiento al momento de pasar por encima del objeto con u
 |`.selector:focus{}` |Cuando el cursos se ubique dentro del formulario
 |`.selector::before` |Se le agrega algo antes del selector
 |`.selector::after`  |Se le agrega algo despues del selector
-</div> </div>
 
-<div id = "posicionamiento"> 
+</div> <!----- Fin de propiedades -------> 
+</div> <!----- Fin de pseudoSelectores ------->
 
 ## [indice](#indice)
+<div id = "posicionamiento">  <!----- Inicio de posicionamiento -------> 
+
 # Posicionamiento
 `position: propiedad` <br> algunas de las pociciones son: 
 | codigo    |explicacion| | | |
@@ -400,7 +422,7 @@ es diferenciar un comportamiento al momento de pasar por encima del objeto con u
 |absolute   | El contenedor sera el punto de referencia
 |fixed      | No importa si se hace scroll el objeto se matiene
 
-<div id = "posicionamiento-Mamejo"> 
+<div id = "posicionamiento-Mamejo">  <!----- Inicio de Mamejo ------->
 
 ## Mamejo del posicionamiento
 | codigo             |explicacion| | | |
@@ -409,22 +431,24 @@ es diferenciar un comportamiento al momento de pasar por encima del objeto con u
 |`right: tamaño px`   | movimiento hacia la izquierda
 |`bottom: tamaño px`  | movimiento hacia arriba
 |`left: tamaño px`    | movimiento hacia la derecha
-</div>
-<div id = "posicionamiento-profundidad"> 
+
+</div> <!----- Fin de Mamejo ------->
+<div id = "posicionamiento-profundidad">  <!----- Inicio de profundidad ------->
 
 ## pocicionamiento en profundidad
 | codigo             |explicacion| | | |
 |:------------------:|---|---|---|---|
 |`z-index: valor`    | se le aplica un valor tanto positivo como negatativo para posicionarlo 
-</div> </div>
 
-
-<div id = "animaciones"> 
+</div> <!----- Fin de profundidad ------->
+</div> <!----- Fin de posicionamiento ------->
 
 ## [indice](#indice)
+<div id = "animaciones">  <!----- Inicio de animaciones ------->
+
 # Animaciones
 
-<div id = "animaciones-Estructura"> 
+<div id = "animaciones-Estructura">  <!----- Inicio de Estructura ------->
 
 ## Estructura
 ```
@@ -433,8 +457,9 @@ es diferenciar un comportamiento al momento de pasar por encima del objeto con u
     100%{ } estado final
 }
 ```
-</div>
-<div id = "animaciones-Aplicacion"> 
+
+</div> <!----- Fin de Estructura ------->
+<div id = "animaciones-Aplicacion">  <!----- Inicio de Aplicacion ------->
 
 ## Aplicacion
 | codigo             |explicacion| | | |
@@ -444,20 +469,21 @@ es diferenciar un comportamiento al momento de pasar por encima del objeto con u
 |`animation-iteration-count: iteraciones`   |cantidad de veces que se repetira la animacion, infinite para no tereminarla
 |`animation: nombre tiempo iteranciones`    |es una abreviatura de las tres anteriores 
 |`animation-direction: valor`               |valor puede ser: alternative (la animacion va y viene)  normal (la animacion va en bucle)
-</div> </div>
 
-
-<div id = "Normalize">
+</div> <!----- Fin de Aplicacion ------->
+</div> <!----- Fin de animaciones ------->
 
 ## [indice](#indice)
+<div id = "Normalize"> <!----- Inicio de Normalize ------->
+
 # Normalize
 ## libreria de estilos para web. descarga: 
 <a href = "https://necolas.github.io/normalize.css/"> <img src = "../img/normalize.png"></a>
-</div>
-
-<div id = "iconos">
+</div> <!----- Fin de Normalize ------->
 
 ## [indice](#indice)
+<div id = "iconos">  <!----- Inicio de iconos ------->
+
 # Agregar iconos
 1. entrar a la pagina de font awesome 
 <br>
@@ -468,4 +494,5 @@ es diferenciar un comportamiento al momento de pasar por encima del objeto con u
 
 3. copia el codigo del icomo, algo como esto
 `<i class="fa-solid fa-soft-serve"></i>`
-</div>
+
+</div> <!----- Fin de iconos ------->
