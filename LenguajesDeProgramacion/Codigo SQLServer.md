@@ -50,7 +50,7 @@
 <br> 
 
 
-## [Indice](#Indice)
+## [Indice](#indice)
 
 <div id = "datos"> <!----- Inicio de datos ------->
 
@@ -75,9 +75,13 @@
 ## Datos de texto 
 | datos         |           definicion                              | 
 |:-------------:|---------------------------------------------------|
-|char(num)      |El numero indica la cantidad exacta de caractereres|
-|varchar(num)   |El numero indica el valor maximo de caracteres     |
-|text           |               No tiene maximo                     |
+|CHAR(num)      |El numero indica la cantidad exacta de caractereres longitud fija tabla ASCII|
+|VARCHAR(num)   |El numero indica el valor maximo de caracteres longitud variable tabla ASCII    |
+|NCAHR()|El numero indica la cantidad exacta de caractereres longitud Unicode|
+|NVARCHAR(num)   |El numero indica el valor maximo de caracteres longitud variable Unicode |
+|TEXT           |               No tiene maximo                     |
+
+* Unicode: caracteres extendidos de la tabla ASCII
 
 </div> <!----- Fin de texto ------->
 <div id = "datos-fecha"> <!----- Inicio de fecha ------->
@@ -92,7 +96,7 @@
 </div> <!----- Fin de fecha ------->
 </div> <!----- Fin de datos ------->
  
-## [Indice](#Indice)
+## [Indice](#indice)
 <div id = "constraints"> <!----- Inicio de constraints ------->
 
 # Constraints
@@ -112,11 +116,15 @@ Limitaciones en tipo de datos de una columna para mantener la integridad de nues
 |PRIMARY KEY    | Identificador de forma unica a una fila (obligatoria) |
 |DEFAULT        | Aplica un valor por defecto                           |
 |AUTO_INCREMENT | Generta un numero unico y lo incrementa automaticamente |
+|IDENTYTY(valoresInicial,aumento)|Los valores creados ronda del valor incial aumentado segun se inidique|
+|CONSTRAIRNT nombre|Se le agrega el nombre para poder identificarlo al momento del error|
+|REFERENCE tabla|se utiliza para claves foraneas riferenciando la tabla|
+|CHECK (bool)| Agrega una condicion para un capo|
 
 </div> <!----- Fin de tipos ------->
 </div> <!----- Fin de constraints ------->
 
-## [Indice](#Indice)
+## [Indice](#indice)
 <div id = "funciones"> <!----- Inicio de funciones ------->
 
 # Funciones
@@ -127,8 +135,8 @@ Limitaciones en tipo de datos de una columna para mantener la integridad de nues
 CREATE TABLE nombre_de_la_tabla(
     nombre_de_la_columna_1 TIPO_DE_DATO CONSTRAINTS,
     nombre_de_la_columna_2 TIPO_DE_DATO CONSTRAINTS,
-    PRIMARY KEY (variable_primaria),
-    FOREIGN KEY(variable_foraneas) REFERENCES base_de-datos-variable(id)
+    PRIMARY KET (variable_primaria),
+    FOREIGN KEY(variable_foraneas) REFERENCES base_de-datos-variable
 )
 ```
 ejemplo: 
@@ -138,8 +146,10 @@ CREATE TABLE productos(
     nombre VARCHAR(100) NOT NULL,
     mail VARCHAR(100) NOT NULL UNIQUE,
     direccion_id INT,
+    precio INT,
     PRIMARY KEy (id),
-    FOREIGN KEY(direccion_id) REFERENCES direcciones(id)
+    FOREIGN KEY(direccion_id) REFERENCES direcciones(id),
+    CONSTRAINT pro_pre CHECK (precio > 0)
 )
 ```
 
@@ -178,7 +188,7 @@ ALTER TABLE productos(
 </div> <!----- Fin de editar ------->
 </div> <!----- Fin de funciones ------->
 
-## [Indice](#Indice)
+## [Indice](#indice)
 <div id = "funciones-manipulacion"> <!----- Inicio de manipulacion ------->
 
 # Manipulacion de datos
@@ -217,7 +227,8 @@ solicita todos los datos * de una tabla <br>
 `SELECT * FROM movies` <br>
 si quiero solicitar X campo:<br>
 `SELECT campo1,campo2,campo3 FROM movies` <br>
-
+Si se quiere solicitar varias tablas siendo Tabla el nombre de la tabla y tabla1 un apodo para luego usarse <br>
+`SELECT tabla1.campo tabla2.campo FROM Tabla1 tabla1, Tabla2 tabla2
 
 <div id = "funciones-manipulacion-Seleccionar-Filtro"> <!----- Inicio de Filtro ------->
 
@@ -227,9 +238,19 @@ se solicita el filtro agregando WHEARE y la condicion: <br>
 para agregar mas de un filtro se agrega AND o OR.
 
 </div> <!----- Fin de Filtro ------->
-<div id = "funciones-manipulacion-Seleccionar-Operadores"> <!----- Inicio de Operadores ------->
+<div id = "funciones-manipulacion-Seleccionar-OperadoresLogicos"> <!----- Inicio de Logicos Comparacion------->
 
-### Operadores
+### Operadores Logicos
+|Operador   |   Funcion                 | 
+|:---------:|---------------------------|
+| `AND`     | los dos valores true para que se valide|   
+| `OR`      | con que un valor sea true se valida|
+
+
+</div> <!----- Fin de Operadores Logicos------->
+<div id = "funciones-manipulacion-Seleccionar-OperadoresComparacion"> <!----- Inicio de Operadores Comparacion------->
+
+### Operadores Comparacion
 |Operador   |   Funcion                 | 
 |:---------:|---------------------------|
 | `=`       | Igual a                   |   
@@ -239,15 +260,17 @@ para agregar mas de un filtro se agrega AND o OR.
 | `<=`      | Menor o igual que         |
 | `<>`      | Diferente a               |
 | `!=`      | Diferente a               |
-| `IS NULL` | Es null    
+| `IS NULL` | Es null    |
 | `NOT NULL` | No es null                     |
 | `BETWEEN valor AND valor` | Entre dos valores
 | `IN`      | Lista de valores          |
 | `LIKE ("string")`    | Se ajusta a la estring. Puede ser (%string => termina) (string% => inicia) (%string% => contiene)
 |`LIMIT int`| no selecciona hasta el limite. va al final de todas las sentencias 
-|`OFFSET int`| nos saltea los primeros int resultados al final de todo despues de LIMIT 
+|`OFFSET int`| nos saltea los primeros int resultados al final de todo despues de LIMIT
+| `EXISTS` | Existencia de un dato |
 
-</div> <!----- Fin de Operadores ------->
+
+</div> <!----- Fin de Operadores Comparacion------->
 </div> <!----- Fin de Seleccionar -------> 
 <div id = "funciones-manipulacion-Ordenar"> <!----- Inicio de Ordenar ------->
 
@@ -294,11 +317,20 @@ CASE
     ELSE valor
 END
 ```
+Ejemplo
+```sql
+SELECT clie_razon_social AS [Razon Social], clie_telefono AS Telefono, clie_codigo,
+CASE WHEN clie_limite_credito < 100 THEN 'Poco'
+	 WHEN clie_limite_credito BETWEEN 100 AND 4000 THEN 'Moderado'
+	 WHEN clie_limite_credito > 4000 THEN 'Alto'
+	 END AS Credito, clie_domicilio 
+FROM Cliente
+```
 
 </div> <!----- Fin de CASE ------->
 </div> <!----- Fin de manipulacion ------->
 
-## [Indice](#Indice)
+## [Indice](#indice)
 <div id = "union-tablas"> <!----- Inicio de union ------->
 
 # Union de tablas
@@ -346,7 +378,7 @@ Agrega condiciones a los datos agrupados <br>
 </div> <!----- Fin de union ------->
 
 
-## [Indice](#Indice)
+## [Indice](#Indice_)
 <div id = "Funciones-agregación"> <!----- Inicio de agregación ------->
 
 # Funciones de agregación
@@ -359,3 +391,81 @@ Agrega condiciones a los datos agrupados <br>
 |`AVG(campo)`       | Saca el promedio de todas las filas segun el campo
 
 </div> <!----- Fin de agregación ------->
+
+
+
+
+## [Indice](#indice)
+<div id = "Indice"> <!----- Inicio de Indice ------->
+
+# Indices
+
+<div id = "Indice-QueEs"> <!----- Inicio de Que Es ------->
+
+## ¿Que es?
+Son estructuras fisicas adicionales. Que van a tener una independencia tanto logica como fisica de la tabla. No es parte de la tabla. 
+
+</div> <!----- Fin de Que Es ------->
+
+<div id = "Indice-Utilizacion"> <!----- Inicio de Utilizacion ------->
+
+## Cuando se utiliza
+Al momento de insertar tanto PK o UNIK se insertan automaticamente los indices. Si mi tabla requiere mostrar mas registros no es encesario utilizar indices.
+
+</div> <!----- Fin de Utilizacion ------->
+</div> <!----- Fin de Indice ------->
+
+## [Indice](#indice)
+<div id = "TiposDeTabla"> <!----- Inicio de TiposDeTabla ------->
+
+# Tipo de tablas
+## Parametricas
+Son tablas que se ingresan por teclado. Son casos particulares de los parametros del sistema.
+
+## Maestras
+Son tablas que se ingresan por teclado. Son datos del modelo (productos, clientes, etc)
+
+## Transaccionales
+Estas tablas siempre se crean los registros con un procesos donde interactuan otras tablas transaccionales o parametricas maestras. Siempre se incertan por un proceso
+
+</div> <!----- Fin de TiposDeTabla ------->
+
+
+## [Indice](#indice)
+<div id = "FuncionesDeMotor"> <!----- Inicio de Funciones de motor ------->
+
+# Funciones de motor
+<div id = "FuncionesDeMotor-QueEs"> <!----- Inicio de Que es ------->
+
+## ¿Que son?
+Son funciones que cada motor tiene y puede variar segun el motor. En el texto usamos SQLServer para estas funciones
+
+</div> <!----- Fin de Que es ------->
+<div id = "FuncionesDeMotor-Funciones"> <!----- Inicio de Funciones ------->
+
+
+## Funciones
+
+|Operador   |   Funcion                 | 
+|:---------:|---------------------------|
+|`ISNULL(param1,param2)`|Sirve para todo tipo de datos, si param1 no es null recive ese valor de serlo lo cambia por el param2|
+|`ROUND(param1,param2)`|Esta funcion redoneda el numero param1 a la cantidad que se le indique en param2|
+|`ABS(param)`|Pone param en valor absoluto osea positivo|
+|`YEAR(param)`|Toma de param el año, siendo param una fecha el dato resultante es numerico|
+|`MONTH(param)`|Toma de param el mes, siendo param una fecha el dato resultante es numerico|
+|`DATEDIF(param1,param2,param3)`|Toma tres parametros, param1 es la unidad de medida (YEAR,DAY,MONTH)y tanto param2 como param3 los años y se comparan segun la unidad de medida|
+|`DATEDADD(param1,param2,param3)`|Toma tres parametros, param1 es la unidad de medida (YEAR,DAY,MONTH), param2 es la cantidad a sumarsey param3 el año a el cual se le va a sumar|
+|`SPACE(param)`|Agrega la cantidad de espacios en blaco que se indiquen en param|
+|`UPPER(param)`|Pone el parametro a mayusculas|
+|`CHARINDEX(param1,param2)`|Busca el string indicado en param1 en la fila indicada en param2|
+|`RTRIM(param)`|Le saca todos los espacios a la derecha del parametro|
+|`CONCAT(param1,param2,param3,paramn)`|Concatena todos los aparametros dentro de los parentesis|
+|`LEN(param)`|cantidad de caracteres de param|
+|`LTRIM(param)`|Saca los espacios a izquierda de param|
+|`SUBSTRING(param1,param2,param3)`|param1 es el string total param2 a partir de que columna toma el strign y param3 cuanto toma a partir de param2|
+|`CONVERT(param1,param2,param3)`|........................|
+|`CAST(param AS variable)`|Convierte param en la variable que se necesite|
+|`REPLICATE(param1,param2)`|repite param1 la cantidad de veces que indica param2|
+
+</div> <!----- Fin de Funciones ------->
+</div> <!----- Fin de Funciones de motor ------->

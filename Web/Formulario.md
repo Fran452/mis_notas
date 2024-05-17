@@ -3,11 +3,11 @@
 
 # Indice
 1. 
-|[estructura](#estructura)| |
+|[estructura](#estructura)|
 |:-------------------------:|
 
 2. 
-|[Tipos](#Tipos)| |
+|[Tipos](#Tipos)| 
 |:-------------------------:|
 |[Enviar ](#Tipos-Enviar)|
 |[Oculta](#Tipos-oculta)|
@@ -15,12 +15,12 @@
 |[Eliminar](#Tipos-eliminar)|
 
 3. 
-|[Etiquetas](#Etiquetas)| |
+|[Etiquetas](#Etiquetas)| 
 |:-------------------------:|
 |[Type](#type)|
 
 4.     
-|[Otras etiquetas](#etiquetas-Poseen)| |
+|[Otras etiquetas](#etiquetas-Poseen)| 
 |:-------------------------:|
 |[Formulario](#etiquetas-Poseen-Formulario)|
 |[Input](#etiquetas-Poseen-Input)|
@@ -29,7 +29,7 @@
 |[Radio Buttons](#etiquetas-Poseen-Radio-Buttons)| 
 
 5. 
-|[Estructuras](#estructura)| |
+|[Estructuras](#estructura)| 
 |:-------------------------:|
 |[Marcado](#estructura-marcado)|
 |[Una Opcion](#estructura-unaOpcion)|

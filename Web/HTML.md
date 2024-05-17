@@ -91,32 +91,32 @@ Son la base del lenguaje
 |`<h2> </h2>`           | Subtitulo
 |`<h..> </h..>`         | Del 3 al 6 para diferencia titulos de forma escalada
 |`<p> </p>`             | Bloques de texto
-|`<strong> </strong>`   | Textos en negrita
-|`<em> </em>`           | Textos en cursiba
-|`<span> </span>`       | Elemento de linea
+|`<strong> </strong>`   | Textos en negrita (no se usa)
+|`<em> </em>`           | Textos en cursiba (no se usa)
+|`<span> </span>`       | Elemento de linea 
 |`<div> </div>`         | Elemento de bloque
 |`<br>`                 | Salto de linea
-|`<b> </b>`             | Texto en negrita
-|`<i> </i>`             | Tecto en cursiva
-|`<strik> </strik>`     | Texto tachado 
-|`<small> </small>`     | Chiquita
-|`<center> </center>`   | Centra tanto texto como imagenes
+|`<b> </b>`             | Texto en negrita (no se usa)
+|`<i> </i>`             | Tecto en cursiva (no se usa)
+|`<strik> </strik>`     | Texto tachado (no se usa)
+|`<small> </small>`     | Chiquita (no se usa)
+|`<center> </center>`   | Centra tanto texto como imagenes (no se usa)
 </div>
 <div id = "etiquetas-tipos-lista">
 
 ### lista
 |        etiqueta       |        funcion          |
 |:---------------------:|-------------------------|
-| `<ul> </ul>`          | Lista oredenada         |
-| `<ol> </ol>`          | Lista desordenada       |
+| `<ul> </ul>`          | Lista desordenada       |
+| `<ol> </ol>`          | Lista oredenada         |
 | `<li> </li>`          | Elemeto de la lista     |
 
 
 
 #### atributo
     type = "" => se puede cambiar el typo 
-        en ul siendo numerico (1), alfabetico(A) o romanos (I)
-        en ol siendo disc, circle, square, none
+        en ol siendo numerico (1), alfabetico(A) o romanos (I)
+        en ul siendo disc, circle, square, none
     star = "" => valor de inicio de la ul
 </div> </div>
 
@@ -140,11 +140,13 @@ Son la base del lenguaje
 <div id = "etiquetas-semantica">
 
 ## Semantica
-    <header> </header>      => se utiliza para la cabecera del la pagina
-    <nav> </nav>            => barra de navegacion
-    <footer> </footer>      => pie de pagina de una pagina
-    <section> </section>    => seccion de contenido monotematica
-    <articol> </articol>    => pieza de contenido indepediente
+|        etiqueta       |        funcion          |
+|:---------------------:|-------------------------|
+|`<header> </header>`   |Se utiliza para la cabecera del la pagina
+|`<nav> </nav>`         |Barra de navegacion
+|`<footer> </footer>`   |Pie de pagina de una pagina
+|`<section> </section>` |Seccion de contenido monotematica
+|`<articol> </articol>` |Pieza de contenido indepediente
 </div>
 
 <div id = "etiquetas-botones">
@@ -158,7 +160,7 @@ Son la base del lenguaje
 
 <div id = "tabla">
 
-## |[indice](#indice)|
+## [indice](#indice)
 # Tabla
 <div id = "tabla-estructura">
 
@@ -193,14 +195,14 @@ caracteristica de la etiqueta a modificar
 
 ## partes del atributo:
     nombre                      |
-    =                            > <h1 aling="center"> hola mundo</h1>
+    =                            > <h1 aling="center"> hola mundo </h1>
     valor del atributo entre "" |         atributo
 </div> </div>
 
 
 <div id = "estructura">
 
-## |[indice](#indice)|
+## [indice](#indice)
 # Estructura 
 
 <div id = "estructura-Basica">
@@ -257,7 +259,7 @@ independiente del contenido ocupara el ancho correspondiente
 
 <div id = "Metadato">
 
-## |[indice](#indice)|
+## [indice](#indice)
 # Metadato
 
 <div id = "Metadato-estructura">
@@ -277,10 +279,10 @@ independiente del contenido ocupara el ancho correspondiente
 </div> </div>
 <div id = "Google-Fonts">
 
-## |[indice](#indice)|
+## [indice](#indice)
 # Agregar Tipografia Google Fonts
 - se entra a la pagina de google fonts:
-<a href= "https://fonts.google.com/"> <img src="./img/googleFonts.png" width = 80px></a>
+<a href= "https://fonts.google.com/"> <img src="../img/googleFonts.png" width = 80px></a>
 - se copia la tipografia de la pagina el link
 ejemplo:
     
@@ -301,7 +303,7 @@ ejemplo:
 </div>
 <div id = "EJS">
 
-## |[indice](#indice)|
+## [indice](#indice)
 # EJS
 <div id = "EJS-que">
 
@@ -319,8 +321,8 @@ Es un Template Engine. Esto permite que mis archivos html sean completamente din
 <div id = "EJS-Etiquetas">
 
 ## Etiquetas especiales
-| Codigo                  |Funcion| | | |
-|:-------------------------:|---|---|---|---|
+| Codigo                  |Funcion|
+|:-------------------------:|---|
 |`<% codigo %>` |entre este codigo se implementa el codigo JS|
 |`<%= codigo %>`|se utiliza para que el contenido sea impreso de forma literal en el html|
 |`<%-include(ubicacion) %>`|incluye un codigo guardado anteriormente y reutilizable|
