@@ -758,8 +758,8 @@ __------------------ ARREGLAR Y AGREGAR: primeras ------------------------------
 <div id = "Sequelize-Configuracion"> <!----- Inicio de Configuracion-------> 
 
 ## Configuracion
-1. Requerimos el paquete con:  `sudo npm i -g sequelize@5.21 sequelize-cli` 
-2. Requerimos la base de dato que vamos a usar: `sudo npm i mysql`
+1. Requerimos el paquete con:  `sudo npm i sequelize@5.21 sequelize-cli` 
+2. Requerimos la base de dato que vamos a usar: `sudo npm i mysql2`
 3. Creamos el arichivo `.sequelizerc`. En este se espesifica donde se almacena todo lo relacionado a nuestra base de datos. como por ejemplo:
 ```js
 const path=require('path');

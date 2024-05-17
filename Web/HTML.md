@@ -315,7 +315,7 @@ Es un Template Engine. Esto permite que mis archivos html sean completamente din
 ## Intalacion
 > primero lo intalamos en nuestro proyecto con : `npm install ejs --save`
 > agregar el codigo corresponediente en nuestro app.js: `app.set("view engine","ejs");`
-> agregar la ruta donde se encuentran nuestros archivos ejs: ejemplo: `app.set("view","./src/views");`
+> agregar la ruta donde se encuentran nuestros archivos ejs: ejemplo: `app.set("views","./src/views");`
 > y modificar todos los .html a .ejs 
 </div>
 <div id = "EJS-Etiquetas">
