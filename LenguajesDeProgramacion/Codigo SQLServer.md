@@ -469,3 +469,316 @@ Son funciones que cada motor tiene y puede variar segun el motor. En el texto us
 
 </div> <!----- Fin de Funciones ------->
 </div> <!----- Fin de Funciones de motor ------->
+<div id = "Transac-sql"> <!----- Inicio de Transac-sql ------->
+
+
+# TRANSACT-SQL
+
+<div id = "TransacSql-QueEs"> <!----- Inicio de QueEs ------->
+
+## ¿Que es?
+Es el lenguaje de programacion secuencial el cual se puede manejar en sql.<br>
+PL/SQL: PROGRAMINNG LANNGUAJE (ORACLE)
+
+</div> <!----- Fin de QueEs ------->
+<div id = "TransacSql-Estructura"> <!----- Inicio de Estructura ------->
+
+## Estructuras
+
+### Inicio y fin de bloque de codigo
+```sql
+BEGIN   -> inicio del programa
+/* */   -> comentarios
+END     -> Fin del programa
+```
+
+### Definicion de variable
+Para definir una variable tenemos que utilizar la palabra reservada DECLASER luego el nombre de la variable con @ y por ultimo el tipo de dato:
+
+```sql
+BEGIN   
+    DECLARE @variable TIPODEDATO
+    /* ejemplo */
+    DECLARE @entero INT
+     
+END     
+```
+
+### Asigancion de variables
+Para asignar usamos la palabra reservada set seguido del nombre de la variable que le querramos asignar algo con el igual como asignacion:
+
+```sql
+BEGIN   
+    SET @VAR1 = ASIGNACION
+    /* EJEMPLO */
+    SET @entero = 100
+END     
+```
+
+A su vez se le puede asignar a las variables valores sacados directos desde el select:
+
+```sql
+BEGIN   
+    SELECT 
+        @VAR1 = CAMPO_DE_TABLA
+     FROM TABLA
+     WHERE condicion 
+    /* EJEMPLO */
+    SELECT 
+        @PRODUCTO = prod_detalle
+     FROM Productos
+     WHERE prod_codigo = '000000' 
+END     
+```
+De esta forma se le asigna el producto con el id 00000 a la variable @PRODUCTO 
+
+### Funciones de decicion 
+A diferencia de otros lenguajes, para abrir el bloque de codigo del if o del else utilizaremos la mismas palabras que para inicializar el lenguaje (BEGIN: como apertura / END: comocierre). Dentro del condicional se le puede agregar una consulta a la tabla <br>
+
+#### IF
+```sql
+BEGIN   
+    IF (CONDICION)
+        BEGIN
+        END
+    ELSE
+        BEGIN
+        END
+    
+    /* Ejemplo */
+
+
+    IF ((SELECT COUNT(*) FROM CLIENTES)>1000 ) 
+        BEGIN
+        PRINT("MAS DE MIL CLIENTES")
+        END
+    ELSE
+        BEGIN
+        PRINT("MENOS DE MIL CLIENTES")
+        END
+
+END     
+```
+#### WHILE
+```sql
+BEGIN   
+    WHILE CONDICION
+        BEGIN
+        END
+
+    
+    /* Ejemplo */
+
+
+    WHILE ((SELECT COUNT(*) FROM CLIENTES)>1000 ) 
+        BEGIN
+        PRINT("MAS DE MIL CLIENTES")
+        END
+
+END    
+```
+
+### Codigo imporante
+|Operador   |   Funcion                 | 
+|:---------:|---------------------------|
+|`PRINT @VARIABLE`| Muestra por pantalla la variable|
+|``||
+|``||
+
+</div> <!----- Fin de Estructura ------->
+</div> <!----- Fin de Transac-sql ------->
+
+
+# Transaccion
+## ¿Que es?
+Un conjunto de instrucciones que respetan las propiedades ACID <br>
+Que son las propiedades ACID:
+- A: Atomicidad
+- C: Consistencia
+- I: ISOLATION (Aislamiento)
+- D: Durabilidad
+Para que una transaccion funciones se tiene que cumplir todas las intruccines, de no ser asi se reevierte los cambios ya hechos.
+
+### Atomicidad
+La no interrupcion de las intrucciones, de ser interrumpida se cancelan todas y las que fueron ejecutadas se retraen y se eliminan las modificaciones.
+### Consistencia
+La consitencia es que para el mismo dato, la informacion sea la misma.
+### Isolation
+Esto se utiliza para que al momento de mostrar un dato se muetre el dato confirmado. este puede ser o no el ultimo dato. tiene cuatro niveles:
+```sql
+-- lee solo la transaccion confirmada no necesariamente la ultima
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED    
+
+ -- solo lee el dato cuando se subio en el mientra se queda en espera
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED     
+
+-- Este nivel de aislamiento asegura que si una transacción lee datos, podrá leer esos mismos datos nuevamente y verá la misma información
+SET TRANSACTION ISOLATION LEVEL REPEATABLE READ
+
+-- Es el nivel de aislamiento más alto y garantiza que una transacción se ejecutará como si fuera la única transacción en el sistema.
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
+```
+### Durabilidad
+La durabilidad es la confirmacion de los sistemas que cuando el mismo sistema te da la confirmacion el dato se almacena de forma precisa sin variacion del mismo.
+
+## Abrir transaccion
+```sql
+
+BEGIN TRANSACTION
+
+    -- INSERTAR LOS DIFERENTES INTRUCCIONES
+
+-- se puede cerrar o con un COMMIT o con un ROLLBACK
+COMMIT -- para guardar el dato
+ROLLBACK -- para que las modificaciones no queden aplicadas
+```
+
+
+# Vistas Dinamicas
+## Que es
+Es una forma de poder crear una estructura. Que se comporta como una tabla, que tiene todos los atributos de una tabla como tal (consultada, modificada, eliminada, etc). Pero no es una tabla ya que las filas que las componen estan dadas por diferentes tablas. Cabe aclarar que todas las modificaciones a las vistas hace las modificaciones a las tablas.
+## Para que sirve
+Seria el equivalente a hacer un select en el from. Tiene la utilizad de la praticidad para no repetir quieris, otra utilidad es la emcapsular el error en una vista para facilitar la solucion, Siver seguridad en la cual solo se permitan la visualizacion de vistas,entre otros.
+## Estructura
+### Crear
+```sql
+CREATE VIEW V_Ejemplo
+AS
+    SELECT 
+        CAMPO_A
+        CAMPO_B
+     FROM TABLA
+```
+### Modificar 
+```sql
+ALTER VIEW V_Ejemplo
+AS
+    SELECT 
+        CAMPO_A
+        CAMPO_B
+     FROM TABLA
+```
+### ELIMINAR 
+```sql
+DELETE VIEW V_Ejemplo
+```
+
+# Procedure y Funciones
+## Que son?
+## Cual es la diferencia
+La diferencia entre los procedures y las funciones es que el primero puede modificar bases de datos mientras que el segundo no
+## Estrucutra
+```sql
+-- Procedure:
+CREATE PROCEDURE
+as
+BEGIN
+    -- ALGORITMO
+    --    PUEDE MODIFICAR CODIGO
+END
+
+-- Funcion 
+
+CREATE FUNCTION FCN_nombre_funcion(variable TIPO)
+        RETURN tipo
+```
+## Ejecucion
+```sql  
+-- Procedure
+EXEC nombreDelProcedure @variable = algo
+```
+
+# TRIGGER
+## Que es?
+El trigger son funciones que responden ante un evento en una tabla (evento pudiendo ser: UPDATE, DELETE, INSERT)
+## Estructura 
+```sql
+CREATE TRIGGER NombreDelTrigger ON TablaQueEvalua
+momento {AFTER: despues de } ACCION {UPDATE, DELETE, INSERT }
+AS
+BEGIN TRANSACTION
+
+COMMIT 
+```
+ejemplo
+```sql
+CREATE TRIGGER ej_parcial_prov ON provincia
+AFTER DELETE
+AS
+BEGIN
+	IF EXISTS (select * from Cliente where pcia_id in (select id from deleted))
+	BEGIN
+		print 'error: hay clientes que referencian a la provincia'
+		rollback
+	END
+END
+GO
+```
+En este trigger se consulta si un cliente utilisa el id de la provincia que se quiere eliminar. si existe no permite la accion de no existir la accion continua.
+
+## Simulador de fk
+```sql
+ET TRANSACTION ISOLATION LEVEL serializable
+go
+
+-- Consulta de eliminacion de registro de una tabla con FK
+-- Eliminar un registro de la tabla provincia que puede estar referenciado en la tabla cliente
+create trigger ej_parcial_prov on provincia
+after delete
+as
+begin
+	if exists (select * from Cliente where pcia_id in (select id from deleted))
+	begin
+		print 'error: hay clientes que referencian a la provincia'
+		rollback
+	end
+end
+go
+
+-- Consulta de modificacion de registro de una tabla con FK
+-- Modificacion de un registro de la tabla provincia que puede estar referenciado en la tabla cliente
+create trigger ej_parcial_prov_update on provincia
+after update
+as
+begin
+	if exists (select * from Cliente where pcia_id not in (select id from provincia))
+	begin
+		print 'error: hay clientes que referencian a la provincia'
+		rollback
+	end
+end
+go
+
+-- Consulta la insercion de registro de una tabla con FK
+-- Insertar un nuevo registro en la tabla cliente con un id en el campo provincia inexistente
+create trigger ej_parcial_clie on cliente
+after insert
+as
+begin
+	if exists (select * from inserted
+		where pcia_id not in (select id from provincia))
+	begin
+		print 'error: la pcia_id no referencia a ninguna provincia'
+		rollback
+	end
+end
+go
+
+-- Consulta la modificacion de registro de una tabla con FK
+-- Modifica el campo id_provincia inexistente en la tabla cliente
+create trigger ej_parcial_clie on cliente
+after update
+as
+begin
+	if exists (select * from inserted
+		where pcia_id not in (select id from provincia))
+	begin
+		print 'error: la pcia_id no referencia a ninguna provincia'
+		rollback
+	end
+end
+```
+
+# CURSOR
+## Que es?
+## Como funciona

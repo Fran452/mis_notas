@@ -67,6 +67,7 @@
 | [Express Session](#Express-Session)| [Configurarciones](#Express-Session-Configurarciones) <br> [Codigo](#Express-Session-Codigo)| 
 | [Cookies](#Express-Cookies)| [Configurarciones](#Express-Cookies-Configurarciones)| 
 | [Hashing](#Express-Hashing)| [Configurarciones](#Express-Hashing-Configurarciones) <br> [Codigo](#Express-Hashing-Codigo)|
+|[Dotenv](#Express-Dotenv)| [Configurarciones](#Express-Dotenv-Config)| 
 
 10. 
 | [Sequelize](#Sequelize) | Extenciones | 
@@ -556,6 +557,8 @@ para una mejor implementaicon de node es necesario descargar estos paquetes de n
 |npm i sequelize@5.21      | `require("sequelize")`         | Se utiliza para el manejo de bases de datos 
 |npm i mysql2              |                                | Se utiliza para la utilizacion de bases de datos de sql      
 |npm i node-fetch          | `require("node-fetch")`        | Nos permite hacer pedidos a una api de terceros desde nuestro back-end
+|npm i dotenv | `require("dotenv").config()` | configuracion para el soporte de los archivos .env de configuraciones de ambiente
+|npm i nodemailer|| Se utiliza para el envio de mails
 #### interno
 `require(path)` <br>
 `require(fs)`
@@ -629,7 +632,7 @@ const storage = multer.diskStorage({
 para subir una imagne <br>
 `router.post('/register',upload.single("fotoDePerfil"),(req,res)=>{})`<br>
 para subir varias => <br> 
-`upload.any("fotoDePerfil")`
+`upload.any("fotoDePerfil")` <br>
 __------------------ ARREGLAR Y AGREGAR: HTML --------------------------------------__
 
 </div> <!----- Fin de Configurarciones ------->
@@ -704,7 +707,7 @@ errors:[
 ### Codigo
 | Codigo                  |Funcion|
 |:-------------------------:|---|
-|`get.session.parametro`| se almacena de forma global el parametro seleccionado 
+|`req.session.parametro`| se almacena de forma global el parametro seleccionado 
 
 </div> <!----- Fin de Codigo -------> 
 </div> <!----- Fin de Session -------> 
@@ -716,14 +719,14 @@ errors:[
 
 ### Primeras configurarciones
 #### app.js
-- requerimos el paquete
-- lo importamos
-- lo configuramos como Middlewares: <br>
+- Requerimos el paquete
+- Lo importamos
+- Lo configuramos como Middlewares: <br>
 `app.use(coockieParser())`
 
 #### Controller
-- para utilisarse primero se almacena un valor en `res.cookie(nombre,valor,{configuraciones})`
-- se llama utilizando la funcion `req.cookie.nombreDelvalor`
+- Para utilisarse primero se almacena un valor en `res.cookie(nombre,valor,{configuraciones})`
+- Se llama utilizando la funcion `req.cookie.nombreDelvalor`
 
 </div> <!----- Fin de Configurarciones-------> 
 </div> <!----- Fin de Cookies-------> 
@@ -733,9 +736,9 @@ errors:[
 <div id = "Express-Hashing-Configurarciones"> <!----- Inicio de Configurarciones-------> 
 
 ### Primeras configurarciones
-- requerimos el paquete
-- lo importamos
-__------------------ ARREGLAR Y AGREGAR: primeras --------------------------------------__
+- Requerimos el paquete
+- Lo importamos en el back con el comando de siempre: `const bcrypt = require("bcrypt");`
+- Utilizamos las funciones de abajo segun lo necesario:
 
 </div><!----- Fin de Configurarciones------->  
 <div id = "Express-Hashing-Codigo"><!----- Inicio de Codigo-------> 
@@ -748,6 +751,31 @@ __------------------ ARREGLAR Y AGREGAR: primeras ------------------------------
 
 </div>  <!----- Fin de Codigo-------> 
 </div> <!----- Fin de Hashing------->  
+
+<div id = "Express-Dotenv"><!----- Inicio de Dotenv-------> 
+
+## Dotenv
+<div id = "Express-Dotenv-Config"><!----- Inicio de Dotenv-------> 
+
+- Requerimos el paquete 
+- Lo importamos 
+- Lo configuramos como Middlewares: <br>
+`require("dotenv").config()` 
+- Configuramos el archivo .env con la siguiente estructura: <br>
+```js
+PORT = 20202
+nombre = "nombre"
+texto = "texto" 
+```
+- Para utilizarlo lo llamamos como un objeto de JS: <br>
+`process.env.PORT`
+
+</div>  <!----- Fin de Config-------> 
+</div>  <!----- Fin de Dotenv-------> 
+
+
+
+
 </div> <!----- Fin de Express ------->
 
 ## [Indice](#Indice)
@@ -819,7 +847,7 @@ module.exports = (sequelize, dataTypes) => {
 |`dataTypes.STRING`           | VARCHAR(255)
 |`dataTypes.STRING(VALOR)`    | VARCHAR(VALOR)
 
-Estos son algunos tipos, para mas informacion: [TIPOS DE DATOS Sequelize](#https://sequelize.org/docs/v6/core-concepts/model-basics/#data-types)
+Estos son algunos tipos, para mas informacion: [TIPOS DE DATOS Sequelize](https://sequelize.org/docs/v6/core-concepts/model-basics/#data-types)
 ### Operadores
 | Codigo                    |Funcion|
 |:-------------------------:|---|
@@ -868,7 +896,7 @@ Tabla.funcionSeleccio(
     }
 )
 ```
-Para ver todos los operadores entrar al siguiente link: [Operadores](#https://sequelize.org/v5/manual/querying.html) 
+Para ver todos los operadores entrar al siguiente link: [Operadores](https://sequelize.org/v5/manual/querying.html) 
 
 </div> <!----- Fin de where------->
 <div id = "Sequelize-Pedidos-Order"> <!----- Inicio de Order-------> 
@@ -1385,7 +1413,7 @@ Es un objeto que almacena valores para la utilizacion del front, el almacenamien
 </div>
 
 ## ¿Que es?
-React es una librería de JavaScript para crear proyectos del lado del front-end. Su implementación permite que la carga de la aplicación sea más rápida y performante.
+React es una biblioteca de JavaScript para crear proyectos del lado del front-end. Su implementación permite que la carga de la aplicación sea más rápida y performante.
 
 </div> <!----- Fin de Que -------> 
 <div id = "React-Implemetacion"> <!----- Inicio de Implemetacion ------->
