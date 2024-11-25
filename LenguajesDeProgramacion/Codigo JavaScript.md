@@ -67,7 +67,7 @@
 | [Express Session](#Express-Session)| [Configurarciones](#Express-Session-Configurarciones) <br> [Codigo](#Express-Session-Codigo)| 
 | [Cookies](#Express-Cookies)| [Configurarciones](#Express-Cookies-Configurarciones)| 
 | [Hashing](#Express-Hashing)| [Configurarciones](#Express-Hashing-Configurarciones) <br> [Codigo](#Express-Hashing-Codigo)|
-|[Dotenv](#Express-Dotenv)| [Configurarciones](#Express-Dotenv-Config)| 
+| [Dotenv](#Express-Dotenv)| [Configurarciones](#Express-Dotenv-Config)| 
 
 10. 
 | [Sequelize](#Sequelize) | Extenciones | 
@@ -557,8 +557,9 @@ para una mejor implementaicon de node es necesario descargar estos paquetes de n
 |npm i sequelize@5.21      | `require("sequelize")`         | Se utiliza para el manejo de bases de datos 
 |npm i mysql2              |                                | Se utiliza para la utilizacion de bases de datos de sql      
 |npm i node-fetch          | `require("node-fetch")`        | Nos permite hacer pedidos a una api de terceros desde nuestro back-end
-|npm i dotenv | `require("dotenv").config()` | configuracion para el soporte de los archivos .env de configuraciones de ambiente
-|npm i nodemailer|| Se utiliza para el envio de mails
+|npm i dotenv              | `require("dotenv").config()`   | Configuracion para el soporte de los archivos .env de configuraciones de ambiente
+|npm i nodemailer          | `require("node-fetch")`        | Se utiliza para el envio de mails
+|npm i xlsx-populate       | `require('xlsx-populate')`     | Se utiliza para poder leer, modificar y crear archivos excel
 #### interno
 `require(path)` <br>
 `require(fs)`
@@ -756,6 +757,8 @@ errors:[
 
 ## Dotenv
 <div id = "Express-Dotenv-Config"><!----- Inicio de Dotenv-------> 
+
+### Configuracion
 
 - Requerimos el paquete 
 - Lo importamos 
@@ -1077,6 +1080,31 @@ module.exports = Tabla;
 </div> <!----- Fin de NaN ------->
 </div> <!------ Fin de Relaciones ------>
 </div> <!----- Fin de Sequelize ------->
+
+# Excel (xlsx-populate)
+## Que es?
+Los archivos excel son utilizados normalmente para mostrar los datos de forma mas facil o para subir una gran cantidad de registros de forma facil. Para la lectura de estos archivos con node se utiliza el paquete xlsx-populate que el mismo nos permite la lectura, edicion y lectura de archivos excel.
+
+## Instalarlo
+1) Instalar el paquete en linea de comando: `npm i xlsx-populate`
+2) requererir el paquete: `const xlsx = require('xlsx-populate');`
+
+## Como funciona
+### Creacion
+1) Para crear un archivo excel se utiliza el siguiente comando: `let excel = await xlsx.fromBlankAsync()`
+2) Armar la estructura: 
+```js
+excel.sheet('nombre de la hoja').cell('celda').value('valor que se escribe en la celda al momento de la creacion'); //-> para escribir dentro del excel
+excel.toFileAsync('./salida.xlsx') //-> lugar donde se almacenara el excel
+```
+### Lectura
+1) para la lectura de un archivo primero utilizamos el  
+### Modificacion
+
+
+
+
+
 
 ## [Indice](#Indice)
 <div id = "Fetch"> <!----- Inicio de Fetch-------> 
